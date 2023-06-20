@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Primary from '../button/primary';
+import Primary from '../button/Primary';
 
 function ContactCard(props) {
 

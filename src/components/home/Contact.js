@@ -19,7 +19,7 @@ function Contact({ data }) {
                         <div className="content ">
                             <div className="flex flex-wrap">
                                 <div className="w-full sm:w-fit bg-white rounded-xl p-[20px]">
-                                    <div className="text-[20px] sm:text-[40px] text-center sm:text-left text-center sm:text-left font-bold text-red-800">
+                                    <div className="text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
                                         <MarkdownView markdown={data?.title} />
                                     </div>
                                     <div className="py-[20px] ">
