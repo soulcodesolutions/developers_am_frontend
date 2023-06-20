@@ -1,7 +1,7 @@
 import React from "react";
 import MarkdownView from "react-showdown";
 import AboutImage from "../../images/home/about.png";
-import { JustAppear, SlideLeft } from "../../components/SlideAnimation";
+import { JustAppear, SlideLeft } from "../SlideAnimation";
 
 export default function AboutUs({ data }) {
     console.log(data)

@@ -1,7 +1,7 @@
 import React from 'react';
 import MarkdownView from "react-showdown";
 import ContactCard from './ContactCard';
-import { JustAppear } from '../../components/SlideAnimation';
+import { JustAppear } from '../SlideAnimation';
 import Bg from '../../images/home/bg.jpg'
 
 function Contact({ data }) {

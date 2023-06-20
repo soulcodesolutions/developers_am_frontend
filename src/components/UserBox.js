@@ -1,14 +1,9 @@
 import React, { useRef } from "react";
-
-// import { ReactComponent as NextIcon } from 'assets/buttons/next.svg';
-
+import 'swiper/css/bundle';
 import Swiper from 'react-id-swiper';
 import SwiperCore, { Autoplay, Navigation } from 'swiper';
-import 'swiper/css/bundle';
 
-import UserIcon from '../images/OIP.jpg'
-
-function UserCard(props) {
+export function UserCard(props) {
     const { items = {} } = props
 
 
@@ -87,8 +82,7 @@ function UserCard(props) {
     )
 }
 
-export const UserBox = (item) => {
-    
+function UserBox(item) {
     return (<div key={item?.strapi_id} className="max-w-[250px]_ bg-white rounded-xl p-[20px]" >
         <div className="max-w-[200px] lg:max-w-[180px] photo mx-auto rounded-full overflow-hidden">
             <img src={process.env.STRAPI_API_URL + item.photo.url} alt="" className="w-full" />
@@ -102,4 +96,4 @@ export const UserBox = (item) => {
     </div>)
 }
 
-export default UserCard;
+export default UserBox;

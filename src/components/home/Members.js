@@ -1,8 +1,8 @@
 import React from "react";
 import MarkdownView from 'react-showdown';
-import { JustAppear, SlideLeft } from "../../components/SlideAnimation";
-import { ViewAll } from "../../components/ViewAll";
-import CompanyCard from "../../components/CompanyCard";
+import { JustAppear, SlideLeft } from "../SlideAnimation";
+import { ViewAll } from "../ViewAll";
+import CompanyCard from "../members/CompanyCard";
 
 
 export default function Members({ data }) {

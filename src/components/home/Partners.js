@@ -1,8 +1,8 @@
 import React from 'react';
 import MarkdownView from "react-showdown";
-import PartnerCard from '../../components/PartnerCard';
-import { JustAppear, SlideLeft } from '../../components/SlideAnimation';
-import { ViewAll } from '../../components/ViewAll';
+import PartnerCard from '../PartnerCard';
+import { JustAppear, SlideLeft } from '../SlideAnimation';
+import { ViewAll } from '../ViewAll';
 
 
 

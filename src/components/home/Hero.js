@@ -1,8 +1,8 @@
 import React from "react";
 import MarkdownView from 'react-showdown'
 import Bg from '../../images/home/bg.jpg'
-import Primary from "../../components/button/primary";
-import { JustAppear, SlideLeft, SlideRight } from "../../components/SlideAnimation";
+import Primary from '../button/Primary'
+import { JustAppear, SlideLeft, SlideRight } from "../SlideAnimation";
 
 export default function Hero({ data }) {
     return (<div

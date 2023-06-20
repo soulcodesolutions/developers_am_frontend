@@ -1,13 +1,13 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Hero from "./Hero";
-import AboutUs from "./AboutUs";
-import Council from "./Council";
-import Members from "./Members";
-import Partners from "./Partners";
-import News from "./News";
+import Hero from "../../components/home/Hero";
+import AboutUs from "../../components/home/AboutUs";
+import Council from "../../components/home/Council";
+import Members from "../../components/home/Members";
+import Partners from "../../components/home/Partners";
+import News from "../../components/home/News";
 import Navbar from "../../components/navbar";
-import Contact from "./Contact";
+import Contact from "../../components/home/Contact";
 import Footer from "../../components/footer";
 
 export const languages = ["en", "hy-AM"];
@@ -22,7 +22,7 @@ export default function Home({ location, data }) {
     <>
       <Navbar location={location} language={language} />
       <Hero data={{ sub_heading: data.sub_heading, hero_text: data.hero_text }} />
-      <AboutUs data={{ title: data.about_heading, content: data.about_content.data.about_content }} />
+      <AboutUs data={{ title: data.about_heading, content: data.about_content }} />
       <Council data={{ title: data.council_heading, members: data.council, isCouncil: true }} />
       <Members data={{ title: data.members_heading, members: data.members }} />
       <Partners data={{ title: data.partner_heading, members: data.partners }} />
@@ -40,11 +40,7 @@ query HomeQuery {
       sub_heading
       hero_text
       about_heading
-      about_content {
-        data {
-          about_content
-        }
-      }
+      about_content
       council_heading
       council {
         strapi_id

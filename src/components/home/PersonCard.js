@@ -1,5 +1,4 @@
 import React from "react";
-// import UserIcon from '../images/OIP.jpg'
 
 export default function PersonCard(props) {
     const { item = {} } = props

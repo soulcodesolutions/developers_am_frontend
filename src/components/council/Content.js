@@ -1,49 +1,11 @@
 import React from 'react';
 import MarkdownView from "react-showdown";
-import { UserBox } from "../../components/UserCard"
-
-import Popup from '../../components/Popup';
 import { useState } from 'react';
+import UserBox from '../UserBox';
+import Popup from '../Popup';
 import PopupContent from './PopupContent';
 
-function Content(props) {
-
-    const data = {
-        title: "Association Council",
-        members: [
-            {
-                id: 1,
-                photo: '',
-                name: "Sample Name",
-                position: "position"
-            },
-            {
-                id: 2,
-                photo: '',
-                name: "Sample name",
-                position: "position"
-            },
-            {
-                id: 3,
-                photo: '',
-                name: "Sample name",
-                position: "position"
-            },
-            {
-                id: 4,
-                photo: '',
-                name: "Sample name",
-                position: "position"
-            },
-            {
-                id: 5,
-                photo: '',
-                name: "Sample name",
-                position: "position"
-            },
-        ]
-
-    }
+function Content({ title, members }) {
 
     const [selectedItem, setSelectedItem] = useState(null)
 
@@ -51,13 +13,13 @@ function Content(props) {
         <div className="pt-[150px] py-[50px]">
             <div className="container mx-auto">
                 <div className="text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
-                    <   MarkdownView markdown={data?.title} />
+                    <   MarkdownView markdown={title} />
                 </div>
                 <div className="pt-[50px]">
                     <div className="grid gird-cols-1  sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
-                        {data?.members?.map((item,index) => { return (
+                        {members?.map((item,index) => { return (
                             <div 
-                                key={item.id}
+                                key={item.strapi_id}
                                 onClick={() => setSelectedItem(item)}
                                 className='shadow rounded-xl cursor-pointer hover:shadow-red-200 hover:shadow-md'
                                 >

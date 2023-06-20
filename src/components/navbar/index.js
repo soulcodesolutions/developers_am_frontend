@@ -9,17 +9,17 @@ export function getNavLinks(language) {
         {
             id: 3,
             lable: "Association council",
-            link: `/${language}/associationCouncil`,
+            link: `/${language}/council`,
         },
         {
             id: 4,
             lable: "Association members",
-            link: `/${language}/associationMembers`,
+            link: `/${language}/members`,
         },
         {
             id: 5,
             lable: "Our partners",
-            link: `/${language}/OurPartners`,
+            link: `/${language}/partners`,
         },
         {
             id: 5,

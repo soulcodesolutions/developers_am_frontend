@@ -11,7 +11,7 @@ import { languages } from "../../pages/home/index.en";
 
                 <div className="flex justify-between items-center">
                     <div>
-                        <Link to="/">
+                        <Link to={`/${language}/home`}>
                             <div className="nav flex items-center">
                                 <img alt="" src={Logo} className="h-fit" />
                                 <div className="text-[10px] ml-[20px] text-sky-900 font-bold">
@@ -28,7 +28,7 @@ import { languages } from "../../pages/home/index.en";
                                 className="inline-block ml-[10px]"
                                 to={location.pathname.replace(`/${language}`, `/${l}`)}
                                 activeClassName="text-red-800  font-bold"
-                                aria-disabled={l==language}
+                                aria-disabled={l===language}
                                 >
                                     {l}
                                 </Link>

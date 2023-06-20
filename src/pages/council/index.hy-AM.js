@@ -11,7 +11,7 @@ export default function Index({ location, data }) {
 
 export const query = graphql`
 query CouncilQuery {
-    allStrapiCouncil(filter: {locale: {eq: "en"}}) {
+    allStrapiCouncil(filter: {locale: {eq: "hy-AM"}}) {
       nodes {
         strapi_id
         name
@@ -22,7 +22,7 @@ query CouncilQuery {
         }
       }
     }
-    strapiHomePageV2(locale: {eq: "en"}) {
+    strapiHomePageV2(locale: {eq: "hy-AM"}) {
       council_heading
     }
   }

@@ -1,11 +1,10 @@
 import React from "react";
 import MarkdownView from 'react-showdown';
-import Secondary from "../../components/button/secondary";
-import { JustAppear, SlideBottom, SlideLeft } from "../../components/SlideAnimation";
-import { ViewAll } from "../../components/ViewAll";
+import { JustAppear, SlideBottom, SlideLeft } from "../SlideAnimation";
+import { ViewAll } from "../ViewAll";
 import { Link } from "gatsby";
-import NewsBox from "../../components/NewsBox";
-
+import NewsBox from "../NewsBox";
+import Secondary from "../button/Secondary"
 
 export default function News({ data }) {
 
