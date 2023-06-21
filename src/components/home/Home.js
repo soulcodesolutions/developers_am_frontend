@@ -1,5 +1,4 @@
 import React from "react";
-import { graphql } from "gatsby";
 import Hero from "./Hero";
 import AboutUs from "./AboutUs";
 import Council from "./Council";
@@ -13,7 +12,7 @@ import Footer from "../footer";
 export const languages = ["en", "hy-AM"];
 
 export default function Home({ location, data }) {
-  const language = location.pathname.split('/')[1];
+  let language = location.pathname.split('/')[1];
   if (!languages.includes(language)){
       language = "en";
   }
@@ -32,49 +31,3 @@ export default function Home({ location, data }) {
     </>
   )
 }
-
-export const query = graphql`
-query HomeQuery {
-    strapiHomePageV2 {
-      sub_heading
-      hero_text
-      about_heading
-      about_content
-      council_heading
-      council {
-        strapi_id
-        name
-        position
-        photo {
-          url
-        }
-      }
-      members_heading
-      members {
-        strapi_id
-        name
-        photo {
-          url
-        }
-      }
-      partner_heading
-      partners {
-        strapi_id
-        name
-        photo {
-          url
-        }
-      }
-      news_heading
-      news_articles {
-        strapi_id
-        title
-        description
-        thumbnail {
-          url
-        }
-      }
-      contact_heading
-    }
-  }
-`
