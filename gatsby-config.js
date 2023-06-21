@@ -4,11 +4,10 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+const siteMetadata = require('./src/data/siteMetadata');
+
 module.exports = {
-  siteMetadata: {
-    title: `devam-gatsby`,
-    siteUrl: `https://www.yourdomain.tld`,
-  },
+  siteMetadata,
   plugins: [
     "gatsby-plugin-postcss",
     {
