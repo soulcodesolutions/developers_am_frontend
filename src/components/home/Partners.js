@@ -6,7 +6,7 @@ import { ViewAll } from '../ViewAll';
 
 
 
-export default function Partners({ data }) {
+export default function Partners({ data, language }) {
     return (
         <div className="pt-[50px] sm:pt-[100px] py-[50px] bg-slate-100">
             <div className="container mx-auto">
@@ -16,7 +16,7 @@ export default function Partners({ data }) {
                             <MarkdownView markdown={data?.title} />
                         </SlideLeft>
                     </div>
-                    <ViewAll to="/OurPartners" />
+                    <ViewAll to={`/${language}/partners`} />
                 </div>
                 <div className="content pt-[50px]">
                     <div className="grid grid-cols-2 sm:grid-cols-6 gap-[10px]">

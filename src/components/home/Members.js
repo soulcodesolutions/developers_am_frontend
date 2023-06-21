@@ -5,24 +5,24 @@ import { ViewAll } from "../ViewAll";
 import CompanyCard from "../members/CompanyCard";
 
 
-export default function Members({ data }) {
+export default function Members({ data, language }) {
     console.log('Members -> ', data)
     return (
         <div className="py-[50px] bg-white">
-        <div className="container mx-auto">
-        <div className="flex justify-center sm:justify-between items-center">
-                <div className="text-[24px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
-                    <SlideLeft>
-                    <MarkdownView markdown={data?.title} />
-                    </SlideLeft>
+            <div className="container mx-auto">
+                <div className="flex justify-center sm:justify-between items-center">
+                    <div className="text-[24px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
+                        <SlideLeft>
+                            <MarkdownView markdown={data?.title} />
+                        </SlideLeft>
+                    </div>
+                    <ViewAll to={`/${language}/members`} />
                 </div>
-                <ViewAll to="/associationMembers" />
+                <div className="pt-[50px]">
+                    <JustAppear>
+                        <CompanyCard items={data?.members} />
+                    </JustAppear>
+                </div>
             </div>
-            <div className="pt-[50px]">
-                <JustAppear>
-                    <CompanyCard items={data?.members} />
-                </JustAppear>
-            </div>
-        </div>
-    </div>);
+        </div>);
 }
