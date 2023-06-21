@@ -24,6 +24,7 @@ query CouncilQuery {
     }
     strapiHomePageV2(locale: {eq: "en"}) {
       council_heading
+      contact_heading
     }
   }
 `

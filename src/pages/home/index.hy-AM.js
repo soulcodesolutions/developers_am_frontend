@@ -28,7 +28,7 @@ export default function Home({ location, data }) {
       <Partners data={{ title: data.partner_heading, members: data.partners }} />
       <News data={{ title: data.news_heading, members: data.news_articles }} />
       {/* <Contact data={{ title: data.contact_heading}} /> */}
-      <Contact data={{ title: "Contact Us"}} />
+      <Contact data={{ title: data.contact_heading}} />
       <Footer language={language} />
     </>
   )
@@ -75,6 +75,7 @@ query ArmenianQuery {
         url
       }
     }
+    contact_heading
   }
 }
 `

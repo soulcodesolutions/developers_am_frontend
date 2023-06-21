@@ -23,5 +23,6 @@ query MembersQuery {
     }
     strapiHomePageV2(locale: {eq: "en"}) {
       members_heading
+      contact_heading
     }
   }`

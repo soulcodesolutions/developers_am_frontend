@@ -24,5 +24,6 @@ query NewsListQuery {
   }
   strapiHomePageV2(locale: {eq: "en"}) {
     news_heading
+    contact_heading
   }
 }`

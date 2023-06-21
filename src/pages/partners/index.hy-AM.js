@@ -22,5 +22,6 @@ query PartnersQuery {
   }
   strapiHomePageV2(locale: {eq: "hy-AM"}) {
     partner_heading
+    contact_heading
   }
 }`

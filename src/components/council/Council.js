@@ -15,7 +15,7 @@ export default function Council({ location, data }) {
     return (<div>
         <Navbar location={location} language={language} />
         <Content members={data.allStrapiCouncil.nodes} title={data.strapiHomePageV2.council_heading} />
-        <Contact />
+        <Contact data={{ title: data.strapiHomePageV2.contact_heading }} />
         <Footer />
 
     </div>);
