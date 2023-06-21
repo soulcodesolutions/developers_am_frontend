@@ -11,7 +11,7 @@ function Footer({ language }) {
             <div className="flex flex-wrap sm:flex-nowrap justify-between items-start">
 
                 <div className="w-full sm:w-fit  pt-[20px] sm:pt-0  items-center items-center order-1">
-                    <div className="">
+                    <div>
                     <Link to="/">
                     <div className="flex items-center w-fit mx-auto sm:mx-0">
 

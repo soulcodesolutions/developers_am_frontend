@@ -1,37 +1,9 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
-import Hero from "../../components/home/Hero";
-import AboutUs from "../../components/home/AboutUs";
-import Council from "../../components/home/Council";
-import Members from "../../components/home/Members";
-import Partners from "../../components/home/Partners";
-import News from "../../components/home/News";
-import Navbar from "../../components/navbar";
-import Contact from "../../components/home/Contact";
-import Footer from "../../components/footer";
-export const languages = ["en", "hy-AM"];
+import { graphql } from "gatsby";
+import Home from "../../components/home/Home";
 
-export default function Home({ location, data }) {
-  const language = location.pathname.split('/')[1];
-  if (!languages.includes(language)){
-      language = "en";
-  }
-  console.log('Selected language ->', language)
-  data = data.strapiHomePageV2;
-  return (
-    <>
-      <Navbar location={location} language={language} />
-      <Hero data={{ sub_heading: data.sub_heading, hero_text: data.hero_text }} />
-      <AboutUs data={{ title: data.about_heading, content: data.about_content }} />
-      <Council data={{ title: data.council_heading, members: data.council, isCouncil: true }} />
-      <Members data={{ title: data.members_heading, members: data.members }} />
-      <Partners data={{ title: data.partner_heading, members: data.partners }} />
-      <News data={{ title: data.news_heading, members: data.news_articles }} />
-      {/* <Contact data={{ title: data.contact_heading}} /> */}
-      <Contact data={{ title: data.contact_heading}} />
-      <Footer language={language} />
-    </>
-  )
+export default function Index({ location, data }) {
+  return <Home data={data} location={location} />
 }
 
 export const query = graphql`

@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../../images/Logo.webp"
 import { Link } from "gatsby";
-import { languages } from "../../pages/home/index.en";
+import { languages } from "../home/Home";
 
  const FloatingBar = ({ navlinks = [], openSideBar, location, language }) => {
 

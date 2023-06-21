@@ -3,7 +3,7 @@ import Content from './Content';
 import Contact from '../home/Contact';
 import Footer from '../footer';
 import Navbar from '../navbar';
-import { languages } from '../../pages/home/index.en';
+import { languages } from '../home/Home';
 
 function Partners({ location, data }) {
     let language = location.pathname.split('/')[1];
