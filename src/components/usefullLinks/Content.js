@@ -112,7 +112,7 @@ function Content({ location, data = {} }) {
                 {
                     data?.[activeKey]?.map(item => {
                         return(
-                        <a href=""  key={item?.id}>
+                        <a href={item.link}   key={item?.id}  target='_blank'>
 
                         <div className='flex items-center mb-[10px] p-[10px] shadow border-2 border- rounded-lg w-full sm:max-w-[50%]'>
                             <div className='mr-[10px]' > <IconPdf /></div>
@@ -133,8 +133,8 @@ function Content({ location, data = {} }) {
                     data?.[activeKey]?.map(item => {
                         return(
                         <a href={item.link}  key={item?.id} target='_blank'>
-
                         <div className='flex items-center  mb-[10px] p-[10px] shadow border-2 border- rounded-xl w-full sm:max-w-[50%]'>
+                      
                             <div className='mr-[10px]'>{item?.label}</div>
                             <div className='mr-[10px]' > <IconLink /></div>
                         </div>

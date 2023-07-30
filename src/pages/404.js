@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+// import Navbar from "../components/navbar"
 
 const pageStyles = {
   color: "#232129",
@@ -24,8 +25,12 @@ const codeStyles = {
 }
 
 const NotFoundPage = () => {
+
+  
+
   return (
     <main style={pageStyles}>
+      {/* <Navbar language={"en"}  /> */}
       <h1 style={headingStyles}>Page not found</h1>
       <p style={paragraphStyles}>
         Sorry 😔, we couldn’t find what you were looking for.
@@ -38,7 +43,7 @@ const NotFoundPage = () => {
           </>
         ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        <Link to="/" className="text-red-800 font-bold text-[20px]">Go home</Link>.
       </p>
     </main>
   )

@@ -4,6 +4,9 @@ import Members from '../../components/members/Members';
 
 
 export default function Index({ location, data }) {
+
+    // console.log(data)
+
     return (
         <Members location={location} data={data}/>
     )
