@@ -50,7 +50,7 @@ function Navbar({ location, language }) {
 
     return (<div>
         <FloatingBar navlinks={navlinks} openSideBar={openSideBar} location={location} language={language} />
-        <SideBar navlinks={navlinks} open={open}  closeSidebar={closeSidebar} />
+        <SideBar navlinks={navlinks} open={open}  closeSidebar={closeSidebar} location={location} language={language} />
     </div>);
 }
 

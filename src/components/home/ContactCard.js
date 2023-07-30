@@ -48,7 +48,7 @@ function ContactCard(props) {
                 })
             }
             <div className="pt-[20px]">
-                <Primary label="Submit" />
+                <Primary label="Submit" className="cursor-pointer" />
             </div>
             
         </div>

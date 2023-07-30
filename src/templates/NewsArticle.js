@@ -20,6 +20,10 @@ function NewsArticle({ location, data, pageContext }) {
             <div>
                 <MarkdownView markdown={data.content.data.content} />
             </div>
+            <div>
+              <img src={`${process.env.STRAPI_API_URL}${data?.thumbnail.url}`} alt="" />
+              {/* <img src={data?.thumbnail.url} alt=""  className='w-[12px] h-[12px]'/> */}
+            </div>
         </div>
         <Contact />
         <Footer />
@@ -29,14 +33,15 @@ function NewsArticle({ location, data, pageContext }) {
 
 export default NewsArticle;
 
+
 export const query = graphql`
-query NewsArticleQuery($slug:String) {
-    strapiNewsArticle(slug: {eq: $slug}) {
+  query NewsArticleQuery($slug: String) {
+    strapiNewsArticle(slug: { eq: $slug }) {
       slug
       strapi_id
       title
       description
-      publishedAt
+      
       thumbnail {
         url
       }
@@ -50,4 +55,4 @@ query NewsArticleQuery($slug:String) {
       }
     }
   }
-`
+`;

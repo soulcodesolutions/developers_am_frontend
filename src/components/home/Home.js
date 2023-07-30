@@ -16,7 +16,7 @@ export default function Home({ location, data }) {
   if (!languages.includes(language)){
       language = "en";
   }
-  data = data.strapiHomePageV2;
+  data = data?.strapiHomePageV2 || {};
   return (
     <>
       <Navbar location={location} language={language} />

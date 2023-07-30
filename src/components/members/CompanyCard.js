@@ -88,8 +88,8 @@ function CompanyCard(props) {
 export const CompanyBox = (item) => {
     return (<div key={item.strapi_id} className={"mx-auto py-[10px] "}>
         <div className="max-w-[300px] sm:max-w-full mx-auto w-full p-2 rounded-xl cursor-pointer shadow hover:shadow-red-200 hover:shadow-md">
-            <div className="bg-sky-100 min-h-[200px]">
-                <img src={process.env.STRAPI_API_URL + item.photo.url} alt="" />
+            <div className=" min-h-[150px] max-h-[200px]  overflow-hidden">
+                <img src={process.env.STRAPI_API_URL + item.photo.url} alt="" className="" />
             </div>
             <div className="py-[10px] text-center">
                 {item.name}

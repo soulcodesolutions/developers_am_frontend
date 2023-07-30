@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import { Link, navigate } from 'gatsby'
 
+import { languages } from "../home/Home";
+
+
 
 export default function SideBar(props) {
 
-    const { navlinks = [], closeSidebar = () => { }, open = false } = props
+    const { navlinks = [], closeSidebar = () => { }, open = false,  location, language  } = props
 
     const [expand, setExpand] = useState(false)
 
@@ -67,6 +70,22 @@ export default function SideBar(props) {
                             </div>
                         )
                     })}
+                    <div className="flex uppercase">
+
+                      {languages.map(l => {
+                          return (
+                            <Link
+                                key={l}
+                                className=" min-w-[80px] text-center"
+                                to={location.pathname.replace(`/${language}`, `/${l}`)}
+                                activeClassName="text-red-800  font-bold bg-red-100"
+                                aria-disabled={l === language}
+                            >
+                                {l}
+                            </Link>
+                        )
+                    })}
+                    </div>
                 </div>
             </div>
         </>

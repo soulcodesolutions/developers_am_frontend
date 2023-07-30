@@ -86,7 +86,39 @@ module.exports = {
                 locale: "all",
               },
             }
-          }
+          },
+          {
+            singularName: "usefull-link",
+            queryParams: {
+              populate: {
+                legal_acts : {
+                  populate : {
+                    pdf : "*"
+                  }
+                },
+                association_documents :{
+                  populate : {
+                    pdf : "*"
+                  },
+                },
+                certifications :{
+                  populate : {
+                    pdf : "*"
+                  },
+                },
+                "usefull_links":{
+                  populate : {
+                    pdf : "*"
+                  }
+                }
+              }
+            },
+            pluginOptions: {
+              i18n: {
+                locale: "all",
+              },
+            }
+          },
         ]
       }
     }

@@ -10,7 +10,9 @@ import Navbar from "../../components/navbar";
 
 export default function Home({ location, data }) {
   const language = "en";
-  data = data.strapiHomePageV2;
+  console.log(data)
+  data = data?.strapiHomePageV2 || {};
+
   return (
     <>
       <Navbar language={language} />

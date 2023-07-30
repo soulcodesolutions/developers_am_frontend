@@ -27,7 +27,7 @@ function Content({ members, title }) {
                             <div 
                                 key={item.strapi_id}
                                 onClick={() => setSelectedItem(item)}
-                                className='shadow rounded-xl mx-auto max-w-[300px] cursor-pointer  hover:shadow-red-200 hover:shadow-md'
+                                className='shadow rounded-xl mx-auto w-full _max-w-[300px] cursor-pointer  hover:shadow-red-200 hover:shadow-md'
                                 >
                                 {PartnerBox(item)}
                             </div>

@@ -13,7 +13,7 @@ function Popup(props) {
         return (
             <div className="fixed top-0 left-0 bg-black/50 w-full h-full z-[100]">
                 <div className="flex justify-center h-screen items-center">
-                    <div className="absolute  rounded-xl w-fit overflow-auto ">
+                    <div className="absolute  rounded-xl w-full max-w-[1000px] overflow-auto ">
                         <Outsideclick onOutsideClick={props.onClose}>
                             <div className="w-full">
 
@@ -27,7 +27,7 @@ function Popup(props) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="bg-white h-full w-full rounded-b-xl  p-5 overflow-y-scroll max-h-[50vh]">
+                            <div className="bg-white h-full w-full rounded-b-xl  p-5 overflow-y-scroll max-h-[70vh]">
                                 {props?.children}
                             </div>
                             </div>

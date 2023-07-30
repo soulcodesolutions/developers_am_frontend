@@ -6,7 +6,7 @@ function PopupContent(props) {
 
     return ( <div className=''>
         <div className="photo mx-auto rounded-xl overflow-hidden  max-w-[200px]">
-            <div className="bg-sky-100 min-h-[200px]">
+            <div className=" min-h-[150px] max-h-[200px]">
                 <img src={process.env.STRAPI_API_URL + item.photo.url} alt="" />
             </div>
         </div>

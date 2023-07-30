@@ -29,7 +29,7 @@ export default function News({ data, language }) {
                     </JustAppear>
                     <div className="pt-[50px]">
                         <SlideBottom>
-                            <Link to="/news">
+                            <Link to={`/${language}/news`}>
                                 <Secondary className="max-w-[250px] mx-auto" label="View more" />
                             </Link>
                         </SlideBottom>

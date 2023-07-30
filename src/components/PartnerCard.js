@@ -86,8 +86,8 @@ export const PartnerBox = (item, index) => {
         className="px-[20px] sm:px-0"
         >
         <div className=" rounded-xl p-[10px] bg-white" >
-            <div className="photo mx-auto  overflow-hidden w-full ">
-                <img src={process.env.STRAPI_API_URL + item.photo.url} alt="" className="w-full mx-auto" />
+            <div className="photo mx-auto  overflow-hidden w-full max-h-[200px]">
+                <img src={process.env.STRAPI_API_URL + item?.photo?.url} alt="" className="w-full mx-auto" />
             </div>
             <div className="text-[16px] text-slate-500 text-center pt-[20px]">
                 {item.name}

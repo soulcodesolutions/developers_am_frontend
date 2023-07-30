@@ -3,7 +3,33 @@ import Logo from "../../images/Logo.webp"
 import { Link } from "gatsby";
 import { languages } from "../home/Home";
 
- const FloatingBar = ({ navlinks = [], openSideBar, location, language }) => {
+const FloatingBar = ({ navlinks = [], openSideBar, location, language }) => {
+
+    const ChangeLangButton = () => {
+
+        return (<div className="inline-block ml-[20px]   relative uppercase group cursor-pointer">
+            <div className="font-bold text-red-500" >
+                {language}
+            </div>
+            <div className="absolute invisible group-hover:visible">
+                <div className="   top-[30px] bg-white shadow rounded-xl overflow-hidden right-[10px]">
+                    {languages.map(l => {
+                        return (
+                            <Link
+                                key={l}
+                                className="inline-block min-w-[80px] text-center"
+                                to={location.pathname.replace(`/${language}`, `/${l}`)}
+                                activeClassName="text-red-800  font-bold bg-red-100"
+                                aria-disabled={l === language}
+                            >
+                                {l}
+                            </Link>
+                        )
+                    })}
+                </div>
+            </div>
+        </div>)
+    }
 
     return (<div>
         <div className="w-full fixed top-0 left-0 bg-white py-[20px] px-[10px] drop-shadow-xl z-[100]">
@@ -21,19 +47,10 @@ import { languages } from "../home/Home";
                         </Link>
                     </div>
                     <div className="nav-menu hidden lg:block">
-                        {languages.map(l => {
-                            return (
-                                <Link
-                                key={l}
-                                className="inline-block ml-[10px]"
-                                to={location.pathname.replace(`/${language}`, `/${l}`)}
-                                activeClassName="text-red-800  font-bold"
-                                aria-disabled={l===language}
-                                >
-                                    {l}
-                                </Link>
-                            )
-                        })}
+
+
+
+
                         {navlinks.map(item => {
                             return (<Link
                                 key={item.id}
@@ -44,6 +61,7 @@ import { languages } from "../home/Home";
                                 {item.lable}
                             </Link>);
                         })}
+                        <ChangeLangButton />
                     </div>
                     <div className="block lg:hidden">
                         <div onClick={() => openSideBar()} className="w-fit cursor-pointer">
