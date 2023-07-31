@@ -6,6 +6,15 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    container: {
+      padding: {
+        DEFAULT: '10px',
+        sm: '5px',
+        lg: '30px',
+        xl: '50px',
+        '2xl': '100px',
+      },
+    },
   },
   plugins: [],
 }
