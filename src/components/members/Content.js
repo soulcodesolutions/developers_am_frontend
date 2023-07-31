@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import MarkdownView from "react-showdown";
 import { CompanyBox } from "./CompanyCard"
 import Popup from '../Popup';
 import { useState } from 'react';
 import PopupContent from './PopupContent';
 
-function Content({ members, title }) {
+// import { useQueryParam, NumberParam, StringParam } from "use-query-params";
+// import { useSearchParams } from "react-router-dom"; 
+
+function Content({ members, title, location, language }) {
 
     const [selectedItem, setSelectedItem] = useState(null)
+    // const [strapiId, setstrapiId] = useQueryParam("strapiId", NumberParam);
+
+    const params = new URLSearchParams(location.search);
+    const strapiId = params.get("strapiId");
+
+
+    // alert(parameter1)
+
+    useEffect(() => {
+        if(strapiId){
+            const result = members?.find(item => item?.strapi_id == strapiId)
+            setSelectedItem(result)
+        }
+    }, [strapiId])
+
 
     return (<div>
         <div className="pt-[150px] py-[50px]">
@@ -23,7 +41,7 @@ function Content({ members, title }) {
                                 onClick={() => setSelectedItem(item)}
 
                                 >
-                                {CompanyBox(item)}
+                                {CompanyBox(item, language)}
                             </div>
                         ) })}
                     </div>

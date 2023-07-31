@@ -41,6 +41,7 @@ query HomeQuery {
       news_heading
       news_articles {
         strapi_id
+        slug
         title
         description
         thumbnail {

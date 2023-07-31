@@ -13,7 +13,7 @@ function Members({ location, data }) {
     }
     return (<div>
         <Navbar location={location} language={language} />
-        <Content members={data.allStrapiMember.nodes} title={data.strapiHomePageV2.members_heading} />
+        <Content members={data.allStrapiMember.nodes} title={data.strapiHomePageV2.members_heading} location={location} language={language} />
         <Contact data={{ title: data.strapiHomePageV2.contact_heading }} />
         <Footer />
 

@@ -3,12 +3,26 @@ import MarkdownView from "react-showdown";
 import { PartnerBox } from "../PartnerCard"
 
 import Popup from '../Popup';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PopupContent from './PopupContent';
 
-function Content({ members, title }) {
+function Content({ members, title, location, language }) {
 
     const [selectedItem, setSelectedItem] = useState(null)
+
+    const params = new URLSearchParams(location.search);
+    const strapiId = params.get("strapiId");
+
+
+    // alert(parameter1)
+
+    useEffect(() => {
+        if(strapiId){
+            const result = members?.find(item => item?.strapi_id == strapiId)
+            setSelectedItem(result)
+        }
+    }, [strapiId])
+
 
     return (<div>
         <div className="pt-[150px] py-[50px]">
@@ -29,7 +43,7 @@ function Content({ members, title }) {
                                 onClick={() => setSelectedItem(item)}
                                 className='shadow rounded-xl mx-auto w-full _max-w-[300px] cursor-pointer  hover:shadow-red-200 hover:shadow-md'
                                 >
-                                {PartnerBox(item)}
+                                {PartnerBox(item, language)}
                             </div>
                         ) })}
                     </div>

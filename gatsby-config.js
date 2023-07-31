@@ -10,6 +10,7 @@ module.exports = {
   siteMetadata,
   plugins: [
     "gatsby-plugin-postcss",
+    // "gatsby-plugin-use-query-params",
     {
       resolve: "gatsby-plugin-i18n",
       options: {

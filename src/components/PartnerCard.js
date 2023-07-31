@@ -2,9 +2,11 @@ import React, { useRef } from "react";
 import Swiper from 'react-id-swiper';
 import SwiperCore, { Autoplay, Navigation } from 'swiper';
 import 'swiper/css/bundle';
+import { Link } from "gatsby";
+
 
 function PartnerCard(props) {
-    const { items = {} } = props
+    const { items = {}, language } = props
     const swiperRef = useRef(null);
     SwiperCore.use([Autoplay, Navigation]);
 
@@ -61,18 +63,18 @@ function PartnerCard(props) {
         <div className="">
             <div className="desktop  relative">
 
-                <div className="container mx-auto px-[10px] h-full w-full absolute z-[20] ">
-                    <div className="absolute left-0 top-[calc(50%-30px)] -translate-x-[10px]  sm:-translate-x-[60px] rotate-180">  <NextIcon onClick={() => goPrev()} /> </div>
-                    <div className="absolute right-0  top-[calc(50%-30px)] translate-x-[10px]  sm:translate-x-[60px] "> <NextIcon onClick={() => goNext()} /> </div>
-                </div>
                 <div className=" mx-auto">
                     <div className=" overflow-hidden  " >
                         {items.length > 0 &&
                             <Swiper {...params} ref={swiperRef}>
-                                {items.map(PartnerBox)}
+                                {items.map((item) => PartnerBox(item, language))}
                             </Swiper>
                         }
                     </div>
+                </div>
+                <div className="container mx-auto px-[10px] w-full absolute z-[20] ">
+                    <div className="absolute left-0 top-[-120px] -translate-x-[10px]  sm:-translate-x-[60px] rotate-180">  <NextIcon onClick={() => goPrev()} /> </div>
+                    <div className="absolute right-0  top-[-120px] translate-x-[10px]  sm:translate-x-[60px] "> <NextIcon onClick={() => goNext()} /> </div>
                 </div>
             </div>
         </div>
@@ -80,11 +82,13 @@ function PartnerCard(props) {
 
 }
 
-export const PartnerBox = (item, index) => {
+export const PartnerBox = (item, language) => {
     return (<div
         key={item?.id}
         className="px-[20px] sm:px-0"
         >
+             <Link to={`/${language}/partners?strapiId=${item.strapi_id}`}>
+
         <div className=" rounded-xl p-[10px] bg-white" >
             <div className="photo mx-auto  overflow-hidden w-full max-h-[200px]">
                 <img src={process.env.STRAPI_API_URL + item?.photo?.url} alt="" className="w-full mx-auto" />
@@ -94,6 +98,7 @@ export const PartnerBox = (item, index) => {
             </div>
 
         </div>
+             </Link>
     </div>)
 }
 

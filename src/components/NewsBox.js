@@ -7,7 +7,9 @@ function NewsBox({ item, language}) {
     <div key={item?.strapi_id} className="px-[20px] sm:px-0 ">
         <Link to={`/${language}/news/${item?.slug}`}>
             <div className={`border-0 shadow-lg hover:shadow-red-200 cursor-pointer border-red-800 p-[20px] rounded-sm`}  >
-                <div className="img w-full h-[150px] bg-sky-100"></div>
+                <div className="img w-full h-[150px] bg-sky-100 overflow-hidden rounded-sm">
+                    <img src={`${process.env.GATSBY_STRAPI_API_URL}${item?.thumbnail?.url}`} className="" alt="" />
+                </div>
                 <div className="text-[16px] pt-[10px]">
                     {item?.title}
                 </div>

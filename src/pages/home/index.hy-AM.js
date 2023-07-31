@@ -42,6 +42,7 @@ query ArmenianQuery {
     news_articles {
       strapi_id
       title
+      slug
       description
       thumbnail {
         url

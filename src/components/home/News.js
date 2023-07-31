@@ -23,7 +23,7 @@ export default function News({ data, language }) {
                     <JustAppear>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
                             {data?.members?.map(item =>
-                                <NewsBox key={item.strapi_id} item={item} />
+                                <NewsBox key={item.strapi_id} item={item} language={language} />
                             )}
                         </div>
                     </JustAppear>

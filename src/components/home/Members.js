@@ -18,9 +18,9 @@ export default function Members({ data, language }) {
                     </div>
                     <ViewAll to={`/${language}/members`} />
                 </div>
-                <div className="pt-[50px]">
+                <div className="pt-[50px] ">
                     <JustAppear>
-                        <CompanyCard items={data?.members} />
+                        <CompanyCard items={data?.members} language={language} />
                     </JustAppear>
                 </div>
             </div>
