@@ -18,7 +18,7 @@ query MembersQuery {
       nodes {
         strapi_id
         name
-        position
+        position 
         photo {
           url
         }

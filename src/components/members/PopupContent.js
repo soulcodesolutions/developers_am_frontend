@@ -16,6 +16,9 @@ function PopupContent(props) {
         <div className="text-[16px] text-center  text-slate-500">
             {item.position}
         </div>
+        <div className="text-[16px] text-center  pt-[20px]">
+            {item?.description}
+        </div>
     </div> );
 }
 
