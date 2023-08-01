@@ -7,28 +7,44 @@ import MarkdownView from 'react-showdown';
 
 
 function NewsArticle({ location, data, pageContext }) {
-    console.log('Page Context  -> ', pageContext);
-    console.log('Data -> ', data);
-    console.log('Location -> ', location);
-    data = data.strapiNewsArticle
-    return (<div>
-        <Navbar location={location} language={pageContext.locale} />
-        <div className="container mx-auto pt-[150px] py-[50px]">
-            <div className="text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
-                {data.title}
+  console.log('Page Context  -> ', pageContext);
+  console.log('Data -> ', data);
+  console.log('Location -> ', location);
+  data = data.strapiNewsArticle
+  return (<div>
+    <Navbar location={location} language={pageContext.locale} />
+    <div className="header ">
+      <div className="container mx-auto pt-[150px] ">
+        <div className="header ">
+          <div className="w-full">
+            <div className='w-full rounded-xl overflow-hidden bg-red-100'>
+              <img src={`${process.env.STRAPI_API_URL}${data?.cover.url}`} alt="" className='w-full' />
             </div>
-            <div>
-                <MarkdownView markdown={data.content.data.content} />
-            </div>
-            <div>
-              <img src={`${process.env.STRAPI_API_URL}${data?.thumbnail.url}`} alt="" />
-              {/* <img src={data?.thumbnail.url} alt=""  className='w-[12px] h-[12px]'/> */}
-            </div>
-        </div>
-        <Contact />
-        <Footer />
 
-    </div>);
+          </div>
+          <div className="content px-[10px]">
+            <div className="text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
+              {data.title}
+            </div>
+            <div className="text-[16px]  text-center sm:text-left font-bold text-slate-800">
+              {data.description}
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="container mx-auto pt-[50px] py-[50px]">
+
+      <div>
+        <MarkdownView markdown={data.content.data.content} />
+      </div>
+    </div>
+    <Contact />
+    <Footer />
+
+  </div>);
 }
 
 export default NewsArticle;

@@ -75,7 +75,18 @@ type STRAPI_PARTNER implements Node @derivedTypes @dontInfer {
   localizations: STRAPI_PARTNERLocalizations
   photo: STRAPI__MEDIA @link(by: "id", from: "photo___NODE")
   strapi_id: Int
+  description : STRAPI_PARTNERDescription
 }
+
+
+type  STRAPI_PARTNERDescription {
+  data: STRAPI_PARTNER_DESCRIPTION_TEXTNODE @link(by: "id", from: "data___NODE")
+}
+
+type STRAPI_PARTNER_DESCRIPTION_TEXTNODE implements Node @dontInfer {
+  description: String
+}
+
 
 type STRAPI_PARTNERLocalizations @derivedTypes {
   data: [STRAPI_PARTNERLocalizationsData]
@@ -118,6 +129,7 @@ type STRAPI_NEWS_ARTICLEContent {
   data: STRAPI_NEWS_ARTICLE_CONTENT_TEXTNODE @link(by: "id", from: "data___NODE")
 }
 
+
 type STRAPI_NEWS_ARTICLELocalizations @derivedTypes {
   data: [STRAPI_NEWS_ARTICLELocalizationsData]
 }
@@ -145,9 +157,19 @@ type STRAPI_MEMBER implements Node @derivedTypes @dontInfer {
   publishedAt: Date @dateformat
   locale: String
   position: String
+  description : STRAPI_MEMBERDescription
   localizations: STRAPI_MEMBERLocalizations
   photo: STRAPI__MEDIA @link(by: "id", from: "photo___NODE")
   strapi_id: Int
+}
+
+
+type  STRAPI_MEMBERDescription {
+  data: STRAPI_MEMBER_DESCRIPTION_TEXTNODE @link(by: "id", from: "data___NODE")
+}
+
+type STRAPI_MEMBER_DESCRIPTION_TEXTNODE implements Node @dontInfer {
+  description: String
 }
 
 type STRAPI_MEMBERLocalizations @derivedTypes {
@@ -192,7 +214,7 @@ type STRAPI_HOME_PAGE_V_2 implements Node @dontInfer {
 type STRAPI_COUNCIL implements Node @derivedTypes @dontInfer {
   name: String
   position: String
-  description: String
+  description: STRAPI_COUNCILDescription
   createdAt: Date @dateformat
   updatedAt: Date @dateformat
   publishedAt: Date @dateformat
@@ -201,6 +223,17 @@ type STRAPI_COUNCIL implements Node @derivedTypes @dontInfer {
   photo: STRAPI__MEDIA @link(by: "id", from: "photo___NODE")
   strapi_id: Int
 }
+
+
+
+type  STRAPI_COUNCILDescription {
+  data: STRAPI_COUNCIL_DESCRIPTION_TEXTNODE @link(by: "id", from: "data___NODE")
+}
+
+type STRAPI_COUNCIL_DESCRIPTION_TEXTNODE implements Node @dontInfer {
+  description: String
+}
+
 
 type STRAPI_COUNCILLocalizations @derivedTypes {
   data: [STRAPI_COUNCILLocalizationsData]

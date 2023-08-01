@@ -16,7 +16,11 @@ query CouncilQuery {
         strapi_id
         name
         position
-        description
+        description  {
+          data {
+            description
+          }
+        }
         photo {
           url
         }

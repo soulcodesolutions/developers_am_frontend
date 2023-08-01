@@ -1,4 +1,5 @@
 import React from 'react';
+import MarkdownView from 'react-showdown';
 
 function PopupContent(props) {
 
@@ -17,7 +18,8 @@ function PopupContent(props) {
             {item.position}
         </div>
         <div className="text-[16px] text-center  pt-[20px]">
-            {item?.description}
+            <MarkdownView markdown={item?.description?.data?.description} />
+            
         </div>
     </div> );
 }

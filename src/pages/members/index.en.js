@@ -19,6 +19,11 @@ query MembersQuery {
         strapi_id
         name
         position 
+        description  {
+          data {
+            description
+          }
+        }
         photo {
           url
         }

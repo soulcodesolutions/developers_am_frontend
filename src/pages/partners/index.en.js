@@ -18,6 +18,11 @@ query PartnersQuery {
       photo {
         url
       }
+      description  {
+        data {
+          description
+        }
+      }
     }
   }
   strapiHomePageV2(locale: {eq: "en"}) {

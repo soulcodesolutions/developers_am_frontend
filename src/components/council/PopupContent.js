@@ -16,7 +16,7 @@ function PopupContent({ item }) {
             {item.position}
         </div>
         <JustAppear className="text-center pt-[20px]">
-            <MarkdownView markdown={item.description} />
+            <MarkdownView markdown={item.description?.data?.description} />
         </JustAppear>
     </div> );
 }
