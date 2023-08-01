@@ -16,7 +16,7 @@ function NewsList({ location, data }) {
         <Navbar location={location} language={language} />
         <Content members={data.allStrapiNewsArticle.nodes} title={data.strapiHomePageV2.news_heading} language={language} />
         <Contact data={{ title: data.strapiHomePageV2.contact_heading }} />
-        <Footer />
+        <Footer language={language} />
 
     </div>);
 }

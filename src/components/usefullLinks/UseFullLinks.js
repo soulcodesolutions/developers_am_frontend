@@ -24,7 +24,7 @@ function usefullLinks({ location, data }) {
          <Navbar language={language} location={location} />
         <Content data={data} />
         <Contact />
-        <Footer />
+        <Footer language={language} />
     </div>);
 }
 
