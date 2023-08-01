@@ -13,7 +13,7 @@ function Contact({ data }) {
             }}
             className=" bg-cover bg-top bg-fixed_"
         >
-            <div className="pt-[100px] py-[50px] _bg-slate-100 backdrop-blur-sm ">
+            <div id='contact' className="pt-[100px] py-[50px] _bg-slate-100 backdrop-blur-sm ">
                 <div className="container mx-auto">
                     <JustAppear>
                         <div className="content ">

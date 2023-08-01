@@ -2,11 +2,11 @@ import React from "react";
 
 export default function Primary(props) {
     const {className = "",
-    //  onClick = (e) => {}, 
+     onClick = (e) => {}, 
      label = "Button" } = props
 
     return (<div 
-        // onClick={onClick}
+        onClick={onClick}
         className={`rounded-xl p-[10px] bg-red-700 ${className} text-white text-center font-bold`}>
         {label}
     </div>  );

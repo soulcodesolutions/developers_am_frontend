@@ -6,6 +6,8 @@ import { getNavLinks } from "../navbar";
 
 function Footer({ language }) {
     const navlinks = getNavLinks(language);
+
+    
     return (<div className="w-full bg-slate-800">
         <div className="container mx-auto pt-[50px] sm:pt-[50px] pb-[30px]">
             <div className="flex flex-wrap sm:flex-nowrap justify-between items-start">

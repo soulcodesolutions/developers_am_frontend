@@ -5,6 +5,14 @@ import Primary from '../button/Primary'
 import { JustAppear, SlideLeft, SlideRight } from "../SlideAnimation";
 
 export default function Hero({ data }) {
+
+    const handleButtonClick = () => {
+        let elem = document.getElementById("contact")
+            if (elem) {
+                elem.scrollIntoView({behavior: "smooth"})
+            }
+    }
+
     return (<div
         style={{
             backgroundImage: `url(${Bg})`
@@ -27,7 +35,9 @@ export default function Hero({ data }) {
                 </div>
                 <div className="py-[20px]">
                     <JustAppear>
-                        <Primary label="Contact us" className="max-w-[300px]" />
+                        <Primary 
+                            onClick={handleButtonClick}
+                            label="Contact us" className="max-w-[300px] cursor-pointer" />
                     </JustAppear>
                 </div>
             </div>
