@@ -6,7 +6,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     // Manually defining the Types instead of letting Gatbsy auto infer it from the recieved payload. 
     // This helps to avoid crashes when we try to build without filling out everything on strapi.
     // If you're making changes to your strapi schema, you might have to make changes here as well.
-    createTypes(strapiTypeDefs);
+    // createTypes(strapiTypeDefs);
 }
 
 exports.createPages = async ({ graphql, actions, reporter }) => {

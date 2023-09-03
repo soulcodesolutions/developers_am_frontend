@@ -37,3 +37,14 @@ html, body {
   border-radius: 0px;
 }
 
+li{
+  padding-left: 20px;
+  padding-top: 2px;
+  /* list-style-type: disc; */
+}
+
+ul li:before {
+  content: '\2014';
+  position: absolute;
+  margin-left: -20px;
+}

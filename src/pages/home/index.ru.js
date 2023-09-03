@@ -8,7 +8,7 @@ export default function Index({ location, data }) {
 
 export const query = graphql`
 query ArmenianQuery {
-  strapiHomePageV2(locale: {eq: "hy-AM"}) {
+  strapiHomePageV2(locale: {eq: "ru"}) {
     sub_heading
     hero_text
     about_heading

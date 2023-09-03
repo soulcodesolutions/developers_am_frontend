@@ -22,7 +22,7 @@ export default function Council({ data, language="en" }) {
                 <div className="pt-[50px]">
                     <div className="">
                         <JustAppear>
-                            <UserCard items={data?.members} />
+                            <UserCard items={data?.members} language={language} />
                         </JustAppear>
                     </div>
                     <div className="pt-[50px] w-full ">

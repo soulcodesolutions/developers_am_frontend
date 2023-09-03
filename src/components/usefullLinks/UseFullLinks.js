@@ -6,9 +6,9 @@ import Footer from "../footer";
 
 import Content from './Content';
 
-import Contact  from '../home/Contact';
+// import Contact  from '../home/Contact';
 
-export const languages = ["en", "hy-AM"];
+export const languages = ["en", "hy-AM", "ru"];
 
 
 function usefullLinks({ location, data }) {
@@ -23,8 +23,8 @@ function usefullLinks({ location, data }) {
     return (  <div>
          <Navbar language={language} location={location} />
         <Content data={data} />
-        <Contact />
-        <Footer />
+        {/* <Contact /> */}
+        <Footer  language={language}  />
     </div>);
 }
 

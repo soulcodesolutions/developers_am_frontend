@@ -5,33 +5,96 @@ import SideBar from "./SideBar";
 
 
 export function getNavLinks(language) {
-    return [
-        {
-            id: 3,
-            lable: "Association council",
-            link: `/${language}/council`,
-        },
-        {
-            id: 4,
-            lable: "Association members",
-            link: `/${language}/members`,
-        },
-        {
-            id: 5,
-            lable: "Our partners",
-            link: `/${language}/partners`,
-        },
-        {
-            id: 5,
-            lable: "News",
-            link: `/${language}/news`,
-        },
-        {
-            id: 5,
-            lable: "Useful links",
-            link: `/${language}/usefullLinks`,
-        },
-    ]
+
+    if(language === "ru"){
+
+        return [
+            {
+                id: 3,
+                lable: "Совет ассоциации",
+                link: `/${language}/council`,
+            },
+            {
+                id: 4,
+                lable: "Члены ассоциации",
+                link: `/${language}/members`,
+            },
+            {
+                id: 5,
+                lable: "Наши партнеры",
+                link: `/${language}/partners`,
+            },
+            {
+                id: 5,
+                lable: "Новости",
+                link: `/${language}/news`,
+            },
+            {
+                id: 5,
+                lable: "Полезные ссылки",
+                link: `/${language}/usefullLinks`,
+            },
+        ]
+        
+    } else if(language === "hy-AM"){
+
+        return [
+            {
+                id: 3,
+                lable: "Ասոցիացիայի խորհուրդl",
+                link: `/${language}/council`,
+            },
+            {
+                id: 4,
+                lable: "Ասոցիացիայի անդամներ",
+                link: `/${language}/members`,
+            },
+            {
+                id: 5,
+                lable: "Մեր գործընկերները",
+                link: `/${language}/partners`,
+            },
+            {
+                id: 5,
+                lable: "Նորություններ",
+                link: `/${language}/news`,
+            },
+            {
+                id: 5,
+                lable: "Օգտակար հղումներ",
+                link: `/${language}/usefullLinks`,
+            },
+        ]
+    } else {
+
+        return [
+            {
+                id: 3,
+                lable: "Association council",
+                link: `/${language}/council`,
+            },
+            {
+                id: 4,
+                lable: "Association members",
+                link: `/${language}/members`,
+            },
+            {
+                id: 5,
+                lable: "Our partners",
+                link: `/${language}/partners`,
+            },
+            {
+                id: 5,
+                lable: "News",
+                link: `/${language}/news`,
+            },
+            {
+                id: 5,
+                lable: "Useful links",
+                link: `/${language}/usefullLinks`,
+            },
+        ]
+    }
 }
 
 function Navbar({ location, language }) {

@@ -12,6 +12,8 @@ const getRedirectLanguage = () => {
   switch (lang) {
     case "hy":
       return "hy-AM";
+    case "ru":
+      return "ru";
     default:
       return "en";
   }

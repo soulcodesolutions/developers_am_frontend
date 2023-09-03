@@ -12,7 +12,7 @@ function PopupContent(props) {
         <div className="text-[20px] text-center pt-[20px]">
             {item.name}
         </div>
-        <div className="text-[16px] text-center  text-slate-500 pt-[20px]">
+        <div className="text-[16px] text-  text-slate-500 pt-[20px]">
             <MarkdownView markdown={item.description?.data?.description} />
             
         </div>

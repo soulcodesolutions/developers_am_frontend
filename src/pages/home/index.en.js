@@ -12,7 +12,11 @@ query HomeQuery {
       sub_heading
       hero_text
       about_heading
-      about_content
+      about_content {
+        data {
+          about_content
+        }
+      }
       council_heading
       council {
         strapi_id

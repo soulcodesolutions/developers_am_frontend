@@ -1,10 +1,12 @@
 import React, { useRef } from "react";
+import { Link, navigate } from "gatsby";
+
 import 'swiper/css/bundle';
 import Swiper from 'react-id-swiper';
 import SwiperCore, { Autoplay, Navigation } from 'swiper';
 
 export function UserCard(props) {
-    const { items = {} } = props
+    const { items = {}, language } = props
 
 
 
@@ -61,29 +63,41 @@ export function UserCard(props) {
         <div className="">
             <div className="desktop  relative">
 
-                <div className="container mx-auto px-[10px] h-full w-full absolute z-[20] ">
-                    <div className="absolute left-0 top-[calc(50%-30px)] -translate-x-[10px]  sm:-translate-x-[60px] rotate-180">  <NextIcon onClick={() => goPrev()} /> </div>
-                    <div className="absolute right-0  top-[calc(50%-30px)] translate-x-[10px]  sm:translate-x-[60px] "> <NextIcon onClick={() => goNext()} /> </div>
-                </div>
                 <div className=" mx-auto">
 
                     <div className=" overflow-hidden  " >
 
                         {items.length > 0 &&
                             <Swiper {...params} ref={swiperRef}>
-                                {items.map(UserBox)}
+                                {items.map((item) => UserBox({item, language}))}
 
                             </Swiper>
                         }
                     </div>
+                </div>
+                <div className="container mx-auto px-[10px] h-full w-full absolute z-[20] ">
+                    <div className="absolute left-0 top-[calc(-150px)] -translate-x-[10px]  sm:-translate-x-[60px] rotate-180">  <NextIcon onClick={() => goPrev()} /> </div>
+                    <div className="absolute right-0  top-[calc(-150px)] translate-x-[10px]  sm:translate-x-[60px] "> <NextIcon onClick={() => goNext()} /> </div>
                 </div>
             </div>
         </div>
     )
 }
 
-function UserBox(item) {
-    return (<div key={item?.strapi_id} className="max-w-[250px]_ bg-white rounded-xl p-[20px]" >
+function UserBox({item, language}) {
+
+    // const navigate = useNavigate()
+
+    const navigateTo = () => {
+        // alert("")
+        navigate(`/${language}/council?strapiId=${item.strapi_id}`)
+    }
+
+    return (<div
+            onClick={() => navigateTo()}
+            key={item?.strapi_id} className="max-w-[250px]_ bg-white rounded-xl p-[20px] _max-h-[350px] h-full min-h-[300px]" >
+          {/* <Link to={`/${language}/council?strapiId=${item.strapi_id}`}> */}
+
         <div className="max-w-[200px] lg:max-w-[180px] photo mx-auto rounded-full overflow-hidden">
            
             <img src={`${process.env.GATSBY_STRAPI_API_URL}${item?.photo?.url}`} alt="" className="w-full" />
@@ -94,6 +108,7 @@ function UserBox(item) {
         <div className="text-[16px] text-center  text-slate-500">
             {item.position}
         </div>
+          {/* </Link> */}
     </div>)
 }
 

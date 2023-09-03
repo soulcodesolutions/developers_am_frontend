@@ -13,8 +13,8 @@ function Partners({ location, data }) {
     return (<div>
         <Navbar location={location} language={language} />
         <Content members={data.allStrapiPartner.nodes} title={data.strapiHomePageV2.partner_heading} location={location} language={language}  />
-        <Contact data={{ title: data.strapiHomePageV2.contact_heading }} />
-        <Footer />
+        {/* <Contact data={{ title: data.strapiHomePageV2.contact_heading }} /> */}
+        <Footer language={language}   data={{ title: data.strapiHomePageV2.contact_heading }} />
 
     </div>);
 }
