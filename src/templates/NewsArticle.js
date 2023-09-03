@@ -7,9 +7,9 @@ import MarkdownView from 'react-showdown';
 
 
 function NewsArticle({ location, data, pageContext }) {
-  console.log('Page Context  -> ', pageContext);
+  // console.log('Page Context  -> ', pageContext);
   console.log('Data -> ', data);
-  console.log('Location -> ', location);
+  // console.log('Location -> ', location);
   data = data.strapiNewsArticle
   return (<div>
     <Navbar location={location} language={pageContext.locale} />
@@ -29,6 +29,9 @@ function NewsArticle({ location, data, pageContext }) {
             <div className="text-[16px]  text-center sm:text-left font-bold text-slate-800">
               {data.description}
             </div>
+            <div className="text-[14px] pt-[10px] text-center sm:text-left font-bold text-slate-500">
+              {data.display_date} 
+            </div>
 
           </div>
         </div>
@@ -41,7 +44,7 @@ function NewsArticle({ location, data, pageContext }) {
         <MarkdownView markdown={data.content.data.content} />
       </div>
     </div>
-    <Contact />
+    {/* <Contact /> */}
     <Footer />
 
   </div>);
@@ -57,7 +60,7 @@ export const query = graphql`
       strapi_id
       title
       description
-      
+      display_date
       thumbnail {
         url
       }

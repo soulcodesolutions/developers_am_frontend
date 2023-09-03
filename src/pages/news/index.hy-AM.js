@@ -11,12 +11,16 @@ export default function Index({ location, data }) {
 
 export const query = graphql`
 query NewsListQuery {
-  allStrapiNewsArticle(filter: {locale: {eq: "hy-AM"}}) {
+  allStrapiNewsArticle(
+    filter: {locale: {eq: "hy-AM"}}
+    sort: [{ display_date : DESC }, { createdAt : DESC}]
+    ) {
     nodes {
       strapi_id
       slug
       title
       description
+      display_date
       thumbnail {
         url
       }
