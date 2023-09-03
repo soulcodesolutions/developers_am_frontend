@@ -8,7 +8,7 @@ function PopupContent(props) {
     return ( <div className=''>
         <div className="photo mx-auto rounded-xl overflow-hidden  max-w-[200px]">
             <div className=" min-h-[150px] max-h-[200px]">
-                <img src={process.env.GATSBY_STRAPI_API_URL + item.photo.url} alt="" />
+                <img src={process.env.GATSBY_STRAPI_API_URL + item?.photo?.url} alt="" />
             </div>
         </div>
         <div className="text-[20px] text-center pt-[20px]">

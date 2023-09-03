@@ -84,7 +84,7 @@ export function UserCard(props) {
     )
 }
 
-function UserBox({item, language}) {
+function UserBox({item = {}, language}) {
 
     // const navigate = useNavigate()
 
