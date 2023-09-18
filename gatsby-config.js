@@ -23,7 +23,7 @@ module.exports = {
     {
       resolve: "gatsby-source-strapi",
       options: {
-        apiURL: process.env.STRAPI_API_URL || "http://localhost:1337",
+        apiURL: process.env.STRAPI_API_URL || "https://developers.soulcodesolutions.com",
         accessToken: process.env.STRAPI_TOKEN,
         collectionTypes: [
           {

@@ -30,7 +30,7 @@ function Content({ title, members, language, location }) {
                     <div className="grid gird-cols-1  sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
                         {members?.map((item,index) => { return (
                             <div 
-                                key={item.strapi_id}
+                                key={item?.strapi_id}
                                 // onClick={() => setSelectedItem(item)}
                                 className='shadow rounded-xl cursor-pointer hover:shadow-red-200 hover:shadow-md'
                                 >

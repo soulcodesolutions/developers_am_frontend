@@ -86,15 +86,15 @@ function CompanyCard(props) {
     </div>);
 }
 
-export const CompanyBox = (item, language) => {
-    return (<div key={item.strapi_id} className={"mx-auto py-[10px] cursor-pointer "}>
-        <Link to={`/${language}/members?strapiId=${item.strapi_id}`}>
+export const CompanyBox = (item = {}, language) => {
+    return (<div key={item?.strapi_id} className={"mx-auto py-[10px] cursor-pointer "}>
+        <Link to={`/${language}/members?strapiId=${item?.strapi_id}`}>
             <div className="max-w-[300px] sm:max-w-full mx-auto w-full p-2 rounded-xl cursor-pointer shadow hover:shadow-red-200 hover:shadow-md">
                 <div className=" min-h-[150px] max-h-[200px]  overflow-hidden">
-                    <img src={process.env.GATSBY_STRAPI_API_URL + item.photo.url} alt="" className="mx-auto" />
+                    <img src={process.env.GATSBY_STRAPI_API_URL + item?.photo?.url} alt="" className="mx-auto" />
                 </div>
                 <div className="py-[10px] text-center">
-                    {item.name}
+                    {item?.name}
                 </div>
             </div>
         </Link>

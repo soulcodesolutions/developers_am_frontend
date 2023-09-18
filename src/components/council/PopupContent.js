@@ -10,10 +10,10 @@ function PopupContent({ item }) {
             <img src={process.env.GATSBY_STRAPI_API_URL + item?.photo?.url} alt="" className="w-full" />
         </div>
         <div className="text-[20px] text-center pt-[20px]">
-            {item.name}
+            {item?.name}
         </div>
         <div className="text-[16px] text-center  text-slate-500">
-            {item.position}
+            {item?.position}
         </div>
         <JustAppear className="text- pt-[20px]">
             <MarkdownView markdown={item.description?.data?.description} />
