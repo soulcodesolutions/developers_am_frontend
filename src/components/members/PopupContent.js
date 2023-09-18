@@ -17,8 +17,14 @@ function PopupContent(props) {
         <div className="text-[16px] text-center  text-slate-500">
             {item?.position}
         </div>
-        <div className="text-[16px] text-  pt-[20px]">
-            <MarkdownView markdown={item?.description?.data?.description} />
+        <div className="text-[16px] text-  pt-[20px] popup_container">
+            <MarkdownView 
+                markdown={item?.description?.data?.description}
+                options={{
+                    openLinksInNewWindow : true,
+                    simplifiedAutoLink : true
+                }}
+                />
             
         </div>
     </div> );

@@ -38,10 +38,16 @@ function NewsArticle({ location, data, pageContext }) {
       </div>
     </div>
 
-    <div className="container mx-auto pt-[50px] py-[50px]">
+    <div className="container mx-auto pt-[50px] py-[50px] popup_container">
 
       <div>
-        <MarkdownView markdown={data.content.data.content} />
+        <MarkdownView 
+          markdown={data?.content?.data?.content}
+          options={{
+            openLinksInNewWindow : true,
+            simplifiedAutoLink : true
+        }}
+          />
       </div>
     </div>
     {/* <Contact /> */}

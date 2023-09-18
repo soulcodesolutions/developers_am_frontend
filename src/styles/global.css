@@ -48,3 +48,8 @@ ul li:before {
   position: absolute;
   margin-left: -20px;
 }
+
+.popup_container a {
+  /* text-decoration: underline; */
+  color: blue;
+}
