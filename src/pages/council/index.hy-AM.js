@@ -15,7 +15,7 @@ query CouncilQuery {
       nodes {
         strapi_id
         name
-        position
+        
         description  {
           data {
             description
