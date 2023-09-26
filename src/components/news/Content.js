@@ -2,6 +2,7 @@ import React from 'react';
 import MarkdownView from "react-showdown";
 import { useState } from 'react';
 import NewsBox from '../NewsBox';
+import { GoBack } from '../ViewAll';
 
 function Content({ members, title, language }) {
 
@@ -10,8 +11,14 @@ function Content({ members, title, language }) {
     return (<div>
         <div className="pt-[150px] py-[50px]">
             <div className="container mx-auto">
-                <div className="text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
-                    <MarkdownView markdown={title} />
+            <div className="flex justify-center sm:justify-between items-center">
+                    <div className="text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800 ">
+                        <   MarkdownView markdown={title} />
+                    </div>
+                    <div>
+
+                        <GoBack />
+                    </div>
                 </div>
                 <div className="pt-[50px]">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">

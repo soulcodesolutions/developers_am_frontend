@@ -79,8 +79,8 @@ function CompanyCard(props) {
                 </div>
             </div>
                 <div className="container mx-auto px-[10px]  w-full absolute z-[20] ">
-                    <div className="absolute left-0 top-[calc(-150px)] -translate-x-[10px]  sm:-translate-x-[60px] rotate-180">  <NextIcon onClick={() => goPrev()} /> </div>
-                    <div className="absolute right-0  top-[calc(-150px)] translate-x-[10px]  sm:translate-x-[60px] "> <NextIcon onClick={() => goNext()} /> </div>
+                    <div className="absolute left-0 top-[calc(-180px)] -translate-x-[10px]  sm:-translate-x-[60px] rotate-180">  <NextIcon onClick={() => goPrev()} /> </div>
+                    <div className="absolute right-0  top-[calc(-180px)] translate-x-[10px]  sm:translate-x-[60px] "> <NextIcon onClick={() => goNext()} /> </div>
                 </div>
         </div>
     </div>);
