@@ -40,7 +40,11 @@ export function UserCard(props) {
             disableOnInteraction: false
         },
         breakpoints: {
-            700: {
+            1000: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1200: {
                 slidesPerView: 4,
                 spaceBetween: 20,
             }

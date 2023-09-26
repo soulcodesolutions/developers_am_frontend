@@ -44,7 +44,7 @@ function CompanyCard(props) {
 
             },
             1000: {
-                slidesPerView: 3,
+                slidesPerView: 4,
                 spaceBetween: 20,
 
             },
@@ -66,7 +66,7 @@ function CompanyCard(props) {
     return (<div>
         <div className="desktop  relative">
 
-            <div className="container mx-auto">
+            <div className=" mx-auto">
 
                 <div className=" overflow-hidden  " >
 

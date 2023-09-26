@@ -38,7 +38,7 @@ function PartnerCard(props) {
         },
         breakpoints: {
             700: {
-                slidesPerView:3,
+                slidesPerView:2,
                 spaceBetween: 20,
 
             },
@@ -85,7 +85,7 @@ function PartnerCard(props) {
 export const PartnerBox = (item, language) => {
     return (<div
         key={item?.id}
-        className="px-[20px] sm:px-0"
+        className="px-[20px] sm:px-0 "
         >
              <Link to={`/${language}/partners?strapiId=${item.strapi_id}`}>
 
