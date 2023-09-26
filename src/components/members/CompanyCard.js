@@ -25,7 +25,7 @@ function CompanyCard(props) {
 
     const params = {
         slidesPerView: 1,
-        centeredSlides: true,
+        // centeredSlides: true,
         // slidesPerView: 3,
         loop: true,
         observer: true,
@@ -33,10 +33,10 @@ function CompanyCard(props) {
         on: {
             // realIndexChange: (swiper) => setImageIndex(swiper.realIndex)
         },
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false
-        },
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false
+        // },
         breakpoints: {
             700: {
                 slidesPerView: 2,
