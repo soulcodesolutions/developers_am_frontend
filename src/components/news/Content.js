@@ -19,6 +19,7 @@ function Content({ members, title, language }) {
                             <div 
                                 key={item.strapi_id}
                                 onClick={() => setSelectedItem(item)}
+                                className=' '
                                 >
                                 <NewsBox  item={item} language={language} />
                             </div>

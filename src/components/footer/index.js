@@ -14,6 +14,7 @@ import ContactCard from '../home/ContactCard';
 
 
 function Footer({ language }) {
+    // console.log(language, "from footer")
     const navlinks = getNavLinks(language);
 
 

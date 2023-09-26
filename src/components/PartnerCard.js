@@ -89,11 +89,11 @@ export const PartnerBox = (item, language) => {
         >
              <Link to={`/${language}/partners?strapiId=${item.strapi_id}`}>
 
-        <div className=" rounded-xl p-[10px] bg-white" >
-            <div className="photo mx-auto  overflow-hidden w-full max-h-[200px]">
-                <img src={process.env.GATSBY_STRAPI_API_URL + item?.photo?.url} alt="" className="w-full mx-auto" />
+        <div className=" rounded-xl p-[10px] bg-white min-h-[300px] flex flex-col justify-between items-center " >
+            <div className="grow flex flex-col items-center justify-center photo mx-auto  overflow-hidden w-full ">
+                <img src={process.env.GATSBY_STRAPI_API_URL + item?.photo?.url} alt="" className="w-fit mx-auto max-h-[220px]" />
             </div>
-            <div className="text-[16px] text-slate-500 text-center pt-[20px]">
+            <div className=" text-slate-500 text-center pt-[20px] text-[14px] 2xl:text-[14px]">
                 {item.name}
             </div>
 

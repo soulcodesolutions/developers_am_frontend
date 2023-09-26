@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import { JustAppear,  } from './SlideAnimation';
 
 export const NextIcon = (props) => {
@@ -24,6 +24,42 @@ export const ViewAll = ({ to = "" }) => {
             </div>
             </div>
         </Link>
+        </JustAppear>
+
+    </div>);
+};
+
+export const GoBack = ({ to = "" }) => {
+
+    const handleBackClick = () => {
+        const { history } = window;
+        console.log(history)
+        if (history && history.length > 1) {
+          // If there's a history and we're not on the initial page
+          // Get the previous page path
+          navigate(-1)
+        } else {
+            navigate("/")
+        }
+
+        
+
+    }
+
+    return (<div className="text-red-800  items-center ">
+        <JustAppear>
+
+        <div onClick={() => handleBackClick()} className='cursor-pointer'>
+            <div className="flex items-center">
+            <div className="rotate-180">
+                <NextIcon />
+            </div>
+
+            <div className='font-bold hidden sm:block cursor-pointer'>
+                Back
+            </div>
+            </div>
+        </div>
         </JustAppear>
 
     </div>);

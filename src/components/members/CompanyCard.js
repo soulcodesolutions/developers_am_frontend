@@ -89,11 +89,14 @@ function CompanyCard(props) {
 export const CompanyBox = (item = {}, language) => {
     return (<div key={item?.strapi_id} className={"mx-auto py-[10px] cursor-pointer "}>
         <Link to={`/${language}/members?strapiId=${item?.strapi_id}`}>
-            <div className="max-w-[300px] sm:max-w-full mx-auto w-full p-2 rounded-xl cursor-pointer shadow hover:shadow-red-200 hover:shadow-md">
-                <div className=" min-h-[150px] max-h-[200px]  overflow-hidden">
-                    <img src={process.env.GATSBY_STRAPI_API_URL + item?.photo?.url} alt="" className="mx-auto" />
+            <div className="max-w-[300px] sm:max-w-full mx-auto w-full min-h-[300px] flex flex-col justify-between items-center  p-2 rounded-xl cursor-pointer shadow hover:shadow-red-200 hover:shadow-md ">
+                <div className="grow flex flex-col justify-center items-center">
+
+                <div className=" min-h-[150px]   px-[30px]">
+                    <img src={process.env.GATSBY_STRAPI_API_URL + item?.photo?.url} alt="" className="mx-auto h-full w-fit max-h-[200px] " />
                 </div>
-                <div className="py-[10px] text-center">
+                </div>
+                <div className="py-[10px] text-center text-[14px] 2xl:text-[14px]">
                     {item?.name}
                 </div>
             </div>

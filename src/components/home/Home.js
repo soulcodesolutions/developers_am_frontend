@@ -27,7 +27,7 @@ export default function Home({ location, data }) {
       <Partners data={{ title: data.partner_heading, members: data.partners }} language={language} />
       <News data={{ title: data.news_heading, members: data.news_articles }} language={language} />
       {/* <Contact data={{ title: data.contact_heading}} /> */}
-      <Footer language={language} />
+      <Footer language={language} location={location} />
     </>
   )
 }

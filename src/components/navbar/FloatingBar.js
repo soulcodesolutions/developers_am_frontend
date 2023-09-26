@@ -46,7 +46,7 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language }) => {
                             </div>
                         </Link>
                     </div>
-                    <div className="nav-menu hidden xl:block">
+                    <div className="nav-menu hidden xl:block text-[14px] 2xl:text-[16px]">
 
 
 
@@ -63,7 +63,7 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language }) => {
                         })}
                         <ChangeLangButton />
                     </div>
-                    <div className="block xl:hidden">
+                    <div className="burger_button block xl:hidden">
                         <div onClick={() => openSideBar()} className="w-fit cursor-pointer">
 
                             <svg
