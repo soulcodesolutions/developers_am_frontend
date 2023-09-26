@@ -5,6 +5,7 @@ import { PartnerBox } from "../PartnerCard"
 import Popup from '../Popup';
 import { useState, useEffect } from 'react';
 import PopupContent from './PopupContent';
+import { GoBack } from '../ViewAll';
 
 function Content({ members, title, location, language }) {
 
@@ -27,12 +28,13 @@ function Content({ members, title, location, language }) {
     return (<div>
         <div className="pt-[150px] py-[50px]">
             <div className="container mx-auto">
-                <div className="text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
-                    <div className="flex justify-between">
-                        <div className="">
-                            <MarkdownView markdown={title} />
-                        </div>
-                       
+            <div className="flex justify-center sm:justify-between items-center">
+                    <div className="text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800 ">
+                        <   MarkdownView markdown={title} />
+                    </div>
+                    <div>
+
+                        <GoBack />
                     </div>
                 </div>
                 <div className="pt-[50px]">

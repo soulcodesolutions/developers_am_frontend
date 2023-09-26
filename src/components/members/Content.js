@@ -4,6 +4,7 @@ import { CompanyBox } from "./CompanyCard"
 import Popup from '../Popup';
 import { useState } from 'react';
 import PopupContent from './PopupContent';
+import { GoBack } from '../ViewAll';
 
 // import { useQueryParam, NumberParam, StringParam } from "use-query-params";
 // import { useSearchParams } from "react-router-dom"; 
@@ -30,8 +31,14 @@ function Content({ members, title, location, language }) {
     return (<div>
         <div className="pt-[150px] py-[50px]">
             <div className="container mx-auto">
-                <div className="text-[20px] sm:text-[40px] text-center sm:text-left  font-bold text-red-800">
-                    <   MarkdownView markdown={title} />
+            <div className="flex justify-center sm:justify-between items-center">
+                    <div className="text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800 ">
+                        <   MarkdownView markdown={title} />
+                    </div>
+                    <div>
+
+                        <GoBack />
+                    </div>
                 </div>
                 <div className="pt-[50px]">
                     <div className="grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
