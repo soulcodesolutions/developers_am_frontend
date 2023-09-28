@@ -18,7 +18,7 @@ function NewsArticle({ location, data, pageContext }) {
         <div className="header ">
           <div className="w-full">
             <div className='w-full rounded-xl overflow-hidden bg-red-100'>
-              <img src={`${process.env.STRAPI_API_URL}${data?.cover.url}`} alt="" className='w-full' />
+              <img src={`${process.env.GATSBY_STRAPI_API_URL}${data?.cover.url}`} alt="" className='w-full' />
             </div>
 
           </div>
