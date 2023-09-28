@@ -17,8 +17,18 @@ function NewsArticle({ location, data, pageContext }) {
       <div className="container mx-auto pt-[150px] ">
         <div className="header ">
           <div className="w-full">
-            <div className='w-full rounded-xl overflow-hidden bg-red-100'>
-              <img src={`${process.env.GATSBY_STRAPI_API_URL}${data?.cover.url}`} alt="" className='w-full' />
+            <div className='w-full rounded-xl overflow-hidden '>
+              <div
+                style={{
+                  backgroundImage : `url(${process.env.GATSBY_STRAPI_API_URL}${data?.cover.url})`
+                }}
+                className="   bg-repeat">
+                  <div className="w-full h-full backdrop-blur-sm bg-black/50 p-[20px] ">
+
+
+                    <img src={`${process.env.GATSBY_STRAPI_API_URL}${data?.cover.url}`} alt="" className='w-fit max-h-[250px]  rounded-xl' />
+                  </div>
+              </div>
             </div>
 
           </div>
