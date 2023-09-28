@@ -23,10 +23,18 @@ function NewsArticle({ location, data, pageContext }) {
                   backgroundImage : `url(${process.env.GATSBY_STRAPI_API_URL}${data?.cover.url})`
                 }}
                 className="   bg-repeat">
-                  <div className="w-full h-full backdrop-blur-sm bg-black/50 p-[20px] ">
+                  <div 
+                    style={{
+                      backdropFilter: "blur(15px)"
+                    }}
+                    className="w-full h-full backdrop-blur-sm bg-black/50 p-[20px] ">
 
 
-                    <img src={`${process.env.GATSBY_STRAPI_API_URL}${data?.cover.url}`} alt="" className='w-fit max-h-[250px]  rounded-xl' />
+                    <img
+                      style={{
+                        maxHeight : "400px"
+                      }}
+                    src={`${process.env.GATSBY_STRAPI_API_URL}${data?.cover.url}`} alt="" className='w-fit h-full   rounded-xl' />
                   </div>
               </div>
             </div>
