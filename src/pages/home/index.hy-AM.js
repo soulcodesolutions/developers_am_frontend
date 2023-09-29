@@ -47,6 +47,7 @@ query ArmenianQuery {
       strapi_id
       title
       slug
+      uniqueid
       description
       thumbnail {
         url
