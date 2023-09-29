@@ -63,7 +63,7 @@ function NewsArticle({ location, data = {}, pageContext }) {
               </div>
 
               <div className="pt-[50px]">
-                <div className="grid grid-cols-4 gap-[10px] rounded-xl bg-slate-300 p-[10px]">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-[10px] rounded-xl bg-slate-300 p-[10px]">
                 {data?.gallery?.map(item => {
                   return(<div>
                       <img
