@@ -19,6 +19,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               nodes {
                 slug
                 locale
+                uniqueid
               }
             }
           }
@@ -36,7 +37,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     if (articles.length > 0) {
         articles.forEach(article => {
             createPage({
-                path: `/${article.locale}/news/${article.slug}`,
+                path: `/${article.locale}/news/${article.uniqueid}`,
                 component: articleComponent,
                 context: {
                     slug: article.slug,

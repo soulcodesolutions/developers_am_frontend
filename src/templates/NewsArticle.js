@@ -6,9 +6,9 @@ import Footer from '../components/footer';
 import MarkdownView from 'react-showdown';
 
 
-function NewsArticle({ location, data, pageContext }) {
+function NewsArticle({ location, data = {}, pageContext }) {
   // console.log('Page Context  -> ', pageContext);
-  console.log('Data -> ', data);
+  // console.log('Data -> ', data);
   // console.log('Location -> ', location);
   data = data.strapiNewsArticle
   return (<div>
@@ -20,35 +20,61 @@ function NewsArticle({ location, data, pageContext }) {
             <div className='w-full rounded-xl overflow-hidden '>
               <div
                 style={{
-                  backgroundImage : `url(${process.env.GATSBY_STRAPI_API_URL}${data?.cover.url})`
+                  backgroundImage: `url(${process.env.GATSBY_STRAPI_API_URL}${data?.cover.url})`
                 }}
                 className="   bg-repeat">
-                  <div 
+                <div
+                  style={{
+                    backdropFilter: "blur(15px)"
+                  }}
+                  className="w-full h-full backdrop-blur-sm bg-black/50 p-[20px] ">
+
+
+                  <img
                     style={{
-                      backdropFilter: "blur(15px)"
+                      maxHeight: "400px"
                     }}
-                    className="w-full h-full backdrop-blur-sm bg-black/50 p-[20px] ">
-
-
-                    <img
-                      style={{
-                        maxHeight : "400px"
-                      }}
                     src={`${process.env.GATSBY_STRAPI_API_URL}${data?.cover.url}`} alt="" className='w-fit h-full   rounded-xl' />
-                  </div>
+                </div>
               </div>
             </div>
 
           </div>
           <div className="content px-[10px]">
-            <div className="text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
-              {data.title}
+            <div className="pt-[20px] text-[20px] sm:text-[20px] text-center sm:text-left font-bold text-red-800">
+              {data?.title}
             </div>
             <div className="text-[16px]  text-center sm:text-left font-bold text-slate-800">
-              {data.description}
+              {data?.description}
             </div>
             <div className="text-[14px] pt-[10px] text-center sm:text-left font-bold text-slate-500">
-              {data.display_date} 
+              {data?.display_date}
+            </div>
+            <div className="  pt-[20px] py-[50px] popup_container ">
+
+              <div>
+                <MarkdownView
+                  markdown={data?.content?.data?.content}
+                  options={{
+                    openLinksInNewWindow: true,
+                    simplifiedAutoLink: true
+                  }}
+                />
+              </div>
+
+              <div className="pt-[50px]">
+                <div className="grid grid-cols-4 gap-[10px] rounded-xl bg-slate-300 p-[10px]">
+                {data?.gallery?.map(item => {
+                  return(<div>
+                      <img
+                   
+                    src={`${process.env.GATSBY_STRAPI_API_URL}${item?.url}`} alt="" className='w-full  rounded-xl' />
+
+                  </div>)
+                })}
+                </div>
+              </div>
+
             </div>
 
           </div>
@@ -56,18 +82,7 @@ function NewsArticle({ location, data, pageContext }) {
       </div>
     </div>
 
-    <div className="container mx-auto pt-[50px] py-[50px] popup_container">
 
-      <div>
-        <MarkdownView 
-          markdown={data?.content?.data?.content}
-          options={{
-            openLinksInNewWindow : true,
-            simplifiedAutoLink : true
-        }}
-          />
-      </div>
-    </div>
     {/* <Contact /> */}
     <Footer />
 
@@ -95,6 +110,9 @@ export const query = graphql`
         data {
           content
         }
+      }
+      gallery {
+        url
       }
     }
   }

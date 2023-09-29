@@ -52,21 +52,21 @@ function Content({ location, data = {} }) {
             key: "legal_acts",
             label: "Legal acts"
         },
-        {
-            id: 2,
-            key: "association_documents",
-            label: "Association documents"
-        },
-        {
-            id: 3,
-            key: "certifications",
-            label: "Certifications"
-        },
-        {
-            id: 3,
-            key: "usefull_links",
-            label: "Usefull links"
-        },
+        // {
+        //     id: 2,
+        //     key: "association_documents",
+        //     label: "Association documents"
+        // },
+        // {
+        //     id: 3,
+        //     key: "certifications",
+        //     label: "Certifications"
+        // },
+        // {
+        //     id: 3,
+        //     key: "usefull_links",
+        //     label: "Usefull links"
+        // },
 
 
     ]
@@ -153,8 +153,8 @@ function Content({ location, data = {} }) {
                     <div className="text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
                         <   MarkdownView markdown={data?.title} />
                     </div>
-                    <div className="pt-[50px]">
-                        <HeaderTab />
+                    <div className="pt-[0px]">
+                        {/* <HeaderTab /> */}
                         {
                             activeKey === "legal_acts" && <PdfList />
                         }

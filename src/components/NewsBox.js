@@ -5,7 +5,7 @@ import 'swiper/css/bundle';
 function NewsBox({ item, language }) {
     return (
         <div key={item?.strapi_id} className="px-[20px] sm:px-0 h-full ">
-            <Link to={`/${language}/news/${item?.slug}`}>
+            <Link to={`/${language}/news/${item?.uniqueid}`}>
                 <div className={`border-0 shadow-lg hover:shadow-red-200 cursor-pointer border-red-800 p-[20px] rounded-sm sm:h-full max-h-[600px]`}  >
                    <div className="flex flex-col justify-between items- h-full">
 
@@ -14,7 +14,7 @@ function NewsBox({ item, language }) {
                         <div className="img w-full h-[150px] bg-sky-100 overflow-hidden rounded-sm">
                             <img src={`${process.env.GATSBY_STRAPI_API_URL}${item?.thumbnail?.url}`} className="" alt="" />
                         </div>
-                        <div className="text-[14px] 2xl:text-[16px] pt-[10px]">
+                        <div className="text-[14px] 2xl:text-[16px] pt-[10px] ">
                           
                             {item?.title}
                         </div>

@@ -18,12 +18,15 @@ query NewsListQuery {
     nodes {
       strapi_id
       slug
+      uniqueid
       title
       description
       display_date
       thumbnail {
         url
       }
+      
+      
     }
   }
   strapiHomePageV2(locale: {eq: "en"}) {
