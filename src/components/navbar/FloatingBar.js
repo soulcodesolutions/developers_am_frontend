@@ -17,7 +17,7 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language }) => {
                         return (
                             <Link
                                 key={l}
-                                className="inline-block min-w-[80px] text-center"
+                                className="inline-block min-w-[80px] text-center hover:bg-red-300"
                                 to={location.pathname.replace(`/${language}`, `/${l}`)}
                                 activeClassName="text-red-800  font-bold bg-red-100"
                                 aria-disabled={l === language}

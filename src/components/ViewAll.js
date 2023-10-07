@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, navigate } from 'gatsby';
 import { JustAppear,  } from './SlideAnimation';
+import { changeWordTo } from './translation_custom';
 
 export const NextIcon = (props) => {
     return (
@@ -9,7 +10,7 @@ export const NextIcon = (props) => {
     )
 }
 
-export const ViewAll = ({ to = "" }) => {
+export const ViewAll = ({ to = "", language }) => {
     return (<div className="text-red-800  items-center">
         <JustAppear>
 
@@ -17,7 +18,7 @@ export const ViewAll = ({ to = "" }) => {
             <div className="flex items-center">
 
             <div className='font-bold hidden sm:block cursor-pointer'>
-                View all
+               {changeWordTo("View all", language)}
             </div>
             <div className="">
                 <NextIcon />

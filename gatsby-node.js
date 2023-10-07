@@ -17,6 +17,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         query NewsListQuery {
             allStrapiNewsArticle {
               nodes {
+                id
                 slug
                 locale
                 uniqueid
@@ -40,6 +41,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 path: `/${article.locale}/news/${article.uniqueid}`,
                 component: articleComponent,
                 context: {
+                    id : article.id,
                     slug: article.slug,
                     locale: article.locale
                 }

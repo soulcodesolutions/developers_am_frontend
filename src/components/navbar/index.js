@@ -10,29 +10,46 @@ export function getNavLinks(language) {
 
         return [
             {
+                id: 1,
+                lable: "Главная",
+                link: `/${language}/home`,
+                onNavbar : false,
+            },
+            {
+                id: 2,
+                lable: "Մեր մասին",
+                link: `/${language}/home#aboutus`,
+                onNavbar : false,
+            },
+            {
                 id: 3,
                 lable: "Совет ассоциации",
                 link: `/${language}/council`,
+                onNavbar : true,
             },
             {
                 id: 4,
                 lable: "Члены ассоциации",
                 link: `/${language}/members`,
+                onNavbar : true,
             },
             {
                 id: 5,
                 lable: "Наши партнеры",
                 link: `/${language}/partners`,
+                onNavbar : true,
             },
             {
-                id: 5,
+                id: 6,
                 lable: "Новости",
                 link: `/${language}/news`,
+                onNavbar : true,
             },
             {
-                id: 5,
+                id: 7,
                 lable: "Полезные ссылки",
                 link: `/${language}/usefullLinks`,
+                onNavbar : true,
             },
         ]
         
@@ -40,65 +57,101 @@ export function getNavLinks(language) {
 
         return [
             {
+                id: 1,
+                lable: "Գլխավոր",
+                link: `/${language}/home`,
+                onNavbar : false,
+            },
+            {
+                id: 2,
+                lable: "Մեր մասին",
+                link: `/${language}/home#aboutus`,
+                onNavbar : false,
+            },
+            {
                 id: 3,
-                lable: "Ասոցիացիայի խորհուրդl",
+                lable: "Ասոցիացիայի խորհուրդ",
                 link: `/${language}/council`,
+                onNavbar : true,
             },
             {
                 id: 4,
                 lable: "Ասոցիացիայի անդամներ",
                 link: `/${language}/members`,
+                onNavbar : true,
             },
             {
                 id: 5,
                 lable: "Մեր գործընկերները",
                 link: `/${language}/partners`,
+                onNavbar : true,
             },
             {
-                id: 5,
+                id: 6,
                 lable: "Նորություններ",
                 link: `/${language}/news`,
+                onNavbar : true,
             },
             {
-                id: 5,
+                id: 7,
                 lable: "Օգտակար հղումներ",
                 link: `/${language}/usefullLinks`,
+                onNavbar : true,
             },
         ]
     } else {
-
+        
         return [
+            {
+                id: 1,
+                lable: "Home",
+                link: `/${language}/home`,
+                onNavbar : false,
+            },
+            {
+                id: 2,
+                lable: "About us",
+                link: `/${language}/home#aboutus`,
+                onNavbar : false,
+            },
             {
                 id: 3,
                 lable: "Association council",
                 link: `/${language}/council`,
+                onNavbar : true,
             },
             {
                 id: 4,
                 lable: "Association members",
                 link: `/${language}/members`,
+                onNavbar : true,
             },
             {
                 id: 5,
                 lable: "Our partners",
                 link: `/${language}/partners`,
+                onNavbar : true,
             },
             {
-                id: 5,
+                id: 6,
                 lable: "News",
                 link: `/${language}/news`,
+                onNavbar : true,
             },
             {
-                id: 5,
+                id: 7,
                 lable: "Useful links",
                 link: `/${language}/usefullLinks`,
+                onNavbar : true,
             },
         ]
     }
 }
 
 function Navbar({ location, language }) {
-    const navlinks = getNavLinks(language);
+
+    let navlinks = getNavLinks(language);
+    navlinks = navlinks.filter(item => item.onNavbar === true)
 
     const [open, setOpen] = useState(false)
 

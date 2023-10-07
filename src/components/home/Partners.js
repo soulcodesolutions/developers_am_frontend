@@ -18,7 +18,7 @@ export default function Partners({ data, language }) {
                     </div>
                     <div>
 
-                        <ViewAll to={`/${language}/partners`} />
+                        <ViewAll to={`/${language}/partners`}  language={language}/>
                     </div>
                 </div>
                 <div className="content pt-[50px]">

@@ -17,7 +17,7 @@ export default function Council({ data, language="en" }) {
                             <MarkdownView markdown={data?.title} />
                         </SlideLeft>
                     </div>
-                    <ViewAll to={`/${language}/council`} />
+                    <ViewAll to={`/${language}/council`} language={language} />
                 </div>
                 <div className="pt-[50px]">
                     <div className="">

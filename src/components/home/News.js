@@ -5,6 +5,7 @@ import { ViewAll } from "../ViewAll";
 import { Link } from "gatsby";
 import NewsBox from "../NewsBox";
 import Secondary from "../button/Secondary"
+import { changeWordTo } from "../translation_custom";
 
 export default function News({ data, language }) {
 
@@ -17,7 +18,7 @@ export default function News({ data, language }) {
                             <MarkdownView markdown={data?.title} />
                         </SlideLeft>
                     </div>
-                    <ViewAll to={`/${language}/news`} />
+                    <ViewAll to={`/${language}/news`} language={language} />
                 </div>
                 <div className="pt-[50px]">
                     <JustAppear>
@@ -30,7 +31,7 @@ export default function News({ data, language }) {
                     <div className="pt-[50px]">
                         <SlideBottom>
                             <Link to={`/${language}/news`}>
-                                <Secondary className="max-w-[250px] mx-auto" label="View more" />
+                                <Secondary className="max-w-[250px] mx-auto" label={ changeWordTo("View more", language)} />
                             </Link>
                         </SlideBottom>
                     </div>

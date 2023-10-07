@@ -18,7 +18,7 @@ export default function Members({ data, language }) {
                     </div>
                     <div className="">
 
-                    <ViewAll to={`/${language}/members`} />
+                    <ViewAll to={`/${language}/members`} language={language} />
                     </div>
                 </div>
                 <div className="pt-[50px] ">

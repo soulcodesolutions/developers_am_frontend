@@ -3,8 +3,9 @@ import MarkdownView from 'react-showdown'
 import Bg from '../../images/home/bg.jpg'
 import Primary from '../button/Primary'
 import { JustAppear, SlideLeft, SlideRight } from "../SlideAnimation";
+import { changeWordTo } from "../translation_custom";
 
-export default function Hero({ data }) {
+export default function Hero({ data, language }) {
 
     const handleButtonClick = () => {
         let elem = document.getElementById("contact")
@@ -37,7 +38,7 @@ export default function Hero({ data }) {
                     <JustAppear>
                         <Primary 
                             onClick={handleButtonClick}
-                            label="Contact us" className="max-w-[300px] cursor-pointer" />
+                            label={changeWordTo("Contact us", language)} className="max-w-[300px] cursor-pointer" />
                     </JustAppear>
                 </div>
             </div>

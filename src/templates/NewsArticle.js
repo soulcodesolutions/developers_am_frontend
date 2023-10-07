@@ -8,7 +8,7 @@ import MarkdownView from 'react-showdown';
 
 function NewsArticle({ location, data = {}, pageContext }) {
   // console.log('Page Context  -> ', pageContext);
-  // console.log('Data -> ', data);
+  console.log('Data -> ', data);
   // console.log('Location -> ', location);
   data = data.strapiNewsArticle
   return (<div>
@@ -93,8 +93,8 @@ export default NewsArticle;
 
 
 export const query = graphql`
-  query NewsArticleQuery($slug: String) {
-    strapiNewsArticle(slug: { eq: $slug }) {
+  query NewsArticleQuery($id: String) {
+    strapiNewsArticle(id: { eq: $id }) {
       slug
       strapi_id
       title

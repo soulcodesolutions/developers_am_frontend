@@ -8,6 +8,7 @@ import Friday from '../../images/friday.png'
 
 
 import ContactCard from '../home/ContactCard';
+import { changeWordTo } from "../translation_custom";
 
 
 
@@ -77,7 +78,7 @@ function Footer({ language }) {
 
                                 <div className="w-full sm:w-fit pt-[30px] sm:pt-0 px-[10px] flex flex-col text-white text-[12px] text-center sm:text-left order-1 sm:order-2">
                                     <div className="text-[16px] pb-[20px]">
-                                        Overview
+                                        {changeWordTo("Overview", language)} 
                                     </div>
                                     <div className="">
                                         {navlinks?.map(item => (
@@ -95,10 +96,10 @@ function Footer({ language }) {
 
                                 <div className="w-full sm:w-fit pt-[30px] px-[10px] sm:pt-0 text-[12px] flex flex-col text-white text-center sm:text-left order-2 sm:order-3">
                                     <div className="text-[16px] pb-[20px]">
-                                        Contact
+                                        {changeWordTo("Contact us", language)}
                                     </div>
                                     <div className="phone">+374 98513233</div>
-                                    <div className="phone">gurgengrigoryan@developers.am</div>
+                                    <div className="phone">info@developers.am</div>
                                     <div className="text-[16px] pt-[20px] pb-[10px]">
                                         Developed by
                                     </div>
@@ -122,7 +123,7 @@ function Footer({ language }) {
                         </div>
                         <div className="w-full xl:w-fit order-1 xl:order-2" >
                             <div className="w-full sm:min-w-[400px] xl:translate-y-[-20px] relative  pb-[20px]">
-                                <ContactCard className="drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] w-full sm:min-w-[400px]" />
+                                <ContactCard className="drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] w-full sm:min-w-[400px]" language={language} />
                             </div>
                         </div>
 
@@ -132,7 +133,7 @@ function Footer({ language }) {
                     </div>
                 </div>
                 <div className="bg-black py-[20px] text-[12px] text-center text-white">
-                    copyright © 2023
+                    Copyright © 2023
                 </div>
 
             </div>

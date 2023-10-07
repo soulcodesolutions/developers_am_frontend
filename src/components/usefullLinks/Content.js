@@ -52,26 +52,26 @@ function Content({ location, data = {} }) {
             key: "legal_acts",
             label: "Legal acts"
         },
-        // {
-        //     id: 2,
-        //     key: "association_documents",
-        //     label: "Association documents"
-        // },
-        // {
-        //     id: 3,
-        //     key: "certifications",
-        //     label: "Certifications"
-        // },
-        // {
-        //     id: 3,
-        //     key: "usefull_links",
-        //     label: "Usefull links"
-        // },
+        {
+            id: 2,
+            key: "association_documents",
+            label: "Association documents"
+        },
+        {
+            id: 3,
+            key: "certifications",
+            label: "Certifications"
+        },
+        {
+            id: 3,
+            key: "usefull_links",
+            label: "Usefull links"
+        },
 
 
     ]
 
-    const [activeKey, setActiveKey] = useState("legal_acts")
+    const [activeKey, setActiveKey] = useState("usefull_links")
 
     const HeaderTab = () => {
         return (
