@@ -5,6 +5,7 @@ import Contact from '../components/home/Contact';
 import Footer from '../components/footer';
 import MarkdownView from 'react-showdown';
 import { SEO } from '../components/seo';
+// import { languages } from '../data/siteMetadata';
 
 
 
@@ -86,7 +87,7 @@ function NewsArticle({ location, data = {}, pageContext }) {
 
 
     {/* <Contact /> */}
-    <Footer />
+    <Footer language={pageContext.locale} />
 
   </div>);
 }
