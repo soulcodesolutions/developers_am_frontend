@@ -37,7 +37,7 @@ function Content({ members, title, location, language }) {
                     </div>
                     <div>
 
-                        <GoBack />
+                        <GoBack  language={language}/>
                     </div>
                 </div>
                 <div className="pt-[50px]">

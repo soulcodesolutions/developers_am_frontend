@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from "gatsby";
 import Partners from '../../components/partners/Partners';
+import { SEO } from '../../components/seo';
 
 
 export default function Index({ location, data }) {
@@ -8,6 +9,10 @@ export default function Index({ location, data }) {
         <Partners location={location} data={data}/>
     )
 }
+
+export const Head = ({ location, data }) => (
+  <SEO title={`${data.strapiHomePageV2.partner_heading} - Association Of The Armenian Developers`} />
+)
 
 export const query = graphql`
 query PartnersQuery {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from "gatsby";
 import NewsList from '../../components/news/NewsList';
+import { SEO } from '../../components/seo';
 
 
 export default function Index({ location, data }) {
@@ -8,6 +9,12 @@ export default function Index({ location, data }) {
         <NewsList location={location} data={data}/>
     )
 }
+
+export const Head = ({ location, data }) => (
+  <SEO title={`${data.strapiHomePageV2.news_heading} - Association Of The Armenian Developers`} />
+)
+
+
 
 export const query = graphql`
 query NewsListQuery {

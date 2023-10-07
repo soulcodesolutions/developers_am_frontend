@@ -1,9 +1,10 @@
 
 module.exports = {
-  title: `devam-gatsby`,
-  siteUrl: `https://www.yourdomain.tld`,
+  title: `Developers.am`,
+  siteUrl: `https://www.developers.am`,
+  descriptions: `Developers Armenian Association`,
   languages: {
-    langs: ['en', 'hy-AM'],
+    langs: ['en', 'hy-AM', 'ru'],
     defaultLangKey: 'en'
   }
 };

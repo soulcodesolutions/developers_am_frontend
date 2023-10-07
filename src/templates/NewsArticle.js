@@ -4,6 +4,8 @@ import Navbar from '../components/navbar';
 import Contact from '../components/home/Contact';
 import Footer from '../components/footer';
 import MarkdownView from 'react-showdown';
+import { SEO } from '../components/seo';
+
 
 
 function NewsArticle({ location, data = {}, pageContext }) {
@@ -90,6 +92,10 @@ function NewsArticle({ location, data = {}, pageContext }) {
 }
 
 export default NewsArticle;
+
+export const Head = ({ location, data }) => (
+  <SEO title={`${data.strapiNewsArticle?.title} - Association Of The Armenian Developers`} />
+)
 
 
 export const query = graphql`
