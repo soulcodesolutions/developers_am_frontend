@@ -28,7 +28,7 @@ query ArmenianQuery {
     council {
       strapi_id
       name
-      position
+      
       photo {
         url
       }

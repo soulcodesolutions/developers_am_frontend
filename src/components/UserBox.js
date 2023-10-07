@@ -99,11 +99,11 @@ function UserBox({item = {}, language}) {
 
     return (<div
             onClick={() => navigateTo()}
-            key={item?.strapi_id} className="max-w-[250px]_ bg-white rounded-xl p-[20px] _max-h-[350px] h-full min-h-[300px]" >
+            key={item?.strapi_id} className="max-w-[250px]_ bg-white rounded-xl p-[20px] _max-h-[350px] h-full min-h-[280px] " >
           {/* <Link to={`/${language}/council?strapiId=${item.strapi_id}`}> */}
-        <div className="flex flex-col justify-between items-center h-full">
+        <div className="flex flex-col justify-between items-center h-full  ">
 
-            <div className="max-w-[200px] lg:max-w-[180px] photo mx-auto rounded-full overflow-hidden">
+            <div className="max-w-[200px] lg:max-w-[180px] photo mx-auto rounded-full overflow-hidden max-h-[170px]">
             
                 <img src={`${process.env.GATSBY_STRAPI_API_URL}${item?.photo?.url}`} alt="" className="w-full" />
             </div>
@@ -111,9 +111,9 @@ function UserBox({item = {}, language}) {
                 <div className="text-[16px] 2xl:text-[18px] text-center pt-[20px]">
                     {item?.name}
                 </div>
-                <div className="text-[16px] text-center  text-slate-500">
+                {/* <div className="text-[16px] text-center  text-slate-500">
                     {item?.position}
-                </div>
+                </div> */}
             </div>
         </div>
           {/* </Link> */}
