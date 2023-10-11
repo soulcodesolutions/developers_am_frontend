@@ -26,7 +26,7 @@ query HomeQuery {
       council {
         strapi_id
         name
-        position
+        
         photo {
           url
         }

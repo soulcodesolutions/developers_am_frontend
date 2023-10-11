@@ -15,6 +15,7 @@ export default function Index({ location, data }) {
 export const Head = ({ location, data }) => (
   <SEO title={`${data.strapiHomePageV2.members_heading} - Association Of The Armenian Developers`} />
 )
+
 export const query = graphql`
 query MembersQuery {
     allStrapiMember(filter: {locale: {eq: "en"}}) {

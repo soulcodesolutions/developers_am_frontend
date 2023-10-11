@@ -97,7 +97,7 @@ function Content({ location, data = {} }) {
     }
 
     const TabContentWrapper = ({children}) => {
-        return (<div className='py-[0px] sm:py-[50px]'>
+        return (<div className='py-[0px] sm:py-[20px]'>
             {children}
         </div>)
     }
@@ -153,8 +153,8 @@ function Content({ location, data = {} }) {
                     <div className="text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
                         <   MarkdownView markdown={data?.title} />
                     </div>
-                    <div className="pt-[0px]">
-                        {/* <HeaderTab /> */}
+                    <div className="pt-[20px]">
+                        <HeaderTab />
                         {
                             activeKey === "legal_acts" && <PdfList />
                         }

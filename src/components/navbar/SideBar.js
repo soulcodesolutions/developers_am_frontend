@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, navigate } from 'gatsby'
 
 import { languages } from "../home/Home";
+import { changeWordTo } from '../translation_custom';
 
 
 
@@ -47,14 +48,15 @@ export default function SideBar(props) {
                                 {item.children ?
                                     <div>
                                         <span className="flex items-center" onClick={() => setExpand(!expand)}>
-                                            {item.lable}
+                                            {/* {item.lable} */}
+                                            {changeWordTo(item.lable, language)} 
                                             {item.children && <svg className={`ml-[10px] ${expand ? "rotate-[-90deg]" : "rotate-[90deg]"} transition`} xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" /></svg>}
                                         </span>
                                         <div className='text-gray-500 text-[20px]'>
                                             {
                                                 expand && item.children.map((_child, index) => <div key={index} className="pt-[10px]">
                                                     <span onClick={() => redirect(_child?.url)}>
-                                                        {_child.lable}
+                                                        {changeWordTo(_child.lable, language)}
                                                     </span>
                                                 </div>)
                                             }
@@ -63,7 +65,7 @@ export default function SideBar(props) {
                                     :
 
                                     <span onClick={() => redirect(item?.link)} className="flex items-center">
-                                        {item.lable}
+                                         {changeWordTo(item.lable, language)} 
                                         {item.children && <svg className={`ml-[10px] rotate-[-90deg] `} xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" /></svg>}
                                     </span>
                                 }
