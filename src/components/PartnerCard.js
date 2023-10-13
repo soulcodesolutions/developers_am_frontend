@@ -91,7 +91,9 @@ export const PartnerBox = (item, language) => {
 
         <div className=" rounded-xl p-[10px] bg-white min-h-[300px] flex flex-col justify-between items-center " >
             <div className="grow flex flex-col items-center justify-center photo mx-auto  overflow-hidden w-full ">
-                <img src={process.env.GATSBY_STRAPI_API_URL + item?.photo?.url} alt="" className="w-fit mx-auto max-h-[220px]" />
+                <div className="">
+                    <img src={process.env.GATSBY_STRAPI_API_URL + item?.photo?.url} alt="" className="w- max-h-[200px]  mx-auto " />
+                </div>
             </div>
             <div className=" text-slate-500 text-center pt-[20px] text-[14px] 2xl:text-[14px]">
                 {item.name}

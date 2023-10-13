@@ -7,7 +7,7 @@ function NewsBox({ item, language }) {
     return (
         <div key={item?.strapi_id} className="px-[20px] sm:px-0 h-full ">
             <Link to={`/${language}/news/${item?.uniqueid}`}>
-                <div className={`border-0 shadow-lg hover:shadow-red-200 cursor-pointer border-red-800 p-[20px] rounded-sm sm:h-full max-h-[600px]`}  >
+                <div className={`border-0 rounded-xl shadow-lg hover:shadow-red-200 cursor-pointer border-red-800 p-[20px] rounded-sm sm:h-full max-h-[600px]`}  >
                    <div className="flex flex-col justify-between items- h-full">
 
                     <div className="grow ">
