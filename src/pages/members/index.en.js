@@ -22,6 +22,7 @@ query MembersQuery {
       nodes {
         strapi_id
         name
+        hide_in_website
          
         description  {
           data {

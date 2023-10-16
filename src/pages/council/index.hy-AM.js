@@ -21,6 +21,7 @@ query CouncilQuery {
       nodes {
         strapi_id
         name
+        hide_in_website
         
         description  {
           data {

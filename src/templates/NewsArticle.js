@@ -5,6 +5,7 @@ import Contact from '../components/home/Contact';
 import Footer from '../components/footer';
 import MarkdownView from 'react-showdown';
 import { SEO } from '../components/seo';
+import VideoSection from '../components/newsArticles/VideoSection';
 // import { languages } from '../data/siteMetadata';
 
 
@@ -64,19 +65,27 @@ function NewsArticle({ location, data = {}, pageContext }) {
                   }}
                 />
               </div>
-
-              <div className="pt-[50px]">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-[10px] rounded-xl bg-slate-300 p-[10px]">
-                {data?.gallery?.map(item => {
-                  return(<div>
-                      <img
-                   
-                    src={`${process.env.GATSBY_STRAPI_API_URL}${item?.url}`} alt="" className='w-full  rounded-xl' />
-
-                  </div>)
-                })}
-                </div>
+              <div className="">
+                <VideoSection videoSection={data?.videoSection} />
               </div>
+
+              {
+                data?.gallery?.length > 0 && <>
+                  <div className="pt-[50px]">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-[10px] rounded-xl bg-slate-100 p-[10px]">
+                      {data?.gallery?.map(item => {
+                        return (<div>
+                          <img
+
+                            src={`${process.env.GATSBY_STRAPI_API_URL}${item?.url}`} alt="" className='w-full  rounded-xl' />
+
+                        </div>)
+                      })}
+                    </div>
+                  </div>
+
+                </>
+              }
 
             </div>
 
@@ -120,6 +129,10 @@ export const query = graphql`
       }
       gallery {
         url
+      }
+      videoSection {
+        title
+        video_url
       }
     }
   }

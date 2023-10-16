@@ -31,6 +31,7 @@ query NewsListQuery {
       thumbnail {
         url
       }
+      hide_in_website
     
     }
   }

@@ -20,6 +20,8 @@ query PartnersQuery {
     nodes {
       strapi_id
       name
+      hide_in_website
+
       photo {
         url
       }

@@ -8,6 +8,8 @@ function Content({ members, title, language }) {
 
     const [selectedItem, setSelectedItem] = useState(null)
 
+    // console.log(members?.filter(item => item?.hide_in_website !== false))
+
     return (<div>
         <div className="pt-[150px] py-[50px]">
             <div className="container mx-auto">
@@ -22,7 +24,7 @@ function Content({ members, title, language }) {
                 </div>
                 <div className="pt-[50px]">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
-                        {members?.map((item,index) => { return (
+                        {members?.filter(item => !item?.hide_in_website)?.map((item,index) => { return (
                             <div 
                                 key={item.strapi_id}
                                 onClick={() => setSelectedItem(item)}

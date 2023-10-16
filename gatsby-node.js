@@ -21,6 +21,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 slug
                 locale
                 uniqueid
+                hide_in_website
               }
             }
           }
@@ -32,7 +33,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         return
     }
 
-    const articles = result.data.allStrapiNewsArticle.nodes
+    let articles = result.data.allStrapiNewsArticle.nodes
+    // articles = articles.map(item => !item.hide_in_website )
+    
     const articleComponent = path.resolve("./src/templates/NewsArticle.js")
 
     if (articles.length > 0) {
