@@ -25,10 +25,10 @@ function Content({ title, members, language, location }) {
         <div className="pt-[150px] py-[50px]">
             <div className="container mx-auto">
                 <div className="flex justify-center sm:justify-between items-center">
-                    <div className="text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800 ">
+                    <div className="order-2 sm:order-1 text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800 ">
                         <   MarkdownView markdown={title} />
                     </div>
-                    <div>
+                    <div className='order-1 sm:order-2'>
 
                         <GoBack  language={language} />
                     </div>

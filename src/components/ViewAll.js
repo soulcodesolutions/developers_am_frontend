@@ -42,6 +42,13 @@ export const GoBack = ({ to = "" , language}) => {
         // } else {
         //     navigate("/")
         // }
+        if (to) {
+          // If there's a history and we're not on the initial page
+          // Get the previous page path
+          navigate(to)
+        } else {
+            navigate(`/${language}/home`)
+        }
 
         
 
@@ -50,8 +57,8 @@ export const GoBack = ({ to = "" , language}) => {
     return (<div className="text-red-800  items-center ">
         <JustAppear>
 
-        <div onClick={() => handleBackClick()} className='cursor-pointer'>
-            <Link to={`/${language}/home`}>
+        <div onClick={() => handleBackClick()} className='cursor-pointer w-fit'>
+            {/* <Link to={`/${language}/home`}> */}
             <div className="flex items-center">
             <div className="rotate-180">
                 <NextIcon />
@@ -61,7 +68,7 @@ export const GoBack = ({ to = "" , language}) => {
                 {/* {changeWordTo("Back",language)} */}
             </div>
             </div>
-            </Link>
+            {/* </Link> */}
         </div>
         </JustAppear>
 

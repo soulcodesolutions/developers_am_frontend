@@ -14,7 +14,7 @@ function VideoSection({ videoSection = [] }) {
                 videoSection?.length > 0 && <>
                     <div className="p-[20px] rounded-lg bg-slate-100 mt-[50px]">
                         {/* {console.log(videoSection)} */}
-                        <div className="grid grid-cols-1  lg:grid-cols-3 gap-[20px] py-[20px]">
+                        <div className="grid grid-cols-1  sm:grid-cols-2  lg:grid-cols-3 gap-[20px] py-[20px]">
                             {
                                 videoSection?.map(item => 
                                 <div
@@ -48,15 +48,16 @@ const VideoPreviewCards = ({ item }) => {
     
 
     return (<div className="  shadow rounded-xl bg-white overflow-hidden relative" >
-        <div className="absolute w-full h-full bg-transparent"></div>
+        <div className="absolute w-full h-full _bg-red-100/50 bg-transparent left-0 top-0 z-[30]"></div>
 
-        <div className="">
+        <div className="max-h-[250px] overflow-hidden">
 
             <ReactPlayer
-                className='react-player min-h-[250px] bg-black'
+                className='react-player bg-black'
                 url={item?.video_url}
+                // url="https://youtu.be/UGUTb6QaGTU?si=jnQFFLpqDyeFoPuV"
                 width='100%'
-            //   height='100%'
+                height='100%'
 
             />
         </div>
@@ -73,13 +74,13 @@ const VideoFUll = ({ item }) => {
 
     
 
-    return (<div className="  bg-white overflow-hidden relative" >
+    return (<div className="  bg-white overflow-hidden relative h-full min-h-screen" >
         {/* <div className="absolute w-full h-full bg-transparent"></div> */}
 
         <div className="">
 
             <ReactPlayer
-                className='react-player min-h-[250px] bg-black'
+                className='react-player min-h-[550px] bg-black'
                 url={item?.video_url}
                 width='100%'
                 controls={true}

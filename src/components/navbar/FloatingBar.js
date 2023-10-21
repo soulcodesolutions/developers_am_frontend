@@ -3,13 +3,22 @@ import Logo from "../../images/Logo.webp"
 import { Link } from "gatsby";
 import { languages } from "../home/Home";
 
+export const SwithLangDisplay = (_string) => {
+    
+    if(_string == "hy-AM") {
+        return "AM"
+    }
+    return _string
+}
+
 const FloatingBar = ({ navlinks = [], openSideBar, location, language }) => {
+
 
     const ChangeLangButton = () => {
 
         return (<div className="inline-block ml-[20px]   relative uppercase group cursor-pointer">
             <div className="font-bold text-red-500" >
-                {language}
+                {SwithLangDisplay(language)}
             </div>
             <div className="absolute invisible group-hover:visible">
                 <div className="   top-[30px] bg-white shadow rounded-xl overflow-hidden right-[10px]">
@@ -22,7 +31,7 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language }) => {
                                 activeClassName="text-red-800  font-bold bg-red-100"
                                 aria-disabled={l === language}
                             >
-                                {l}
+                                {SwithLangDisplay(l)}
                             </Link>
                         )
                     })}

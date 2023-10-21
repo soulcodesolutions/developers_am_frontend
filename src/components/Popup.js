@@ -27,7 +27,7 @@ function Popup(props) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="bg-white h-full w-full rounded-b-xl  p-5 overflow-y-scroll max-h-[70vh]">
+                            <div className="bg-white h-full w-full rounded-b-xl  p-5 overflow-y-scroll max-h-[80vh]">
                                 {props?.children}
                             </div>
                             </div>

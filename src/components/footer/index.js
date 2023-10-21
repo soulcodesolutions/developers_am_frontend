@@ -104,7 +104,7 @@ function Footer({ language }) {
                                         Developed by
                                     </div>
                                     <div className="flex justify-center sm:justify-start">
-                                        <a href="https://fridaydd.com/" target="_blank">
+                                        <a href="https://www.instagram.com/fridaydd_/" target="_blank">
 
                                         <img src={Friday} className="w-[100px]" alt="" />
                                         </a>

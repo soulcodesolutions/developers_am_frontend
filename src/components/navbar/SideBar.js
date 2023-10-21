@@ -3,6 +3,7 @@ import { Link, navigate } from 'gatsby'
 
 import { languages } from "../home/Home";
 import { changeWordTo } from '../translation_custom';
+import { SwithLangDisplay } from './FloatingBar';
 
 
 
@@ -83,7 +84,7 @@ export default function SideBar(props) {
                                 activeClassName="text-red-800  font-bold bg-red-100"
                                 aria-disabled={l === language}
                             >
-                                {l}
+                                {SwithLangDisplay(l)}
                             </Link>
                         )
                     })}
