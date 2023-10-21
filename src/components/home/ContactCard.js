@@ -4,17 +4,29 @@ import MarkdownView from "react-showdown";
 import { changeWordTo } from '../translation_custom';
 // import { languages } from './Home';
 
+import axios from 'axios';
+
+
+
 
 function ContactCard(props) {
 
     const { className = "", data = {}, language } = props
 
-    const [value, setValue] = useState({
+    const _defaultValue = {
         name: "",
         email: "",
         phone: "",
         message: ""
-    })
+    }
+
+    const [value, setValue] = useState(_defaultValue)
+
+    const [loading, setLoading] = useState(false)
+    const [success, setSucess] = useState(false)
+
+    const _isDisabled = value.email === "" || value.message === "" || value.name === ""
+
 
     const textFieldList = [
         {
@@ -22,6 +34,7 @@ function ContactCard(props) {
             name: "name",
             label: "Name",
             type: "text",
+            required : true,
             // placeholder : "Name"
         },
         {
@@ -29,6 +42,8 @@ function ContactCard(props) {
             name: "email",
             label: "Email",
             type: "text",
+            required : true,
+
 
         },
         {
@@ -50,6 +65,23 @@ function ContactCard(props) {
         }))
     }
 
+    async function sendMessage() {
+        if(_isDisabled || loading){
+            return
+        }
+        setLoading(true)
+        try {
+            const response = await axios.post(`${process.env.GATSBY_STRAPI_API_URL}/api/contact/mail`, value);
+        //   const response = await axios.post(`http://localhost:1337/api/contact/mail`, value);
+            setValue(_defaultValue)
+            setSucess(true)
+          console.log(response);
+        } catch (error) {
+          console.error(error);
+        }
+        setLoading(false)
+
+      }
 
 
     return (<div id="contact" className={className}>
@@ -66,7 +98,14 @@ function ContactCard(props) {
             }
             <TextArea item={{ name: "message", label: "Message" }} value={value} handlechange={handlechange} language={language} />
             <div className="pt-[10px]">
-                <Primary label={changeWordTo("Send", language)} className="cursor-pointer max-w-[100px] mx-auto" />
+                {success ? <>
+                    <div className="text-center py-[10px] text-green-500"> {changeWordTo("Thank you!", language)}</div>
+                    </> :
+                    <Primary 
+                    onClick={() => sendMessage()}
+                    disabled={_isDisabled}
+                    label={ loading ? "..." : changeWordTo("Send", language)} className={`cursor-pointer max-w-[100px] mx-auto ${loading ? "animate-pulse" : ""} `} />
+                }
             </div>
 
         </div>
@@ -85,6 +124,7 @@ const TextField = ({ item = {}, handlechange = () => { },  value = {}, type = "t
             value={value?.[item.name]}
             onChange={handlechange}
             placeholder={changeWordTo(item.label, language)}
+            required={item?.required}
             type={type}
             className='border-2 my-[8px] p-[10px] w-full rounded-lg text-[14px]'
         />
@@ -101,6 +141,7 @@ const TextArea = ({ item = {}, handlechange = () => { } ,  value = {}, type = "t
             value={value?.[item.name]}
             onChange={handlechange}
             placeholder={changeWordTo(item.label, language)}
+            required={true}
 
             // type={type}
             className='border-2 my-[10px] p-[10px] w-full rounded-lg text-[14px]'
