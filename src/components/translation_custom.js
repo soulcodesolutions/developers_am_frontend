@@ -1,7 +1,7 @@
 export const changeWordTo = (text, lang) => {
 
     let _translation = text
-    if(lang == "hy-AM"){
+    if (lang == "hy-AM") {
 
         switch (text) {
             case "Contact us":
@@ -43,12 +43,24 @@ export const changeWordTo = (text, lang) => {
             case "Overview":
                 _translation = "Ընդհանուր"
                 break;
-        
+            case "Legal acts":
+                _translation = "Իրավական ակտեր"
+                break;
+            case "Association documents":
+                _translation = "Ասոցիացիայի փաստաթղթեր"
+                break;
+            case "Certificates":
+                _translation = "Վկայականներ"
+                break;
+            case "Useful links":
+                _translation = "Օգտակար հղումներ"
+                break;
+
             default:
                 break;
         }
 
-    } else if (lang === "ru"){
+    } else if (lang === "ru") {
 
         switch (text) {
             case "Contact us":
@@ -90,7 +102,19 @@ export const changeWordTo = (text, lang) => {
             case "Overview":
                 _translation = "Обзор"
                 break;
-        
+            case "Legal acts":
+                _translation = "Правовые акты"
+                break;
+            case "Association documents":
+                _translation = "Документы ассоциации"
+                break;
+            case "Certificates":
+                _translation = "Сертификаты"
+                break;
+            case "Useful links":
+                _translation = "Полезные ссылки"
+                break;
+
             default:
                 break;
         }
@@ -100,3 +124,5 @@ export const changeWordTo = (text, lang) => {
     return _translation
 
 }
+
+// Legal acts Association documents Certificates Useful links 

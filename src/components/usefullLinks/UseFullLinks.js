@@ -22,7 +22,7 @@ function usefullLinks({ location, data }) {
 
     return (  <div>
          <Navbar language={language} location={location} />
-        <Content data={data} />
+        <Content data={data} language={language} />
         {/* <Contact /> */}
         <Footer  language={language}  />
     </div>);

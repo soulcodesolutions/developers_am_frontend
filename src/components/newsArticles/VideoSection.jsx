@@ -80,11 +80,12 @@ const VideoFUll = ({ item }) => {
         <div className="">
 
             <ReactPlayer
-                className='react-player min-h-[550px] bg-black'
+                className='react-player sm:min-h-[550px] bg-black'
                 url={item?.video_url}
+                // url={"https://youtu.be/ouEezpuPc3A?si=mHgbZuqhGfI0gFGo"}
                 width='100%'
                 controls={true}
-                // height='100%'
+                height='100%'
 
             />
         </div>

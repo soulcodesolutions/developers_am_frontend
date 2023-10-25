@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import MarkdownView from "react-showdown";
 
 import { motion } from 'framer-motion';
+import { changeWordTo } from '../translation_custom';
 
 
-function Content({ location, data = {} }) {
+function Content({ location, data = {}, language }) {
 
     
 
@@ -60,12 +61,12 @@ function Content({ location, data = {} }) {
         {
             id: 3,
             key: "certifications",
-            label: "Certifications"
+            label: "Certificates"
         },
         {
             id: 3,
             key: "usefull_links",
-            label: "Usefull links"
+            label: "Useful links"
         },
 
 
@@ -75,16 +76,16 @@ function Content({ location, data = {} }) {
 
     const HeaderTab = () => {
         return (
-            <div className="flex flex-wrap w-full overflow-scroll no-scrollbar hide-scrollbar scroll-smooth  justify-between max-w-[600px]">
+            <div className="flex flex-wrap w-full overflow-scroll no-scrollbar hide-scrollbar scroll-smooth  justify-center sm:justify-start max-w-[750px]">
                 {
                     _headings.map(item => {
                         return (
                             <div
                                 key={item?.key}
-                                className={`pr-[10px] cursor-pointer mb-[20px]  ${activeKey === item?.key ? 'text-red-800 font-bold' : ''}`}
+                                className={`pr-[10px] px-[10px] cursor-pointer mb-[20px]  ${activeKey === item?.key ? 'text-red-800 font-bold' : ''}`}
                                 onClick={() => setActiveKey(item?.key)}
                             >
-                                {item?.label}
+                                {changeWordTo(item?.label, language)}
                                 {activeKey === item?.key ?
                                     <motion.div className='h-1 w-full bg-red-800 mt-[5px]' layoutId="underline"></motion.div>
                                     : null}
