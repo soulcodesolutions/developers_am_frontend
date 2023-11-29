@@ -9,6 +9,9 @@ import { changeWordTo } from "../translation_custom";
 
 export default function News({ data, language }) {
 
+    // console.log(data)
+
+
     return (
         <div id="news" className="py-[50px] bg-white">
             <div className="container mx-auto">

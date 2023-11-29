@@ -15,9 +15,9 @@ function NewsBox({ item, language }) {
                         <div className="img w-full h-[150px] bg-sky-100 overflow-hidden rounded-sm">
                             <img src={`${process.env.GATSBY_STRAPI_API_URL}${item?.thumbnail?.url}`} className="" alt="" />
                         </div>
-                        <div className="text-[12px] 2xl:text-[14px] py-[10px] pt-[10px] font-bold text-slate-500">
+                        <div className="text-[12px] 2xl:text-[14px] _py-[10px] pt-[10px] pb-[5px] font-bold text-slate-500">
                           
-                        {item?.display_date}
+                        {item?.display_date} 
 
                         </div>
                         <div className="text-[14px] 2xl:text-[16px] _pt-[10px] ">

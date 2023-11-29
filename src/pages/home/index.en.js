@@ -53,6 +53,7 @@ query HomeQuery {
         slug
         uniqueid
         title
+        display_date
         description
         thumbnail {
           url

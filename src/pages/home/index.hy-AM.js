@@ -51,6 +51,7 @@ query ArmenianQuery {
     news_articles {
       strapi_id
       title
+      display_date
       slug
       uniqueid
       description
