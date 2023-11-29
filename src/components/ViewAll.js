@@ -30,7 +30,7 @@ export const ViewAll = ({ to = "", language }) => {
     </div>);
 };
 
-export const GoBack = ({ to = "" , language}) => {
+export const GoBack = ({ to = "" , language, hash = ""}) => {
 
     const handleBackClick = () => {
         // const { history } = window;
@@ -47,7 +47,7 @@ export const GoBack = ({ to = "" , language}) => {
           // Get the previous page path
           navigate(to)
         } else {
-            navigate(`/${language}/home`)
+            navigate(`/${language}/home#${hash}`)
         }
 
         

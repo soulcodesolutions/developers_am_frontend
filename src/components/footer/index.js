@@ -27,6 +27,7 @@ function Footer({ language }) {
             }}
             className=" bg-cover bg-top bg-fixed_"
         >
+            <div className="lolipop"></div>
             <div className="w-full bg-slate-800/90 backdrop-blur-sm">
                 <div className="container mx-auto pt-[50px] sm:pt-[50px] pb-[0px]">
                     <div className="flex flex-wrap  justify-between items-start ">

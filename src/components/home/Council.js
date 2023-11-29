@@ -8,7 +8,7 @@ import { UserCard } from "../UserBox";
 export default function Council({ data, language="en" }) {
 
     return (
-        <div className="py-[50px] bg-slate-100">
+        <div id="council" className="py-[50px] bg-slate-100">
             <div className="container mx-auto">
                 <div className="flex justify-center sm:justify-between items-center">
 

@@ -31,7 +31,7 @@ export function UserCard(props) {
         // slidesPerView: 3,
         loop: true,
         observer: true,
-        spaceBetween: 100,
+        spaceBetween: 20,
         on: {
             // realIndexChange: (swiper) => setImageIndex(swiper.realIndex)
         },
@@ -41,11 +41,11 @@ export function UserCard(props) {
         },
         breakpoints: {
             1000: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 20,
             },
             1200: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 20,
             }
         }
@@ -97,15 +97,18 @@ function UserBox({item = {}, language}) {
         navigate(`/${language}/council?strapiId=${item.strapi_id}`)
     }
 
+    // console.log(item?.strapi_id)
+
     return (<div
             onClick={() => navigateTo()}
-            key={item?.strapi_id} className="max-w-[250px]_ bg-white rounded-xl p-[20px] _max-h-[350px] h-full min-h-[280px] " >
+            key={item?.strapi_id} 
+            className="max-w-[250px]_ bg-white rounded-xl p-[20px] _max-h-[350px] h-full min-h-[280px] " >
           {/* <Link to={`/${language}/council?strapiId=${item.strapi_id}`}> */}
         <div className="flex flex-col justify-between items-center h-full  ">
 
-            <div className="max-w-[200px] lg:max-w-[180px] photo mx-auto rounded-full overflow-hidden max-h-[170px]">
+            <div  className="max-w-[200px] lg:max-w-[180px] photo mx-auto rounded-full overflow-hidden max-h-[170px] ">
             
-                <img src={`${process.env.GATSBY_STRAPI_API_URL}${item?.photo?.url}`} alt="" className="w-full" />
+                <img src={`${process.env.GATSBY_STRAPI_API_URL}${item?.photo?.url}`} alt="" className="w-full min-h-[170px] " />
             </div>
             <div className="">
                 <div className="text-[16px] 2xl:text-[18px] text-center pt-[20px]">

@@ -28,7 +28,7 @@ function PartnerCard(props) {
         // slidesPerView: 3,
         loop: true,
         observer: true,
-        spaceBetween: 250,
+        spaceBetween: 20,
         on: {
             // realIndexChange: (swiper) => setImageIndex(swiper.realIndex)
         },

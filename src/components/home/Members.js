@@ -8,7 +8,7 @@ import CompanyCard from "../members/CompanyCard";
 export default function Members({ data, language }) {
     console.log('Members -> ', data)
     return (
-        <div className="py-[50px] bg-white">
+        <div id="members" className="py-[50px] bg-white">
             <div className="container mx-auto relative">
                 <div className="flex justify-center sm:justify-between items-center relative z-[22]">
                     <div className="text-[24px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">

@@ -50,7 +50,7 @@ export const changeWordTo = (text, lang) => {
                 _translation = "Ասոցիացիայի փաստաթղթեր"
                 break;
             case "Certificates":
-                _translation = "Վկայականներ"
+                _translation = "Սերտիֆիկացում"
                 break;
             case "Useful links":
                 _translation = "Օգտակար հղումներ"

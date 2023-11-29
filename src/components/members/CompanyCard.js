@@ -29,7 +29,7 @@ function CompanyCard(props) {
         // slidesPerView: 3,
         loop: true,
         observer: true,
-        spaceBetween: 100,
+        spaceBetween: 20,
         on: {
             // realIndexChange: (swiper) => setImageIndex(swiper.realIndex)
         },

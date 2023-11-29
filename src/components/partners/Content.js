@@ -34,7 +34,7 @@ function Content({ members, title, location, language }) {
                     </div>
                     <div className='order-1 sm:order-2'>
 
-                        <GoBack language={language} />
+                        <GoBack language={language} hash='partners' />
                     </div>
                 </div>
                 <div className="pt-[50px]">

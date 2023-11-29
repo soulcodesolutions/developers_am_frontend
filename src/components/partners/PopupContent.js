@@ -1,9 +1,12 @@
 import React from 'react';
 import MarkdownView from 'react-showdown';
 
+
 function PopupContent(props) {
 
     const {item = {}} = props
+
+    
 
     return ( <div className=''>
         <div className="photo mx-auto rounded-full overflow-hidden  max-w-[200px]">
@@ -17,7 +20,7 @@ function PopupContent(props) {
                 markdown={item.description?.data?.description} 
                 options={{
                     openLinksInNewWindow : true,
-                    simplifiedAutoLink : true
+                    simplifiedAutoLink : true,
                 }}
                 
                 />

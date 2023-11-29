@@ -8,7 +8,7 @@ import { ViewAll } from '../ViewAll';
 
 export default function Partners({ data, language }) {
     return (
-        <div className="pt-[50px] sm:pt-[100px] py-[50px] bg-slate-100">
+        <div id='partners' className="pt-[50px] sm:pt-[100px] py-[50px] bg-slate-100">
             <div className="container mx-auto">
                 <div className="flex justify-center sm:justify-between items-center">
                     <div className="text-[24px] sm:text-[40px] text-center sm:text-left font-bold text-red-800 " >

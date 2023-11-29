@@ -54,3 +54,11 @@ ul li:before {
   /* text-decoration: underline; */
   color: blue;
 }
+
+.lolipop {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+ /* Other transform properties here */
+}

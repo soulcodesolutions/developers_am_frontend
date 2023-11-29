@@ -19,7 +19,7 @@ function Content({ members, title, language }) {
                     </div>
                     <div className='order-1 sm:order-2'>
 
-                        <GoBack language={language} />
+                        <GoBack language={language} hash='news' />
                     </div>
                 </div>
                 <div className="pt-[50px]">
