@@ -22,6 +22,7 @@
     "gatsby": "^5.8.0",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-image": "^3.10.0",
+    "gatsby-plugin-manifest": "^5.12.3",
     "gatsby-plugin-sharp": "^5.8.0",
     "gatsby-plugin-use-query-params": "^1.0.1",
     "gatsby-source-filesystem": "^5.8.0",

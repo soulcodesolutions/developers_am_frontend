@@ -82,6 +82,7 @@ function ContactCard(props) {
         setLoading(false)
 
       }
+      
 
 
     return (<div id="contact" className={className}>

@@ -3,11 +3,13 @@ import { navigate } from "gatsby";
 
 const getRedirectLanguage = () => {
   if (typeof navigator === `undefined`) {
-    return "en";
+    return "hy";
   }
 
-  const lang = navigator && navigator.language && navigator.language.split("-")[0];
-  if (!lang) return "en";
+  //const lang = navigator && navigator.language && navigator.language.split("-")[0];
+  const lang = "hy";
+
+  if (!lang) return "hy";
 
   switch (lang) {
     case "hy":

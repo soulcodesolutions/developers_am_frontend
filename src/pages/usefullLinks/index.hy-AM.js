@@ -24,6 +24,7 @@ query UsefullLinksQuery {
         legal_acts {
           label
           link
+          hide_in_website
          pdf {
           url
          }
@@ -31,6 +32,7 @@ query UsefullLinksQuery {
         association_documents {
           label
           link
+          hide_in_website
          pdf {
           url
          }
@@ -38,6 +40,7 @@ query UsefullLinksQuery {
         certifications {
           label
           link
+          hide_in_website
          pdf {
           url
          }
@@ -45,6 +48,7 @@ query UsefullLinksQuery {
         usefull_links {
           label
           link
+          hide_in_website
          pdf {
           url
          }
