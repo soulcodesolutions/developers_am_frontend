@@ -33,10 +33,10 @@ function CompanyCard(props) {
         on: {
             // realIndexChange: (swiper) => setImageIndex(swiper.realIndex)
         },
-        // autoplay: {
-        //     delay: 2500,
-        //     disableOnInteraction: false
-        // },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+        },
         breakpoints: {
             700: {
                 slidesPerView: 2,

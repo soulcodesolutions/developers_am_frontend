@@ -106,7 +106,7 @@ function UserBox({item = {}, language}) {
           {/* <Link to={`/${language}/council?strapiId=${item.strapi_id}`}> */}
         <div className="flex flex-col justify-between items-center h-full  ">
 
-            <div  className="max-w-[200px] lg:max-w-[180px] photo mx-auto rounded-full overflow-hidden max-h-[170px] ">
+            <div  className="max-w-[200px] lg:max-w-[180px] photo mx-auto rounded-full overflow-hidden max-h-[170px]  ">
             
                 <img src={`${process.env.GATSBY_STRAPI_API_URL}${item?.photo?.url}`} alt="" className="w-full min-h-[170px] " />
             </div>
