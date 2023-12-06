@@ -7,6 +7,7 @@ import MarkdownView from 'react-showdown';
 import { SEO } from '../components/seo';
 import VideoSection from '../components/newsArticles/VideoSection';
 import { GoBack } from '../components/ViewAll';
+import { customRenderer } from '../components/usefullFunctions';
 // import { languages } from '../data/siteMetadata';
 
 
@@ -62,10 +63,11 @@ function NewsArticle({ location, data = {}, pageContext }) {
 
               <div>
                 <MarkdownView
-                  markdown={data?.content?.data?.content}
+                  markdown={customRenderer(data?.content?.data?.content || "")}
                   options={{
                     openLinksInNewWindow: true,
-                    simplifiedAutoLink: true
+                    simplifiedAutoLink: true,
+                    simpleLineBreaks : true
                   }}
                 />
               </div>

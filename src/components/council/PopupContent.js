@@ -1,6 +1,7 @@
 import React from 'react';
 import { JustAppear } from '../SlideAnimation';
 import MarkdownView from 'react-showdown';
+import { customRenderer } from '../usefullFunctions';
 
 
 function PopupContent({ item }) {
@@ -17,10 +18,12 @@ function PopupContent({ item }) {
         </div>
         <JustAppear className="text- pt-[20px] popup_container">
             <MarkdownView 
-                markdown={item.description?.data?.description}
+                markdown={customRenderer(item.description?.data?.description)}
+
                 options={{
-                    openLinksInNewWindow : true,
-                    simplifiedAutoLink : true
+                    openLinksInNewWindow: true,
+                    simplifiedAutoLink: true,
+                    simpleLineBreaks: true
                 }}
                 />
         </JustAppear>

@@ -5,7 +5,7 @@ export default function PersonCard(props) {
     console.log('Council -> ', props)
     return (<div className="max-w-[250px] bg-white rounded-xl p-[20px]" >
         <div className="photo mx-auto rounded-full overflow-hidden ">
-            <img src={process.env.STRAPI_API_URL + item.photo.url} alt="" className="w-full" />
+            <img src={process.env.STRAPI_API_URL + item?.photo?.url} alt="" className="w-full" />
         </div>
         <div className="text-[20px] text-center pt-[20px]">
             {item.name}

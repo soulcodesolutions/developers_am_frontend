@@ -2,6 +2,7 @@ import React from "react";
 import MarkdownView from "react-showdown";
 import AboutImage from "../../images/home/about.png";
 import { JustAppear, SlideLeft } from "../SlideAnimation";
+import { customRenderer } from "../usefullFunctions";
 
 export default function AboutUs({ data }) {
     console.log(data)
@@ -22,7 +23,14 @@ export default function AboutUs({ data }) {
                         </div>
                         <div className="w-full xl:w-1/2 pt-[50px] xl:pt-[0px] max-w-fit overflow-hidden">
                             <JustAppear>
-                                <MarkdownView markdown={data?.content} />
+                                <MarkdownView 
+                                    markdown={customRenderer(data?.content || "")}
+                                    options={{
+                                        openLinksInNewWindow: true,
+                                        simplifiedAutoLink: true,
+                                        simpleLineBreaks : true
+                                    }}
+                                    />
                             </JustAppear>
                         </div>
                     </div>

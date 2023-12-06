@@ -1,5 +1,6 @@
 import React from 'react';
 import MarkdownView from 'react-showdown';
+import { customRenderer } from '../usefullFunctions';
 
 const Instagram_icon = () => {
     return (<>
@@ -76,10 +77,11 @@ function PopupContent(props) {
         </div>
         <div className="text-[16px] text-  pt-[20px] popup_container">
             <MarkdownView
-                markdown={item?.description?.data?.description}
+                markdown={customRenderer(item?.description?.data?.description || "")}
                 options={{
                     openLinksInNewWindow: true,
                     simplifiedAutoLink: true,
+                    simpleLineBreaks : true
                 }}
                 components={{ SocialMedias }}
 

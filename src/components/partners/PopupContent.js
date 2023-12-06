@@ -1,5 +1,6 @@
 import React from 'react';
 import MarkdownView from 'react-showdown';
+import { customRenderer } from '../usefullFunctions';
 
 
 function PopupContent(props) {
@@ -17,10 +18,11 @@ function PopupContent(props) {
         </div>
         <div className="text-[16px] text-  text-slate-500 pt-[20px] popup_container">
             <MarkdownView 
-                markdown={item.description?.data?.description} 
+                markdown={customRenderer(item.description?.data?.description || "")} 
                 options={{
                     openLinksInNewWindow : true,
                     simplifiedAutoLink : true,
+                    simpleLineBreaks : true
                 }}
                 
                 />

@@ -62,3 +62,7 @@ ul li:before {
   transform: translate3d(0, 0, 0);
  /* Other transform properties here */
 }
+
+p {
+  padding-top: 10px;
+}
