@@ -17,7 +17,7 @@ export function getNavLinks(language) {
             },
             {
                 id: 2,
-                lable: "Մեր մասին",
+                lable: "О нас",
                 link: `/${language}/home#aboutus`,
                 onNavbar : false,
             },
