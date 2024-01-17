@@ -11,10 +11,10 @@ function Partners({ location, data }) {
         language = "en";
     }
     return (<div>
-        <Navbar location={location} language={language} />
+        <Navbar data={{ logo : data.strapiHomePageV2.logo }} location={location} language={language} />
         <Content members={data.allStrapiPartner.nodes} title={data.strapiHomePageV2.partner_heading} location={location} language={language}  />
         {/* <Contact data={{ title: data.strapiHomePageV2.contact_heading }} /> */}
-        <Footer language={language}   data={{ title: data.strapiHomePageV2.contact_heading }} />
+        <Footer language={language}   data={{ Footer : data.strapiHomePageV2.Footer, logo : data.strapiHomePageV2.logo }} />
 
     </div>);
 }

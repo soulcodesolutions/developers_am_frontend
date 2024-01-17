@@ -9,14 +9,17 @@ import Friday from '../../images/friday.png'
 
 import ContactCard from '../home/ContactCard';
 import { changeWordTo } from "../translation_custom";
+import MarkdownView from "react-showdown";
 
 
 
 
 
-function Footer({ language }) {
+function Footer({ language, data }) {
     // console.log(language, "from footer")
     const navlinks = getNavLinks(language);
+
+    // console.log(data)
 
 
     return (
@@ -42,10 +45,25 @@ function Footer({ language }) {
                                         <Link to="/">
                                             <div className="flex items-center w-fit mx-auto sm:mx-0">
 
-                                                <div className="logo mr-[20px]">
-                                                    <img src={Logo} alt="" />
+                                                <div className="logo mr-[20px] max-w-[50px] ">
+                                                {/* src={process.env.GATSBY_STRAPI_API_URL + item?.photo?.url} */}
+                                                {
+                                                     data?.logo?.logo?.url ?
+                                                     <img src={process.env.GATSBY_STRAPI_API_URL + data?.logo?.logo?.url} alt="" />
+                                                     :
+                                                     <img src={Logo} alt="" />
+
+                                                }
                                                 </div>
-                                                <div className="text-white text-[10px] font-bold"> ԿԱՌՈՒՑԱՊԱՏՈՂՆԵՐԻ <br />ԱՍՈՑԻԱՑԻԱ</div>
+                                                <div className="text-white text-[10px] font-bold max-w-[100px] font-bold">
+                                                    {
+                                                        data?.logo?.title ?
+                                                        <MarkdownView markdown={data?.logo?.title}  className="mt-[10px]" />
+                                                         :
+                                                        <>ԿԱՌՈՒՑԱՊԱՏՈՂՆԵՐԻ <br />ԱՍՈՑԻԱՑԻԱ</>
+                                                    }
+                                                     
+                                                     </div>
                                             </div>
                                         </Link>
                                     </div>
@@ -99,8 +117,18 @@ function Footer({ language }) {
                                     <div className="text-[16px] pb-[20px]">
                                         {changeWordTo("Contact us", language)}
                                     </div>
-                                    <div className="phone">+374 98513233</div>
-                                    <div className="phone">info@developers.am</div>
+                                    {/* <div className="phone">+374 98513233</div> */}
+                                    <div className="max-w-[250px] mx-auto">
+                                        <MarkdownView markdown={data?.Footer?.address} />
+                                       
+                                    </div>
+                                    <div className="phone ">
+                                        {data?.Footer?.phone}
+                                    </div>
+                                    <div className="phone">
+                                        info@developers.am
+                                    </div>
+
                                     <div className="text-[16px] pt-[20px] pb-[10px]">
                                         Developed by
                                     </div>

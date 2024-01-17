@@ -60,6 +60,16 @@ query HomeQuery {
         }
       }
       contact_heading
+      Footer{
+        address
+        phone
+      }
+      logo {
+        logo  {
+          url
+        }
+        title
+      }
     }
   }
 `

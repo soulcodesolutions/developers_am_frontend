@@ -2,16 +2,17 @@ import React from "react";
 import Logo from "../../images/Logo.webp"
 import { Link } from "gatsby";
 import { languages } from "../home/Home";
+import MarkdownView from "react-showdown";
 
 export const SwithLangDisplay = (_string) => {
-    
-    if(_string == "hy-AM") {
+
+    if (_string == "hy-AM") {
         return "AM"
     }
     return _string
 }
 
-const FloatingBar = ({ navlinks = [], openSideBar, location, language }) => {
+const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) => {
 
 
     const ChangeLangButton = () => {
@@ -41,16 +42,30 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language }) => {
     }
 
     return (<div>
-        <div className="w-full fixed top-0 left-0 bg-white py-[20px] px-[10px] drop-shadow-xl z-[100]">
+        <div className="w-full fixed top-0 left-0 bg-white py-[20px] px-[10px] md:px-0 drop-shadow-xl z-[100]">
             <div className="container mx-auto">
 
                 <div className="flex justify-between items-center">
                     <div>
                         <Link to={`/${language}/home`}>
                             <div className="nav flex items-center">
-                                <img alt="" src={Logo} className="h-fit" />
+                                {/* <img alt="" src={Logo} className="h-fit" /> */}
+                                {
+                                    data?.logo?.logo?.url ?
+                                        <img src={process.env.GATSBY_STRAPI_API_URL + data?.logo?.logo?.url} className="h-fit max-w-[50px] " alt="" />
+                                        :
+                                        <img src={Logo} alt="" className="h-fit" />
+
+                                }
                                 <div className="text-[10px] ml-[20px] text-sky-900 font-bold">
-                                    ԿԱՌՈՒՑԱՊԱՏՈՂՆԵՐԻ <br />ԱՍՈՑԻԱՑԻԱ
+                                    {
+                                        data?.logo?.title ?
+                                            <MarkdownView markdown={data?.logo?.title} className="mt-[10px]" />
+                                            :
+                                            <>ԿԱՌՈՒՑԱՊԱՏՈՂՆԵՐԻ <br />ԱՍՈՑԻԱՑԻԱ</>
+                                    }
+
+                                    {/* ԿԱՌՈՒՑԱՊԱՏՈՂՆԵՐԻ <br />ԱՍՈՑԻԱՑԻԱ */}
                                 </div>
                             </div>
                         </Link>

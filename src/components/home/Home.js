@@ -19,7 +19,7 @@ export default function Home({ location, data }) {
   data = data?.strapiHomePageV2 || {};
   return (
     <>
-      <Navbar location={location} language={language} />
+      <Navbar data={{  logo : data.logo }} location={location} language={language} />
       <Hero data={{ sub_heading: data.sub_heading, hero_text: data.hero_text }} language={language} />
       <AboutUs data={{ title: data.about_heading, content: data.about_content?.data?.about_content }} />
       <Council data={{ title: data.council_heading, members: data.council }} language={language}/>
@@ -27,7 +27,7 @@ export default function Home({ location, data }) {
       <Partners data={{ title: data.partner_heading, members: data.partners }} language={language} />
       <News data={{ title: data.news_heading, members: data.news_articles }} language={language} />
       {/* <Contact data={{ title: data.contact_heading}} /> */}
-      <Footer language={language} location={location} />
+      <Footer data={{ Footer : data.Footer, logo : data.logo }} language={language} location={location} />
       
     </>
   )

@@ -62,6 +62,16 @@ query ArmenianQuery {
       }
     }
     contact_heading
+    Footer{
+      address
+      phone
+    }
+    logo {
+      logo  {
+        url
+      }
+      title
+    }
   }
 }
 `

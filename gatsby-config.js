@@ -85,7 +85,13 @@ module.exports = {
                 council: "*",
                 members: "*",
                 partners: "*",
-                "news_articles": "*"
+                "news_articles": "*",
+                Footer : "*",
+                logo : {
+                  populate : {
+                    logo : "*"
+                  }
+                }
               }
             },
             pluginOptions: {

@@ -12,20 +12,23 @@ import { customRenderer } from '../components/usefullFunctions';
 
 
 
+
 function NewsArticle({ location, data = {}, pageContext }) {
   // console.log('Page Context  -> ', pageContext);
   console.log('Data -> ', data);
   // console.log('Location -> ', location);
+  let footerData = data.strapiHomePageV2 || {}
   data = data.strapiNewsArticle
+
   return (<div>
-    <Navbar location={location} language={pageContext.locale} />
+    <Navbar location={location} language={pageContext.locale}  data={{ Footer: footerData.Footer, logo: footerData.logo }}  />
     <div className="header ">
       <div className="container mx-auto pt-[150px] ">
         <div className="header ">
           <div className="w-full">
-              <div className='pb-[20px] flex justify-end'>
-                <GoBack to={`/${pageContext.locale}/news`} language={pageContext.locale} />
-              </div>
+            <div className='pb-[20px] flex justify-end'>
+              <GoBack to={`/${pageContext.locale}/news`} language={pageContext.locale} />
+            </div>
             <div className='w-full rounded-xl overflow-hidden '>
               <div
                 style={{
@@ -67,7 +70,7 @@ function NewsArticle({ location, data = {}, pageContext }) {
                   options={{
                     openLinksInNewWindow: true,
                     simplifiedAutoLink: true,
-                    simpleLineBreaks : true
+                    simpleLineBreaks: true
                   }}
                 />
               </div>
@@ -102,7 +105,7 @@ function NewsArticle({ location, data = {}, pageContext }) {
 
 
     {/* <Contact /> */}
-    <Footer language={pageContext.locale} />
+    <Footer language={pageContext.locale} data={{ Footer: footerData.Footer, logo: footerData.logo }} />
 
   </div>);
 }
@@ -115,7 +118,7 @@ export const Head = ({ location, data }) => (
 
 
 export const query = graphql`
-  query NewsArticleQuery($id: String) {
+  query NewsArticleQuery($id: String, $locale : String) {
     strapiNewsArticle(id: { eq: $id }) {
       slug
       strapi_id
@@ -139,6 +142,19 @@ export const query = graphql`
       videoSection {
         title
         video_url
+      }
+    }
+    strapiHomePageV2(locale: {eq: $locale}) {
+
+      Footer{
+        address
+        phone
+      }
+      logo {
+        logo  {
+          url
+        }
+        title
       }
     }
   }

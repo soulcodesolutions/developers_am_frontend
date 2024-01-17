@@ -39,5 +39,15 @@ query NewsListQuery {
   strapiHomePageV2(locale: {eq: "ru"}) {
     news_heading
     contact_heading
+    Footer{
+      address
+      phone
+    }
+    logo {
+      logo  {
+        url
+      }
+      title
+    }
   }
 }`

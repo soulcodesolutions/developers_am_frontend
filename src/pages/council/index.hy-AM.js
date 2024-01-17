@@ -36,6 +36,16 @@ query CouncilQuery {
     strapiHomePageV2(locale: {eq: "hy-AM"}) {
       council_heading
       contact_heading
+      Footer{
+        address
+        phone
+      }
+      logo {
+        logo  {
+          url
+        }
+        title
+      }
     }
   }
 `

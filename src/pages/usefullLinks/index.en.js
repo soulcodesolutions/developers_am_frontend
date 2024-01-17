@@ -55,5 +55,19 @@ query UsefullLinksQuery {
       }
       
     }
+    strapiHomePageV2(locale: {eq: "en"}) {
+      
+      Footer{
+        address
+        phone
+      }
+      logo {
+        logo  {
+          url
+        }
+        title
+      }
+    }
+
   }
 `

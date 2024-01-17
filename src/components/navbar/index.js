@@ -148,7 +148,7 @@ export function getNavLinks(language) {
     }
 }
 
-function Navbar({ location, language }) {
+function Navbar({ location, language, data }) {
 
     let navlinks = getNavLinks(language);
     navlinks = navlinks.filter(item => item.onNavbar === true)
@@ -165,7 +165,7 @@ function Navbar({ location, language }) {
 
 
     return (<div>
-        <FloatingBar navlinks={navlinks} openSideBar={openSideBar} location={location} language={language} />
+        <FloatingBar navlinks={navlinks} openSideBar={openSideBar} location={location} language={language} data={data} />
         <SideBar navlinks={navlinks} open={open}  closeSidebar={closeSidebar} location={location} language={language} />
     </div>);
 }

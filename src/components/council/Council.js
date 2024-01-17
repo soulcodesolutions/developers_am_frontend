@@ -13,10 +13,10 @@ export default function Council({ location, data }) {
         language = "en";
     }
     return (<div>
-        <Navbar location={location} language={language} />
+        <Navbar  data={{ logo : data.strapiHomePageV2.logo }} location={location} language={language} />
         <Content members={data.allStrapiCouncil.nodes} title={data.strapiHomePageV2.council_heading} language={language} location={location} />
         {/* <Contact data={{ title: data.strapiHomePageV2.contact_heading }} /> */}
-        <Footer data={{ title: data.strapiHomePageV2.contact_heading }} language={language} />
+        <Footer data={{ Footer : data.strapiHomePageV2.Footer, logo : data.strapiHomePageV2.logo }} language={language} />
 
     </div>);
 }

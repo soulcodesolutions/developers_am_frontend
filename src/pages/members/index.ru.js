@@ -36,5 +36,15 @@ query MembersQuery {
   strapiHomePageV2(locale: {eq: "ru"}) {
     members_heading
     contact_heading
+    Footer{
+      address
+      phone
+    }
+    logo {
+      logo  {
+        url
+      }
+      title
+    }
   }
 }`

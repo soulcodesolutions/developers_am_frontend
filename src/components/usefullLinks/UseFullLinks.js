@@ -18,13 +18,13 @@ function usefullLinks({ location, data }) {
         language = "en";
     }
 
-    data = data?.strapiUsefullLink || {};
+    // data = data?.strapiUsefullLink || {};
 
     return (  <div>
-         <Navbar language={language} location={location} />
-        <Content data={data} language={language} />
+         <Navbar data={{ logo : data.strapiHomePageV2.logo }} language={language} location={location} />
+        <Content data={data?.strapiUsefullLink || {}} language={language} />
         {/* <Contact /> */}
-        <Footer  language={language}  />
+        <Footer  language={language} data={{ Footer : data.strapiHomePageV2.Footer, logo : data.strapiHomePageV2.logo }}  />
     </div>);
 }
 
