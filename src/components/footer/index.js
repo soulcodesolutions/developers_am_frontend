@@ -123,7 +123,9 @@ function Footer({ language, data }) {
                                        
                                     </div>
                                     <div className="phone ">
-                                        {data?.Footer?.phone}
+                                        
+                                        <MarkdownView markdown={data?.Footer?.phone} />
+                                        {/* {data?.Footer?.phone} */}
                                     </div>
                                     <div className="phone">
                                         info@developers.am
