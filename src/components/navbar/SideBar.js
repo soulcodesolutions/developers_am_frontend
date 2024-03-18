@@ -98,7 +98,7 @@ export default function SideBar(props) {
                                 // to={location.pathname.replace(`/${language}`, `/${l}`)}
                                 to={getLinkURL(l)}
 
-                                activeClassName="text-red-800  font-bold bg-red-100"
+                                // activeClassName="text-red-800  font-bold bg-red-100"
                                 aria-disabled={l === language}
                             >
                                 {SwithLangDisplay(l)}

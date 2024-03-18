@@ -15,9 +15,9 @@ export const SwithLangDisplay = (_string) => {
 const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) => {
     
     
-    const isActiveLanguage = (language) => {
+    const isActiveLanguage = (l) => {
     
-        if(location.pathname.split('/')[1] === language){
+        if(location.pathname.split('/')[1] === l){
             return true
         }
         return false
@@ -44,7 +44,7 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) =
                                 key={l}
                                 className={`inline-block min-w-[80px] text-center hover:bg-red-300 ${isActiveLanguage(l)? "text-red-800  font-bold bg-red-100" : ""}`}
                                 to={getLinkURL(l)}
-                                activeClassName="text-red-800  font-bold bg-red-100"
+                                // activeClassName="text-red-800  font-bold bg-red-100"
                                 aria-disabled={l === language}
                             >
                                 {SwithLangDisplay(l)}
