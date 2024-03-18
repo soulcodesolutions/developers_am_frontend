@@ -13,7 +13,15 @@ export const SwithLangDisplay = (_string) => {
 }
 
 const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) => {
-
+    
+    
+    const isActiveLanguage = (language) => {
+    
+        if(location.pathname.split('/')[1] === language){
+            return true
+        }
+        return false
+    }
 
     const ChangeLangButton = () => {
 
@@ -27,8 +35,8 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) =
                         return (
                             <Link
                                 key={l}
-                                className="inline-block min-w-[80px] text-center hover:bg-red-300"
-                                to={location.pathname.replace(`/${language}`, `/${l}`)}
+                                className={`inline-block min-w-[80px] text-center hover:bg-red-300 ${isActiveLanguage(l)? "text-red-800  font-bold bg-red-100" : ""}`}
+                                to={`${location.pathname.replace(`/${language}`, `/${l}`)}${window.location.hash.substring(1) ? `#${window.location.hash.substring(1)}` : '#i'}`}
                                 activeClassName="text-red-800  font-bold bg-red-100"
                                 aria-disabled={l === language}
                             >

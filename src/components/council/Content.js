@@ -30,7 +30,7 @@ function Content({ title, members, language, location }) {
                     </div>
                     <div className='order-1 sm:order-2'>
 
-                        <GoBack  language={language} hash="council" />
+                        {/* <GoBack  language={language} hash="council" /> */}
                     </div>
                 </div>
                 <div className="pt-[50px]">

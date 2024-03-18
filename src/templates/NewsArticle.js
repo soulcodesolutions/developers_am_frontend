@@ -27,7 +27,7 @@ function NewsArticle({ location, data = {}, pageContext }) {
         <div className="header ">
           <div className="w-full">
             <div className='pb-[20px] flex justify-end'>
-              <GoBack to={`/${pageContext.locale}/news`} language={pageContext.locale} />
+              {/* <GoBack to={`/${pageContext.locale}/news`} language={pageContext.locale} /> */}
             </div>
             <div className='w-full rounded-xl overflow-hidden '>
               <div
