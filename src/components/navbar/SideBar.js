@@ -37,6 +37,13 @@ export default function SideBar(props) {
         return false
     }
 
+    const getLinkURL = (l) => {
+        if(typeof window !== 'undefined'){
+            return `${location.pathname.replace(`/${language}`, `/${l}`)}${window.location.hash.substring(1) ? `#${window.location.hash.substring(1)}` : '#i'}`
+        }
+        return ""
+    }
+
     return (
         <>
             {open && <div onClick={() => closeSidebar()} className="fixed z-[110] h-full w-full right-0 top-0 bg-black/50 "></div>}
@@ -89,7 +96,7 @@ export default function SideBar(props) {
                                 key={l}
                                 className={` min-w-[80px] text-center ${isActiveLanguage(l)? "text-red-800  font-bold bg-red-100" : ""}`}
                                 // to={location.pathname.replace(`/${language}`, `/${l}`)}
-                                to={`${location.pathname.replace(`/${language}`, `/${l}`)}${window.location.hash.substring(1) ? `#${window.location.hash.substring(1)}` : '#i'}`}
+                                to={getLinkURL(l)}
 
                                 activeClassName="text-red-800  font-bold bg-red-100"
                                 aria-disabled={l === language}

@@ -23,6 +23,13 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) =
         return false
     }
 
+    const getLinkURL = (l) => {
+        if(typeof window !== 'undefined'){
+            return `${location.pathname.replace(`/${language}`, `/${l}`)}${window.location.hash.substring(1) ? `#${window.location.hash.substring(1)}` : '#i'}`
+        }
+        return ""
+    }
+
     const ChangeLangButton = () => {
 
         return (<div className="inline-block ml-[20px]   relative uppercase group cursor-pointer">
@@ -36,7 +43,7 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) =
                             <Link
                                 key={l}
                                 className={`inline-block min-w-[80px] text-center hover:bg-red-300 ${isActiveLanguage(l)? "text-red-800  font-bold bg-red-100" : ""}`}
-                                to={`${location.pathname.replace(`/${language}`, `/${l}`)}${window.location.hash.substring(1) ? `#${window.location.hash.substring(1)}` : '#i'}`}
+                                to={getLinkURL(l)}
                                 activeClassName="text-red-800  font-bold bg-red-100"
                                 aria-disabled={l === language}
                             >
