@@ -19,7 +19,7 @@
     "axios": "^1.5.1",
     "dotenv": "^16.1.4",
     "framer-motion": "^10.12.16",
-    "gatsby": "^5.8.0",
+    "gatsby": "^5.14.5",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-image": "^3.10.0",
     "gatsby-plugin-manifest": "^5.12.3",
