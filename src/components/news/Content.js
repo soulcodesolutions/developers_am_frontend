@@ -10,7 +10,7 @@ function Content({ members, title, language }) {
     const [selectedItem, setSelectedItem] = useState(null)
 
     // console.log(members?.filter(item => item?.hide_in_website !== false))
-
+ 
     return (<div>
         <div className="pt-[150px] py-[50px]">
             <div className="container mx-auto"> 
