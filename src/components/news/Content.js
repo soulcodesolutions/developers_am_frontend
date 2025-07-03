@@ -13,7 +13,7 @@ function Content({ members, title, language }) {
 
     return (<div>
         <div className="pt-[150px] py-[50px]">
-            <div className="container mx-auto">
+            <div className="container mx-auto"> 
             <div className="flex justify-center sm:justify-between items-center">
                     <div className="order-2 sm:order-1 text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800 ">
                         {/* <   MarkdownView markdown={customRenderer(title || "")} /> */}
