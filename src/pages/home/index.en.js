@@ -16,6 +16,12 @@ query HomeQuery {
     strapiHomePageV2 {
       sub_heading
       hero_text
+      welcome_to_website_heading
+      welcome_to_website_content {
+        data {
+          welcome_to_website_content
+        }
+      }
       about_heading
       about_content {
         data {

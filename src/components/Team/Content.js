@@ -30,7 +30,7 @@ function Content({ title, members, language, location }) {
                     </div>
                     <div className='order-1 sm:order-2'>
 
-                        {/* <GoBack  language={language} hash="council" /> */}
+                        {/* <GoBack  language={language} /> */}
                     </div>
                 </div>
                 <div className="pt-[50px]">
@@ -42,7 +42,7 @@ function Content({ title, members, language, location }) {
                                     // onClick={() => setSelectedItem(item)}
                                     className='shadow rounded-xl cursor-pointer hover:shadow-red-200 hover:shadow-md'
                                 >
-                                    {UserBox({ item, language })}
+                                    {UserBox({ item, language, page: "team" })}
                                 </div>
                             )
                         })}

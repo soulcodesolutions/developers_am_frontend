@@ -15,7 +15,12 @@ function Members({ location, data }) {
     console.log(data)
     return (<div>
         <Navbar  data={{ logo : data.strapiHomePageV2.logo }} location={location} language={language} />
-        <Content members={data.allStrapiMember.nodes} title={data.strapiHomePageV2.members_heading} location={location} language={language} />
+        <Content 
+            members={data.allStrapiMember.nodes} 
+            title={data.strapiHomePageV2.members_heading} 
+            second_title={data.strapiHomePageV2.associated_member_heading}
+            location={location} 
+            language={language} />
         {/* <Contact data={{ title: data.strapiHomePageV2.contact_heading }} /> */}
         <Footer language={language}  data={{ Footer : data.strapiHomePageV2.Footer, logo : data.strapiHomePageV2.logo }}  />
 

@@ -6,7 +6,7 @@ import Swiper from 'react-id-swiper';
 import SwiperCore, { Autoplay, Navigation } from 'swiper';
 
 export function UserCard(props) {
-    const { items = {}, language } = props
+    const { items = {}, language , page = "council"} = props
 
 
 
@@ -73,7 +73,7 @@ export function UserCard(props) {
 
                         {items.length > 0 &&
                             <Swiper {...params} ref={swiperRef}>
-                                {items.map((item) => UserBox({item, language}))}
+                                {items.map((item) => UserBox({item, language, page}))}
 
                             </Swiper>
                         }
@@ -88,13 +88,13 @@ export function UserCard(props) {
     )
 }
 
-function UserBox({item = {}, language}) {
+function UserBox({item = {}, language, page = "council"}) {
 
     // const navigate = useNavigate()
 
     const navigateTo = () => {
         // alert("")
-        navigate(`/${language}/council?strapiId=${item.strapi_id}`)
+        navigate(`/${language}/${page}?strapiId=${item.strapi_id}`)
     }
 
     // console.log(item?.strapi_id)

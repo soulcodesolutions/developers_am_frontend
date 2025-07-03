@@ -1,5 +1,7 @@
 import React from "react";
-import Logo from "../../images/Logo.webp"
+// import Logo from "../../images/Logo.webp"
+import Logo from "../../images/logo_arm.png"
+import Logo2 from "../../images/logo_eng.png"
 import { Link } from "gatsby";
 import { languages } from "../home/Home";
 import MarkdownView from "react-showdown";
@@ -64,15 +66,18 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) =
                     <div>
                         <Link to={`/${language}/home`}>
                             <div className="nav flex items-center">
-                                {/* <img alt="" src={Logo} className="h-fit" /> */}
                                 {
+                                    language === "hy-AM" ? <img alt="" src={Logo} className="h-fit" style={{ height : "80px"}} /> : <img alt="" src={Logo2} className="h-fit" style={{ height : "80px"}} />
+                                }
+                                {/* <img alt="" src={Logo} className="h-fit" /> */}
+                                {/* {
                                     data?.logo?.logo?.url ?
                                         <img src={process.env.GATSBY_STRAPI_API_URL + data?.logo?.logo?.url} className="h-fit max-w-[50px] " alt="" />
                                         :
                                         <img src={Logo} alt="" className="h-fit" />
 
-                                }
-                                <div className="text-[10px] ml-[20px] text-sky-900 font-bold">
+                                } */}
+                                {/* <div className="text-[10px] ml-[20px] text-sky-900 font-bold">
                                     {
                                         data?.logo?.title ?
                                             <MarkdownView markdown={data?.logo?.title} className="mt-[10px]" />
@@ -80,15 +85,12 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) =
                                             <>ԿԱՌՈՒՑԱՊԱՏՈՂՆԵՐԻ <br />ԱՍՈՑԻԱՑԻԱ</>
                                     }
 
-                                    {/* ԿԱՌՈՒՑԱՊԱՏՈՂՆԵՐԻ <br />ԱՍՈՑԻԱՑԻԱ */}
-                                </div>
+                                    ԿԱՌՈՒՑԱՊԱՏՈՂՆԵՐԻ <br />ԱՍՈՑԻԱՑԻԱ
+                                </div> */}
                             </div>
                         </Link>
                     </div>
                     <div className="nav-menu hidden xl:block text-[14px] 2xl:text-[16px]">
-
-
-
 
                         {navlinks.map(item => {
                             return (<Link

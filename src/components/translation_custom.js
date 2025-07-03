@@ -47,13 +47,13 @@ export const changeWordTo = (text, lang) => {
                 _translation = "Իրավական ակտեր"
                 break;
             case "Association documents":
-                _translation = "Ասոցիացիայի փաստաթղթեր"
+                _translation = "Ներքին փաստաթղթեր"
                 break;
             case "Certificates":
                 _translation = "Սերտիֆիկացում"
                 break;
             case "Useful links":
-                _translation = "Օգտակար հղումներ"
+                _translation = "Հղումներ"
                 break;
 
             default:

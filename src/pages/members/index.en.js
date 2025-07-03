@@ -23,7 +23,7 @@ query MembersQuery {
         strapi_id
         name
         hide_in_website
-         
+        associated_member
         description  {
           data {
             description
@@ -36,6 +36,7 @@ query MembersQuery {
     }
     strapiHomePageV2(locale: {eq: "en"}) {
       members_heading
+      associated_member_heading
       contact_heading
       Footer{
         address

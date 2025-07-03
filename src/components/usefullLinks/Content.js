@@ -170,7 +170,7 @@ function Content({ location, data = {}, language }) {
             <div className="pt-[150px] py-[50px]">
                 <div className="container mx-auto">
                     <div className="text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
-                        <   MarkdownView markdown={data?.title} />
+                        {/* <   MarkdownView markdown={data?.title} /> */}
                     </div>
                     <div className="pt-[20px]">
                         <HeaderTab />

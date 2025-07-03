@@ -44,6 +44,17 @@ module.exports = {
             }
           },
           {
+            singularName: "team",
+            queryParams: {
+              populate: "*"
+            },
+            pluginOptions: {
+              i18n: {
+                locale: "all",
+              },
+            }
+          },
+          {
             singularName: "member",
             queryParams: {
               populate: "*"
