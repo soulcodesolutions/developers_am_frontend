@@ -32,7 +32,7 @@ function NewsArticle({ location, data = {}, pageContext }) {
             <div className='w-full rounded-xl overflow-hidden '>
               <div
                 style={{
-                  backgroundImage: `url(${process.env.GATSBY_STRAPI_API_URL}${data?.cover.url})`
+                  backgroundImage: `url(${process.env.GATSBY_STRAPI_API_URL}${data?.cover?.url})`
                 }}
                 className="   bg-repeat">
                 <div
@@ -46,7 +46,7 @@ function NewsArticle({ location, data = {}, pageContext }) {
                     style={{
                       maxHeight: "400px"
                     }}
-                    src={`${process.env.GATSBY_STRAPI_API_URL}${data?.cover.url}`} alt="" className='w-fit h-full   rounded-xl' />
+                    src={`${process.env.GATSBY_STRAPI_API_URL}${data?.cover?.url}`} alt="" className='w-fit h-full   rounded-xl' />
                 </div>
               </div>
             </div>
