@@ -21,7 +21,7 @@ export default function AboutUs({ data }) {
                                 <img src={AboutImage} className="w-full sm:max-w-[500px] rounded-xl" alt="" />
                             </SlideLeft>
                         </div>
-                        <div className="w-full xl:w-1/2 pt-[50px] xl:pt-[0px] max-w-fit overflow-hidden">
+                        <div className="w-full xl:w-1/2 pt-[50px] xl:pt-[0px] max-w-fit overflow-hidden _text-center sm:text-left ">
                             <JustAppear>
                                 <MarkdownView 
                                     markdown={customRenderer(data?.content || "")}
