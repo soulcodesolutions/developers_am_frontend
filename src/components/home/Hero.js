@@ -18,6 +18,7 @@ export default function Hero({ data, language }) {
     return (<div
         style={{
             // backgroundImage: `url(${Bg_mobile})`
+            backgroundPosition : "right bottom"
         }}
         className="h-[100vh] max-h-[600px]  bg-cover bg-right-bottom bg-top bg-fixed_ bg-[url(/images/bg_mobile.png)] sm:bg-[url(/images/bg2.png)]"
     >
