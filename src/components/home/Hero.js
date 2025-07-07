@@ -1,7 +1,7 @@
 import React from "react";
 import MarkdownView from 'react-showdown'
-import Bg from '../../images/home/bg2.png'
-import Bg_mobile from '../../images/home/bg_mobile.jpg'
+// import Bg from '../../images/home/bg2.png'
+// import Bg_mobile from '../../images/home/bg_mobile.jpg'
 import Primary from '../button/Primary'
 import { JustAppear, SlideLeft, SlideRight } from "../SlideAnimation";
 import { changeWordTo } from "../translation_custom";
