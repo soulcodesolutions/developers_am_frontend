@@ -19,7 +19,7 @@ export default function Hero({ data, language }) {
         style={{
             // backgroundImage: `url(${Bg_mobile})`
         }}
-        className="h-[100vh] max-h-[600px]  bg-cover bg-right-bottom bg-top bg-fixed_ bg-[url(/images/bg_mobile.jpg)] sm:bg-[url(/images/bg2.png)]"
+        className="h-[100vh] max-h-[600px]  bg-cover bg-right-bottom bg-top bg-fixed_ bg-[url(/images/bg_mobile.png)] sm:bg-[url(/images/bg2.png)]"
     >
 
         <div className="w-full h-full flex flex-col items-center justify-center _backdrop-blur-sm bg-white/10">
