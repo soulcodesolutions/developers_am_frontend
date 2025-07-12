@@ -18,14 +18,16 @@ export default function Hero({ data, language }) {
     return (
     <>
     <div className="h-[100px]"></div>
+    <div  className=" bg-cover  bg-[url(/images/bg45.png)]    ">
+
     <div 
             style={{
                 // backgroundPosition : "0px -300px"
             }}
-            className=" bg-cover  bg-[url(/images/bg3.png)] sm:bg-[url(/images/bg3.png)] _bg-centers ">
+            className=" bg-cover  bg-[url(/images/bg44.png)]   sm:bg-[center_-250px] mx-auto max-w-[1500px]">
         <div className="w-full h-full flex flex-col items-center justify-center _backdrop-blur-sm bg-white/10">
             <div className="container mx-auto py-[50px] ">
-                <div className="_subhead text-[16px] sm:text-[24px] lg:text-[30px] text-white _text-red-800  max-w-[800px]  ">
+                <div className="_subhead text-[14px] sm:text-[24px] lg:text-[30px] text-white _text-red-800  max-w-[800px]  ">
                     <SlideRight >
                         <MarkdownView markdown={data.sub_heading} />
                     </SlideRight>
@@ -46,6 +48,8 @@ export default function Hero({ data, language }) {
             </div>
         </div>
     </div>
+    </div>
+
     </>
     )
 
