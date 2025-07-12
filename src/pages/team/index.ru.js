@@ -17,12 +17,16 @@ export const Head = ({ location, data }) => (
 
 export const query = graphql`
 query TeamQuery {
-    allStrapiTeam(filter: {locale: {eq: "ru" }}) {
+    allStrapiTeam(
+      filter: {locale: {eq: "ru" }}
+      sort: [{ createdAt : DESC}]
+      ) {
       nodes {
         strapi_id
         name
         hide_in_website
         position
+        rank
         description  {
           data {
             description

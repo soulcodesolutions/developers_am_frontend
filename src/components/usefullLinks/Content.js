@@ -98,7 +98,7 @@ function Content({ location, data = {}, language }) {
     }
 
     const TabContentWrapper = ({ children }) => {
-        return (<div className='py-[0px] sm:py-[20px]'>
+        return (<div className='py-[0px] sm:py-[20px]  '>
             {children}
         </div>)
     }
@@ -119,25 +119,25 @@ function Content({ location, data = {}, language }) {
                 {
                     data?.[activeKey]?.filter(item => !item?.hide_in_website)?.map(item => {
                         // console.log(item)
-                        return (<>
+                        return (<div className='  w-full lg:max-w-[50%] '>
                             {item?.pdf?.url ?
-                                <a href={getFileURL(item?.pdf?.url)} key={item?.id} target='_blank'>
+                                <a href={getFileURL(item?.pdf?.url)} key={item?.id} target='_blank' >
 
-                                    <div className='flex items-center mb-[10px] p-[10px] shadow border-2 border- rounded-lg w-full sm:max-w-[50%]'>
+                                    <div className='flex items-center mb-[10px] p-[10px] shadow border-2 border- rounded-lg w-full '>
                                         <div className='mr-[10px]' > <IconDownload /></div>
                                         <div className='mr-[10px]'>{item?.label}</div>
                                     </div>
                                 </a>
                                 :
-                                <a href={item.link} key={item?.id} target='_blank'>
-                                    <div className='flex items-center  mb-[10px] p-[10px] shadow border-2 border- rounded-xl w-full sm:max-w-[50%]'>
+                                <a href={item.link} key={item?.id} target='_blank'  >
+                                    <div className='flex items-center  mb-[10px] p-[10px] shadow border-2 border- rounded-xl w-full '>
 
                                         <div className='mr-[10px]' > <IconLink /></div>
                                         <div className='mr-[10px]'>{item?.label}</div>
                                     </div>
                                 </a>
                             }
-                        </>
+                        </div>
                         )
                     })
                 }

@@ -35,7 +35,17 @@ function Content({ title, members, language, location }) {
                 </div>
                 <div className="pt-[50px]">
                     <div className="grid gird-cols-1  sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
-                        {members?.filter(item => !item?.hide_in_website)?.map((item, index) => {
+                        {members?.
+                            sort((item1, item2) => {
+                                const rank1 = item1?.rank;
+                                const rank2 = item2?.rank;
+
+                                if (rank1 == null && rank2 == null) return 0;
+                                if (rank1 == null) return 1;  
+                                if (rank2 == null) return -1;  
+                                return rank1 - rank2;  
+                            })
+                            .filter(item => !item?.hide_in_website)?.map((item, index) => {
                             return (
                                 <div
                                     key={item?.strapi_id}

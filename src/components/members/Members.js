@@ -18,7 +18,8 @@ function Members({ location, data }) {
         <Content 
             members={data.allStrapiMember.nodes} 
             title={data.strapiHomePageV2.members_heading} 
-            second_title={data.strapiHomePageV2.associated_member_heading}
+            second_title={data.strapiHomePageV2.developer_member_heading}
+            third_title={data.strapiHomePageV2.associated_member_heading}
             location={location} 
             language={language} />
         {/* <Contact data={{ title: data.strapiHomePageV2.contact_heading }} /> */}

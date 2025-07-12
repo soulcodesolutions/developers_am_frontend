@@ -37,6 +37,7 @@ query MembersQuery {
     strapiHomePageV2(locale: {eq: "en"}) {
       members_heading
       associated_member_heading
+      developer_member_heading
       contact_heading
       Footer{
         address

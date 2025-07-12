@@ -9,7 +9,7 @@ import { GoBack } from '../ViewAll';
 // import { useQueryParam, NumberParam, StringParam } from "use-query-params";
 // import { useSearchParams } from "react-router-dom"; 
 
-function Content({ members, title, location, second_title, language }) {
+function Content({ members, title, location, second_title, third_title, language }) {
 
     const [selectedItem, setSelectedItem] = useState(null)
     // const [strapiId, setstrapiId] = useQueryParam("strapiId", NumberParam);
@@ -27,22 +27,52 @@ function Content({ members, title, location, second_title, language }) {
         }
     }, [strapiId])
 
+    const [selectedTab, setSelectedTab] = useState(second_title)
+
 
     return (<div>
         <div className="pt-[150px] py-[50px]">
             <div className="container mx-auto">
-                <div className="flex justify-center sm:justify-between items-center">
-                    <div className="order-2 sm:order-1 text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800 ">
-                        <   MarkdownView markdown={title} />
+                <div className="flex flex-wrap justify-center sm:justify-start space-x-[20px] sm:space-x-[50px] items-center  " >
+                    <div
+                        onClick={() => setSelectedTab(second_title)}
+                        className={` text-[20px]  text-center sm:text-left font-bold  cursor-pointer ${selectedTab === second_title ? "text-red-800 underline underline-offset-8" : ""}`}
+                        >
+                        <   MarkdownView markdown={second_title} />
                     </div>
-                    <div className='order-1 sm:order-2'>
-
-                        {/* <GoBack  language={language} hash='members'/> */}
+                    <div 
+                        onClick={() => setSelectedTab(third_title)}
+                        className={` text-[20px]  text-center sm:text-left font-bold  cursor-pointer ${selectedTab === third_title ? "text-red-800 underline underline-offset-8" : ""}`}
+                        >
+                        <   MarkdownView markdown={third_title} />
                     </div>
+                    
                 </div>
-                <div className="pt-[50px]">
-                    <div className="grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
-                        {members?.filter(item => !item?.hide_in_website && !item?.associated_member)?.map((item, index) => {
+                {
+                    selectedTab == second_title ?
+                    <div className="pt-[50px]">
+                        <div className="grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
+                            {members?.filter(item => !item?.hide_in_website && !item?.associated_member)?.map((item, index) => {
+                                return (
+                                    <div
+                                        key={item.strapi_id}
+                                        onClick={() => setSelectedItem(item)}
+
+                                    >
+                                        {CompanyBox(item, language)}
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                    :
+                    null
+
+                }
+                {
+                    selectedTab == third_title?
+                    <div className="grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px] mt-[50px]">
+                        {members?.filter(item => (!item?.hide_in_website && item.associated_member === true))?.map((item, index) => {
                             return (
                                 <div
                                     key={item.strapi_id}
@@ -54,25 +84,10 @@ function Content({ members, title, location, second_title, language }) {
                             )
                         })}
                     </div>
-                </div>
-                <div className="flex justify-center sm:justify-between items-center mt-[50px]">
-                    <div className="order-2 sm:order-1 text-[20px] sm:text-[40px] text-center sm:text-left font-bold text-red-800 ">
-                        <   MarkdownView markdown={second_title} />
-                    </div>
-                </div>
-                <div className="grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px] mt-[50px]">
-                    {members?.filter(item => (!item?.hide_in_website && item.associated_member === true))?.map((item, index) => {
-                        return (
-                            <div
-                                key={item.strapi_id}
-                                onClick={() => setSelectedItem(item)}
+                    :
+                    null
 
-                            >
-                                {CompanyBox(item, language)}
-                            </div>
-                        )
-                    })}
-                </div>
+                }
             </div>
         </div>
         <Popup

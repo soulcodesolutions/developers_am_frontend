@@ -15,23 +15,22 @@ export default function Hero({ data, language }) {
             }
     }
 
-    return (<div
-        style={{
-            // backgroundImage: `url(${Bg_mobile})`
-            backgroundPosition : "right bottom",
-            // marginTop : "100px"
-        }}
-        className="h-[100vh] max-h-[600px] mt-[5px] sm:mt-[50px]  bg-cover bg-right-bottom bg-top bg-fixed_ bg-[url(/images/bg_mobile.png)] sm:bg-[url(/images/bg2.png)]"
-    >
-
+    return (
+    <>
+    <div className="h-[100px]"></div>
+    <div 
+            style={{
+                // backgroundPosition : "0px -300px"
+            }}
+            className=" bg-cover  bg-[url(/images/bg3.png)] sm:bg-[url(/images/bg3.png)] _bg-centers ">
         <div className="w-full h-full flex flex-col items-center justify-center _backdrop-blur-sm bg-white/10">
-            <div className="container mx-auto">
-                <div className="subhead text-[18px] sm:text-[24px] lg:text-[30px] text-red-800  max-w-[800px] mt-[90px]">
+            <div className="container mx-auto py-[50px] ">
+                <div className="_subhead text-[16px] sm:text-[24px] lg:text-[30px] text-white _text-red-800  max-w-[800px]  ">
                     <SlideRight >
                         <MarkdownView markdown={data.sub_heading} />
                     </SlideRight>
                 </div>
-                <div className="hero-text text-[24px] sm:text-[30px] lg:text-[50px] py-[10px] max-w-[800px]">
+                <div className="_hero-text text-[20px] sm:text-[30px] lg:text-[30px] py-[10px] max-w-[800px] text-white">
                     <SlideLeft >
 
                         <MarkdownView markdown={data.hero_text} />
@@ -40,11 +39,15 @@ export default function Hero({ data, language }) {
                 <div className="py-[20px]">
                     <JustAppear>
                         <Primary 
-                            onClick={handleButtonClick}
+                            onClick={() => handleButtonClick()}
                             label={changeWordTo("Contact us", language)} className="max-w-[300px] cursor-pointer" />
                     </JustAppear>
                 </div>
             </div>
         </div>
-    </div>);
+    </div>
+    </>
+    )
+
+    
 }

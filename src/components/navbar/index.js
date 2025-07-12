@@ -17,13 +17,13 @@ export function getNavLinks(language) {
             },
             {
                 id: 2,
-                lable: "Մեր մասին",
+                lable: "О Нас",
                 link: `/${language}/home#aboutus`,
                 onNavbar : false,
             },
             {
                 id: 3,
-                lable: "Совет",
+                lable: "Члены Совета",
                 link: `/${language}/council`,
                 onNavbar : true,
             },
@@ -53,7 +53,7 @@ export function getNavLinks(language) {
             },
             {
                 id: 7,
-                lable: "Полезные ссылки",
+                lable: "Полезные Ссылки",
                 link: `/${language}/usefullLinks`,
                 onNavbar : true,
             },
@@ -70,20 +70,20 @@ export function getNavLinks(language) {
             },
             {
                 id: 2,
-                lable: "Մեր մասին",
+                lable: "Մեր Մասին",
                 link: `/${language}/home#aboutus`,
                 onNavbar : false,
             },
             {
                 id: 3,
-                lable: "Խորհուրդ",
+                lable: "Խորհրդի Անդամներ",
                 link: `/${language}/council`,
                 onNavbar : true,
             },
             
             {
                 id: 8,
-                lable: "Մեր թիմը",
+                lable: "Մեր Թիմը",
                 link: `/${language}/team`,
                 onNavbar : true,
             },
@@ -107,7 +107,7 @@ export function getNavLinks(language) {
             },
             {
                 id: 7,
-                lable: "Օգտակար հղումներ",
+                lable: "Օգտակար Հղումներ",
                 link: `/${language}/usefullLinks`,
                 onNavbar : true,
             },
@@ -129,7 +129,7 @@ export function getNavLinks(language) {
             },
             {
                 id: 3,
-                lable: "Council",
+                lable: "Board Members",
                 link: `/${language}/council`,
                 onNavbar : true,
             },
@@ -159,7 +159,7 @@ export function getNavLinks(language) {
             },
             {
                 id: 7,
-                lable: "Useful links",
+                lable: "Useful Links",
                 link: `/${language}/usefullLinks`,
                 onNavbar : true,
             },
