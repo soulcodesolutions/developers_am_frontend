@@ -123,7 +123,7 @@ export function getNavLinks(language) {
             },
             {
                 id: 2,
-                lable: "About us",
+                lable: "About Us",
                 link: `/${language}/home#aboutus`,
                 onNavbar : false,
             },

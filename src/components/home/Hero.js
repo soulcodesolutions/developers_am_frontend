@@ -27,12 +27,12 @@ export default function Hero({ data, language }) {
             className=" bg-cover  bg-[url(/images/bg44.png)]   sm:bg-[center_-250px] mx-auto max-w-[1500px]">
         <div className="w-full h-full flex flex-col items-center justify-center _backdrop-blur-sm bg-white/10">
             <div className="container mx-auto py-[50px] ">
-                <div className="_subhead text-[14px] sm:text-[24px] lg:text-[30px] text-white _text-red-800  max-w-[800px]  ">
+                <div className="_subhead text-[14px] sm:text-[24px]  lg:text-[35px] text-white _text-red-800  _max-w-[800px]  ">
                     <SlideRight >
                         <MarkdownView markdown={data.sub_heading} />
                     </SlideRight>
                 </div>
-                <div className="_hero-text text-[20px] sm:text-[30px] lg:text-[30px] py-[10px] max-w-[800px] text-white">
+                <div className="_hero-text text-[14px] sm:text-[20px] lg:text-[20px] py-[10px] _max-w-[800px] text-white">
                     <SlideLeft >
 
                         <MarkdownView markdown={data.hero_text} />
