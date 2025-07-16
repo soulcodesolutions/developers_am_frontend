@@ -16,11 +16,11 @@ export default function AboutUs({ data }) {
                 </div>
                 <div className="content pt-[50px] sm:pt-[50px]">
                     <div className="flex flex-wrap justify-between">
-                        <div className="w-1/2 flex  flex-col _items-center justify-center   ">
-                            <div className="h-fit  ">
+                        <div className="w-full sm:w-1/2 flex  flex-col _items-center justify-center   ">
+                            <div className="_h-fit w-full ">
 
                             <SlideLeft>
-                                <img src={AboutImage} className="w-full sm:max-w-[500px] rounded-xl bg-red-100" alt="" />
+                                <img src={AboutImage} className="w-full sm:max-w-[500px] rounded-xl  mx-auto sm:ml-0" alt="" />
                             </SlideLeft>
                             </div>
                         </div>
