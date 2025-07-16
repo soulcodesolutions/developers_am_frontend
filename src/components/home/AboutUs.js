@@ -16,10 +16,13 @@ export default function AboutUs({ data }) {
                 </div>
                 <div className="content pt-[50px] sm:pt-[50px]">
                     <div className="flex flex-wrap justify-between">
-                        <div className="w-[1/2]">
+                        <div className="w-1/2 flex  flex-col _items-center justify-center   ">
+                            <div className="h-fit  ">
+
                             <SlideLeft>
-                                <img src={AboutImage} className="w-full sm:max-w-[500px] rounded-xl" alt="" />
+                                <img src={AboutImage} className="w-full sm:max-w-[500px] rounded-xl bg-red-100" alt="" />
                             </SlideLeft>
+                            </div>
                         </div>
                         <div className="w-full xl:w-1/2 pt-[50px] xl:pt-[0px] max-w-fit overflow-hidden _text-center sm:text-left ">
                             <JustAppear>
