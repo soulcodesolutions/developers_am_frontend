@@ -6,9 +6,10 @@ import { JustAppear, SlideLeft } from "../SlideAnimation";
 export default function Welcome({ data }) {
     // console.log(data)
     return (
-        <div id="aboutus" className="pt-[50px] sm:pt-[100px] py-[50px]">
-            <div className="container mx-auto">
-                <div className="text-[24px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
+        <div id="aboutus" className="pt-[50px] sm:pt-[200px] py-[50px] relative">
+            <div className="absolute bottom-0 w-full">
+            <div className=" mx-auto bg-white p-[50px] max-w-[1200px] drop-shadow-2xl rounded-[20px]">
+                <div className="text-[24px] sm:text-[30px] text-center _sm:text-left font-bold text-red-800">
                     <SlideLeft>
                         <MarkdownView markdown={data?.title} />
                     </SlideLeft>
@@ -28,5 +29,6 @@ export default function Welcome({ data }) {
                     </div>
                 </div>
             </div>
-        </div>);
+        </div>
+        </div >);
 }
