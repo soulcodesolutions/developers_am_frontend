@@ -64,7 +64,7 @@ function NewsArticle({ location, data = {}, pageContext }) {
             </div>
             <div className="  pt-[20px] py-[50px] popup_container ">
 
-              <div>
+              <div className='text-justify'>
                 <MarkdownView
                   markdown={customRenderer(data?.content?.data?.content || "")}
                   options={{

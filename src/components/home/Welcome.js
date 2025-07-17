@@ -15,12 +15,12 @@ export default function Welcome({ data }) {
                 </div>
                 <div className="content pt-[50px] sm:pt-[50px]">
                     <div className="flex flex-wrap justify-between">
-                        <div className="w-full sm:w-1/3 flex flex-col _items-center justify-center  ">
+                        <div className="w-full xl:w-1/2 flex flex-col _items-center justify-center  ">
                             <SlideLeft>
                                 <img src={WelcomeImage} className="_w-full _sm:max-w-[500px] rounded-xl max-h-[320px] mx-auto sm:ml-0" alt="" />
                             </SlideLeft>
                         </div>
-                        <div className="w-full xl:w-2/3 pt-[50px] xl:pt-[0px] max-w-fit overflow-hidden _text-center sm:text-left ">
+                        <div className="w-full xl:w-1/2 pt-[50px] xl:pt-[0px] max-w-fit overflow-hidden _text-center sm:text-left ">
                             <JustAppear>
                                 <MarkdownView markdown={data?.content} className="text-justify" />
                             </JustAppear>
