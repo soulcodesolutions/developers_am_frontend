@@ -9,7 +9,7 @@ export default function AboutUs({ data }) {
     return (
         <div id="aboutus" className="pt-[50px] sm:pt-[100px] py-[50px]">
             <div className="container mx-auto">
-                <div className="text-[24px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
+                <div className="text-[24px]  sm:text-[28px] xl:text-[40px] text-center sm:text-left font-bold text-red-800">
                     <SlideLeft>
                         <MarkdownView markdown={data?.title} />
                     </SlideLeft>
