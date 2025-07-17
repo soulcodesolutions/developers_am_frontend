@@ -59,9 +59,8 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) =
     }
 
     return (<div>
-        <div className="w-full fixed top-0 left-0 bg-white py-[20px] px-[10px] md:px-0 drop-shadow-xl z-[100]">
+        <div className="w-full fixed top-0 left-0 bg-white/60 backdrop-blur-3xl	 py-[20px] px-[10px] md:px-0 drop-shadow-xl z-[100]">
             <div className="container mx-auto">
-
                 <div className="flex justify-between items-center">
                     <div>
                         <Link to={`/${language}/home`}>

@@ -17,22 +17,22 @@ export default function Hero({ data, language }) {
 
     return (
     <>
-    {/* <div className="h-[100px]"></div> */}
+    <div className="h-[100px]  sm:h-[100px] xl:h-0"></div>
     {/* <div  className=" bg-cover  _bg-[url(/images/bg45.png)]    "> */}
 
     <div 
             style={{
                 // backgroundPosition : "0px -300px"
             }}
-            className=" bg-cover  _bg-[url(/images/bg_mobile.png)] _sm:bg-[url(/images/bg2.png)] bg-[url(/images/bg4.png)]   sm:bg-[center_-250px] mx-auto  h-[calc(100vh-100px)]">
-        <div className="w-full h-full max-h-[600px] flex flex-col items-center justify-center _backdrop-blur-sm _bg-black/10 ">
+            className="bg-cover sm:bg-fixed  _bg-[url(/images/bg4.png)] bg-[url(/images/bg4.png)] bg-center   sm:bg-[center_-100px] mx-auto h-[300px] sm:h-[300px] xl:h-[calc(100vh-100px)]">
+        <div className="w-full h-full   flex flex-col items-center justify-center pt-[50px]  xl:pt-[150px] xl:max-h-[400px]">
             <div className="container mx-auto py-[50px] ">
-                <div className="_subhead text-[14px] sm:text-[24px]  lg:text-[35px] text-white _text-red-800  _max-w-[800px] text-center ">
+                <div className="_subhead text-[14px] sm:text-[24px]  lg:text-[35px] text-white _text-red-800   text-center ">
                     <SlideRight >
                         <MarkdownView markdown={data.sub_heading} />
                     </SlideRight>
                 </div>
-                <div className="_hero-text text-[14px] sm:text-[20px] lg:text-[20px] py-[10px] _max-w-[800px] text-white text-center">
+                <div className="_hero-text text-[14px] sm:text-[20px] lg:text-[20px] py-[10px]  text-white text-center">
                     <SlideLeft >
 
                         <MarkdownView markdown={data.hero_text} />
