@@ -19,11 +19,11 @@ export default function Hero({ data, language }) {
         <>
             <div className="h-[20px]  sm:h-[80px] xl:h-0"></div>
 
-            <div className="bg-cover sm:bg-fixed    bg-[url(/images/bg8.jpg)] bg-center   sm:bg-top mx-auto h-[300px] sm:h-[300px] xl:min-h-[760px] xl:h-[calc(100vh-200px)]">
+            <div className="bg-cover sm:bg-cover sm:bg-fixed    bg-[url(/images/bg13.png)] bg-top  sm:bg-top mx-auto h-[300px] sm:h-[300px] xl:min-h-[760px] xl:h-[calc(100vh-80px)]">
                 <div className="h-full bg-black/40">
 
-                <div className="w-full h-full   flex flex-col items-center justify-center pt-[50px]  xl:pt-[40px] xl:max-h-[400px]">
-                    <div className="container mx-auto py-[50px] ">
+                <div className="w-full h-full   flex flex-col items-center justify-center pt-[50px]   xl:pt-[20px] xl:max-h-[400px]">
+                    <div className="container mx-auto py-[50px]  ">
                         <div className="_subhead text-[14px] sm:text-[24px]  lg:text-[35px] text-white _text-red-800   text-center ">
                             <SlideRight >
                                 <MarkdownView markdown={data.sub_heading} />
