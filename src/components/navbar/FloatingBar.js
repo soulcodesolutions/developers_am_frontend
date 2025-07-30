@@ -59,38 +59,20 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) =
     }
 
     return (<div>
-        <div className="w-full fixed top-0 left-0 bg-white py-[20px] px-[10px] md:px-0 drop-shadow-xl z-[100]">
+        <div className="w-full fixed top-0 left-0 bg-white/60 backdrop-blur-3xl	 py-[10px] px-[10px] md:px-0 drop-shadow-xl z-[100]">
             <div className="container mx-auto">
-
                 <div className="flex justify-between items-center">
                     <div>
                         <Link to={`/${language}/home`}>
                             <div className="nav flex items-center">
                                 {
-                                    language === "hy-AM" ? <img alt="" src={Logo} className="h-fit" style={{ height : "80px"}} /> : <img alt="" src={Logo2} className="h-fit" style={{ height : "80px"}} />
+                                    language === "hy-AM" ? <img alt="" src={Logo} className="h-fit" style={{ height : "60px"}} /> : <img alt="" src={Logo2} className="h-fit" style={{ height : "60px"}} />
                                 }
-                                {/* <img alt="" src={Logo} className="h-fit" /> */}
-                                {/* {
-                                    data?.logo?.logo?.url ?
-                                        <img src={process.env.GATSBY_STRAPI_API_URL + data?.logo?.logo?.url} className="h-fit max-w-[50px] " alt="" />
-                                        :
-                                        <img src={Logo} alt="" className="h-fit" />
-
-                                } */}
-                                {/* <div className="text-[10px] ml-[20px] text-sky-900 font-bold">
-                                    {
-                                        data?.logo?.title ?
-                                            <MarkdownView markdown={data?.logo?.title} className="mt-[10px]" />
-                                            :
-                                            <>ԿԱՌՈՒՑԱՊԱՏՈՂՆԵՐԻ <br />ԱՍՈՑԻԱՑԻԱ</>
-                                    }
-
-                                    ԿԱՌՈՒՑԱՊԱՏՈՂՆԵՐԻ <br />ԱՍՈՑԻԱՑԻԱ
-                                </div> */}
+                                
                             </div>
                         </Link>
                     </div>
-                    <div className="nav-menu hidden xl:block text-[14px] 2xl:text-[16px]">
+                    <div className="nav-menu hidden xl:block text-[14px] 2xl:text-[14px]">
 
                         {navlinks.map(item => {
                             return (<Link
