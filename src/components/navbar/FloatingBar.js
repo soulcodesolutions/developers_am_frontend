@@ -72,7 +72,7 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) =
                             </div>
                         </Link>
                     </div>
-                    <div className="nav-menu hidden xl:block text-[14px] 2xl:text-[16px]">
+                    <div className="nav-menu hidden xl:block text-[14px] 2xl:text-[14px]">
 
                         {navlinks.map(item => {
                             return (<Link
