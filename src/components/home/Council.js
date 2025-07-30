@@ -12,7 +12,7 @@ export default function Council({ data, language="en" }) {
             <div className="container mx-auto">
                 <div className="flex justify-center sm:justify-between items-center">
 
-                    <div className="text-[24px] sm:text-[40px] text-center sm:text-left font-bold text-red-800">
+                    <div className="text-[24px] sm:text-[28px] text-center sm:text-left font-bold text-red-800">
                         <SlideLeft>
                             <MarkdownView markdown={data?.title} />
                         </SlideLeft>

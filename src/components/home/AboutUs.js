@@ -9,7 +9,7 @@ export default function AboutUs({ data }) {
     return (
         <div id="aboutus" className="pt-[50px] sm:pt-[100px] py-[50px]">
             <div className="container mx-auto">
-                <div className="text-[24px]  sm:text-[28px] xl:text-[40px] text-center sm:text-left font-bold text-red-800">
+                <div className="text-[20px]  sm:text-[28px] xl:text-[28px] text-center sm:text-left font-bold text-red-800">
                     <SlideLeft>
                         <MarkdownView markdown={data?.title} />
                     </SlideLeft>
@@ -20,11 +20,11 @@ export default function AboutUs({ data }) {
                             <div className="_h-fit w-full ">
 
                             <SlideLeft>
-                                <img src={AboutImage} className="w-full sm:max-w-[500px] rounded-xl  mx-auto sm:ml-0" alt="" />
+                                <img src={AboutImage} className="w-full sm:max-w-[450px] rounded-xl  mx-auto sm:ml-0" alt="" />
                             </SlideLeft>
                             </div>
                         </div>
-                        <div className="w-full xl:w-1/2 pt-[50px] xl:pt-[0px] max-w-fit overflow-hidden _text-center sm:text-left ">
+                        <div className="w-full xl:w-1/2 pt-[50px] text-[14px] xl:pt-[10px] max-w-fit overflow-hidden _text-center sm:text-left ">
                             <JustAppear>
                                 <MarkdownView 
                                     markdown={customRenderer(data?.content || "")}
