@@ -21,7 +21,7 @@ export default function Hero({ data, data2, language }) {
         <>
             <div className="h-[20px]  sm:h-[80px] xl:h-0"></div>
 
-            <div className="bg-fixed bg-no-repeat sm:bg-cover sm:bg-fixed    bg-[url(/images/bg13.png)] bg-top  sm:bg-top mx-auto h-[1400px] sm:h-[1200px] xl:h-[100vh] xl:min-h-[780px]  xl:max-h-[900px] _xl:h-[calc(100vh-0px)]">
+            <div className="bg-fixed bg-no-repeat sm:bg-cover sm:bg-fixed    bg-[url(/images/bg13.png)] bg-top  sm:bg-top mx-auto h-[1400px] sm:h-[1200px] xl:h-[100vh] xl:min-h-[850px]  xl:max-h-[900px] _xl:h-[calc(100vh-0px)]">
                 <div className="h-full bg-black/40">
 
                     <div className="w-full h-full   flex flex-col items-center justify-end pt-[50px] max-h-[250px]   xl:pt-[20px] xl:max-h-[300px]">
