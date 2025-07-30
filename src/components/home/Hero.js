@@ -21,10 +21,10 @@ export default function Hero({ data, data2, language }) {
         <>
             <div className="h-[20px]  sm:h-[80px] xl:h-0"></div>
 
-            <div className="bg-fixed bg-no-repeat sm:bg-cover sm:bg-fixed    bg-[url(/images/bg13.png)] bg-top  sm:bg-top mx-auto h-[1400px] sm:h-[1200px] xl:h-[100vh] xl:min-h-[850px]  xl:max-h-[900px] _xl:h-[calc(100vh-0px)]">
+            <div className="bg-cover bg-no-repeat sm:bg-cover sm:bg-fixed    bg-[url(/images/bg13.png)] bg-top  sm:bg-top mx-auto h-[1400px] sm:h-[1200px] xl:h-[100vh] xl:min-h-[700px]  xl:max-h-[760px] _xl:h-[calc(100vh-20px)]">
                 <div className="h-full bg-black/40">
 
-                    <div className="w-full h-full   flex flex-col items-center justify-end pt-[50px] max-h-[250px]   xl:pt-[20px] xl:max-h-[300px]">
+                    <div className="w-full h-full   flex flex-col items-center justify-end pt-[50px] max-h-[250px]   xl:pt-[20px] xl:max-h-[280px]">
                         <div className="container mx-auto py-[50px]  ">
                             <div className="_subhead text-[14px] sm:text-[24px]  lg:text-[35px] text-white _text-red-800   text-center ">
                                 <SlideRight >
