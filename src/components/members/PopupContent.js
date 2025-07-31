@@ -75,7 +75,7 @@ function PopupContent(props) {
         <div className="text-[16px] text-center  text-slate-500">
             {item?.position}
         </div>
-        <div className="text-[16px] text-  pt-[20px] popup_container">
+        <div className="text-[16px] text-  pt-[20px] popup_container text-justify">
             <MarkdownView
                 markdown={customRenderer(item?.description?.data?.description || "")}
                 options={{
