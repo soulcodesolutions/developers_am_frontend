@@ -4,8 +4,10 @@ import AboutImage from "../../images/home/about.png";
 import { JustAppear, SlideLeft } from "../SlideAnimation";
 import { customRenderer } from "../usefullFunctions";
 
-export default function AboutUs({ data }) {
-    console.log(data)
+export default function AboutUs({ data, language }) {
+    function getLanguageCode(locale) {
+        return locale.split('-')[0];
+    }
     return (
         <div id="aboutus" className="pt-[50px] sm:pt-[100px] py-[50px]">
             <div className="container mx-auto">
@@ -24,9 +26,10 @@ export default function AboutUs({ data }) {
                             </SlideLeft>
                             </div>
                         </div>
-                        <div className="w-full xl:w-1/2 pt-[50px] text-[14px] xl:pt-[10px] max-w-fit overflow-hidden _text-center sm:text-left ">
+                        <div className="w-full xl:w-1/2 px-[10px] pt-[50px] text-[14px] xl:pt-[10px] max-w-fit overflow-hidden _text-center sm:text-left ">
                             <JustAppear>
                                 <MarkdownView 
+                                    lang={getLanguageCode(language)}
                                     markdown={customRenderer(data?.content || "")}
                                     options={{
                                         openLinksInNewWindow: true,

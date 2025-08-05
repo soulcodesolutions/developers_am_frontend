@@ -26,7 +26,7 @@ export default function Home({ location, data }) {
         data2={{ title: data.welcome_to_website_heading, content: data.welcome_to_website_content?.data?.welcome_to_website_content }}
         />
       {/* <Welcome data={{ title: data.welcome_to_website_heading, content: data.welcome_to_website_content?.data?.welcome_to_website_content }} /> */}
-      <AboutUs data={{ title: data.about_heading, content: data.about_content?.data?.about_content }} />
+      <AboutUs data={{ title: data.about_heading, content: data.about_content?.data?.about_content }} language={language} />
       <Council data={{ title: data.council_heading, members: data.council }} language={language}/>
       <Members data={{ title: data.members_heading, members: data.members }} language={language} />
       <Partners data={{ title: data.partner_heading, members: data.partners }} language={language} />

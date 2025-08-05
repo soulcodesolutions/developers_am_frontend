@@ -46,7 +46,7 @@ export default function Hero({ data, data2, language }) {
                         </div> */}
                         </div>
                     </div>
-                    <Welcome data={data2} />
+                    <Welcome data={data2} language={language} />
                 </div>
 
             </div>
