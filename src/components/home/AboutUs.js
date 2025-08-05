@@ -36,7 +36,7 @@ export default function AboutUs({ data, language }) {
                                         simplifiedAutoLink: true,
                                         simpleLineBreaks : true
                                     }}
-                                    className="text-justify"
+                                    className="text-justify "
                                     />
                             </JustAppear>
                         </div>

@@ -15,10 +15,14 @@ import { customRenderer } from '../components/usefullFunctions';
 
 function NewsArticle({ location, data = {}, pageContext }) {
   // console.log('Page Context  -> ', pageContext);
-  console.log('Data -> ', data);
+  // console.log('Data -> ', data);
   // console.log('Location -> ', location);
   let footerData = data.strapiHomePageV2 || {}
   data = data.strapiNewsArticle
+
+  function getLanguageCode(locale) {
+    return locale.split('-')[0];
+  }
 
   return (<div>
     <Navbar location={location} language={pageContext.locale}  data={{ Footer: footerData.Footer, logo: footerData.logo }}  />
@@ -66,6 +70,7 @@ function NewsArticle({ location, data = {}, pageContext }) {
 
               <div className='text-justify'>
                 <MarkdownView
+                  lang={getLanguageCode(pageContext.locale)}
                   markdown={customRenderer(data?.content?.data?.content || "")}
                   options={{
                     openLinksInNewWindow: true,

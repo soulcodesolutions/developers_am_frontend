@@ -13,6 +13,7 @@ function Content({ title, members, language, location }) {
     const params = new URLSearchParams(location.search);
     const strapiId = params.get("strapiId");
 
+
     useEffect(() => {
         if (strapiId) {
             const result = members?.find(item => item?.strapi_id == strapiId)
