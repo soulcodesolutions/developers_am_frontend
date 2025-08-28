@@ -9,20 +9,20 @@ export default function AboutUs({ data, language }) {
         return locale.split('-')[0];
     }
     return (
-        <div id="aboutus" className="pt-[50px] sm:pt-[100px] py-[50px]">
+        <div id="aboutus" className="pt-[50px] sm:pt-[50px] xl:pt-[100px] py-[50px]">
             <div className="container mx-auto">
-                <div className="text-[20px]  sm:text-[28px] xl:text-[28px] text-center sm:text-left font-bold text-red-800">
+                <div className="text-[20px]  sm:text-[28px] xl:text-[28px] text-center sm:text-left  xl:text-left font-bold text-red-800">
                     <SlideLeft>
                         <MarkdownView markdown={data?.title} />
                     </SlideLeft>
                 </div>
-                <div className="content pt-[50px] sm:pt-[50px]">
-                    <div className="flex flex-wrap justify-between">
-                        <div className="w-full sm:w-1/2 flex  flex-col _items-center justify-center   ">
-                            <div className="_h-fit w-full ">
+                <div className="content pt-[50px] sm:pt-[1px] xl:pt-[50px]">
+                    <div className="flex flex-wrap sm:flex-nowrap justify-between">
+                        <div className="w-full sm:w-[400px] xl:w-1/2 flex  flex-col _items-center justify-center   ">
+                            <div className="_h-fit w-full sm:pr-[20px]">
 
                             <SlideLeft>
-                                <img src={AboutImage} className="w-full sm:max-w-[450px] rounded-xl  mx-auto sm:ml-0" alt="" />
+                                <img src={AboutImage} className="w-full sm:max-w-[450px]  xl:max-w-[450px]   rounded-xl  mx-auto sm:ml-0" alt="" />
                             </SlideLeft>
                             </div>
                         </div>
