@@ -75,12 +75,12 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) =
                             </div>
                         </Link>
                     </div>
-                    <div className="nav-menu hidden xl:block text-[14px] 2xl:text-[14px]">
+                    <div className="nav-menu hidden lg:block  ">
 
                         {navlinks.map(item => {
                             return (<Link
                                 key={item.id}
-                                className="inline-block ml-[20px]"
+                                className="inline-block ml-[20px] text-[14px] sm:text-[14px] xl:text-[16px]"
                                 to={item.link}
                                 activeClassName="text-red-800  font-bold"
                             >
@@ -89,7 +89,7 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) =
                         })}
                         <ChangeLangButton />
                     </div>
-                    <div className="burger_button block xl:hidden">
+                    <div className="burger_button block lg:hidden">
                         <div onClick={() => openSideBar()} className="w-fit cursor-pointer">
 
                             <svg

@@ -19,7 +19,7 @@ export default function Hero({ data, data2, language }) {
 
     return (
         <>
-            <div className="h-[20px]  sm:h-[50px] xl:h-0"></div>
+            <div className="h-[20px]  sm:h-[10px] xl:h-0"></div>
 
             <div className="bg-cover bg-no-repeat sm:bg-cover sm:bg-fixed    bg-[url(/images/bg100.png)] bg-top  sm:bg-top mx-auto h-[1250px] sm:h-[800px] xl:h-[100vh] xl:min-h-[700px]  xl:max-h-[850px]  ">
                 <div className="h-full _bg-black/40">
