@@ -1,7 +1,7 @@
 import React from "react";
 // import Logo from "../../images/Logo.webp"
-import Logo from "../../images/logo_arm.png"
-import Logo2 from "../../images/logo_eng.png"
+import Logo from "../../images/logo_arm_2.png"
+import Logo2 from "../../images/logo_eng_2.png"
 import { Link } from "gatsby";
 import { getNavLinks } from "../navbar";
 

@@ -34,7 +34,7 @@ export default function Welcome({ data, language }) {
                                 </div>
 
                             </div>
-                            <div className="w-full text-[14px]  px-[20px]  pt-[50px] xl:pt-[15px] xl:pl-[50px] xl:max-w-[810px] overflow-hidden _text-center sm:text-left  ">
+                            <div className="w-full text-[16px]  px-[20px]  pt-[50px] xl:pt-[15px] xl:pl-[50px] xl:max-w-[810px] overflow-hidden _text-center sm:text-left  ">
                                 <JustAppear>
                                     <MarkdownView markdown={data?.content} lang={getLanguageCode(language)} className="text-justify hyphens-auto" />
                                 </JustAppear>

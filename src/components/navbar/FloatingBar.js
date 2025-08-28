@@ -1,7 +1,7 @@
 import React from "react";
 // import Logo from "../../images/Logo.webp"
-import Logo from "../../images/logo_arm.png"
-import Logo2 from "../../images/logo_eng.png"
+import Logo from "../../images/logo_arm_2.png"
+import Logo2 from "../../images/logo_eng_2.png"
 import { Link } from "gatsby";
 import { languages } from "../home/Home";
 import MarkdownView from "react-showdown";
@@ -65,9 +65,12 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) =
                     <div>
                         <Link to={`/${language}/home`}>
                             <div className="nav flex items-center">
+                                <div>
+
                                 {
-                                    language === "hy-AM" ? <img alt="" src={Logo} className="h-fit" style={{ height : "60px"}} /> : <img alt="" src={Logo2} className="h-fit" style={{ height : "60px"}} />
+                                    language === "hy-AM" ? <img alt="" src={Logo} className="_h-fit" style={{ height : "40px"}} /> : <img alt="" src={Logo2} className="_h-fit" style={{ height : "40px"}} />
                                 }
+                                </div>
                                 
                             </div>
                         </Link>
