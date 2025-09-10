@@ -59,7 +59,7 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) =
     }
 
     return (<div>
-        <div className="w-full fixed top-0 left-0 bg-white/60 backdrop-blur-3xl	 py-[10px] px-[10px] md:px-0 drop-shadow-xl z-[100]">
+        <div className="w-full fixed top-0 left-0 bg-white/60 backdrop-blur-3xl	 py-[5px] px-[10px] md:px-0 drop-shadow-xl z-[100]">
             <div className="container mx-auto">
                 <div className="flex justify-between items-center">
                     <div>
@@ -68,7 +68,7 @@ const FloatingBar = ({ navlinks = [], openSideBar, location, language, data }) =
                                 <div>
 
                                 {
-                                    language === "hy-AM" ? <img alt="" src={Logo} className="_h-fit" style={{ height : "40px"}} /> : <img alt="" src={Logo2} className="_h-fit" style={{ height : "40px"}} />
+                                    language === "hy-AM" ? <img alt="" src={Logo} className="_h-fit" style={{ height : "60px"}} /> : <img alt="" src={Logo2} className="_h-fit" style={{ height : "60px"}} />
                                 }
                                 </div>
                                 

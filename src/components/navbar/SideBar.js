@@ -59,7 +59,7 @@ export default function SideBar(props) {
                 <div className="flex flex-col items-start ">
                     {_navlinks?.map((item) => {
                         return (
-                            <div key={item?.lable} className={`pb-[40px] inter text-[24px] font-[500]  cursor-pointer  text-black`}>
+                            <div key={item?.lable} className={`pb-[40px] inter text-[16px] font-[500]  cursor-pointer  text-black`}>
 
                                 {item.children ?
                                     <div>
