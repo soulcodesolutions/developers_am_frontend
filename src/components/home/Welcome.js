@@ -1,6 +1,7 @@
 import React from "react";
 import MarkdownView from "react-showdown";
-import WelcomeImage from "../../images/home/welcome2.png";
+// import WelcomeImage from "../../images/home/welcome2.png";
+import WelcomeImage from "../../images/home/IMG_8386.jpg";
 import { JustAppear, SlideLeft } from "../SlideAnimation";
 
 export default function Welcome({ data, language }) {
@@ -22,7 +23,7 @@ export default function Welcome({ data, language }) {
                             <MarkdownView markdown={data?.title} />
                         </SlideLeft>
                     </div>
-                    <div className="px-[10px] sm:px-[10px] xl:px-[30px] pb-[20px]">
+                    <div className="px-[10px] sm:px-[10px] xl:px-[0px] pb-[20px]">
                         <div className="border-b "></div>
                     </div>
                     <div className=" content pt-[50px] sm:pt-[10px]">
