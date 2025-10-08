@@ -30,7 +30,7 @@ export default function Welcome({ data, language }) {
                         <div className="flex flex-wrap sm:flex-nowrap xl:flex-nowrap sm:h-fit  justify-center ">
                             <div className="  w-full sm:w-fit xl:w-fit   flex flex-col sm:items-center xl:items-center justify-center   ">
 
-                                <div className="  ">
+                                <div className=" px-[10px] ">
                                     <img src={WelcomeImage} className=" h-full w-content max-h-[200px] sm:max-h-[320px] xl:max-h-[280px] rounded-xl mx-auto sm:ml-0  " alt="" />
                                 </div>
 
