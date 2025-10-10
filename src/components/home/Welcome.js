@@ -23,14 +23,14 @@ export default function Welcome({ data, language }) {
                             <MarkdownView markdown={data?.title} />
                         </SlideLeft>
                     </div>
-                    <div className="px-[10px] sm:px-[10px] xl:px-[0px] pb-[20px]">
+                    <div className="px-[10px] sm:px-[10px] xl:px-[30px] pb-[20px]">
                         <div className="border-b "></div>
                     </div>
                     <div className=" content pt-[50px] sm:pt-[10px]">
                         <div className="flex flex-wrap sm:flex-nowrap xl:flex-nowrap sm:h-fit  justify-center ">
                             <div className="  w-full sm:w-fit xl:w-fit   flex flex-col sm:items-center xl:items-center justify-center   ">
 
-                                <div className=" px-[10px] ">
+                                <div className=" _px-[10px] ">
                                     <img src={WelcomeImage} className=" h-full w-content max-h-[200px] sm:max-h-[320px] xl:max-h-[280px] rounded-xl mx-auto sm:ml-0  " alt="" />
                                 </div>
 
