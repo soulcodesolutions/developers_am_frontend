@@ -1,6 +1,6 @@
 import React from "react";
 import MarkdownView from "react-showdown";
-import WelcomeImage from "../../images/home/welcome2.png";
+import WelcomeImage from "../../images/home/welcome3.jpg";
 import { JustAppear, SlideLeft } from "../SlideAnimation";
 
 export default function Welcome({ data, language }) {
