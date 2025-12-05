@@ -54,7 +54,7 @@ const VideoPreviewCards = ({ item }) => {
 
             <ReactPlayer
                 className='react-player bg-black'
-                url={item?.video_url}
+                url={normalizeUrl(item?.video_url)}
                 // url="https://youtu.be/UGUTb6QaGTU?si=jnQFFLpqDyeFoPuV"
                 width='100%'
                 height='100%'
@@ -81,8 +81,8 @@ const VideoFUll = ({ item }) => {
 
             <ReactPlayer
                 className='react-player sm:min-h-[550px] h-full bg-black '
-                url={item?.video_url}
-                // url={"https://youtu.be/ouEezpuPc3A?si=mHgbZuqhGfI0gFGo"}
+                url={normalizeUrl(item?.video_url)}
+                // url={"https://www.facebook.com/watch/?v=1877345239521187"}
                 width='100%'
                 controls={true}
                 height={window?.innerWidth <= 450 ? '100%' : undefined}
@@ -97,6 +97,25 @@ const VideoFUll = ({ item }) => {
 
 }
 
+const normalizeUrl = (url) => {
+    if (!url) return url;
+    
+    // Convert Facebook Reels URL to a format react-player can handle
+    if (url.includes('facebook.com/reel')) {
+        // Extract reel ID and convert to watch format
+        const reelIdMatch = url.match(/\/reel\/(\d+)/);
+        if (reelIdMatch) {
+            return `https://www.facebook.com/watch/?v=${reelIdMatch[1]}`;
+        }
+    }
+    
+    // Handle share URLs
+    if (url.includes('fb.watch')) {
+        return url; // react-player should handle these
+    }
+    
+    return url;
+};
 
 
 export default VideoSection;
